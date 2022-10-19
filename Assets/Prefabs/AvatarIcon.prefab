@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8562190711347377941}
   - component: {fileID: 1922801961783183656}
   - component: {fileID: 1092050056085232019}
+  - component: {fileID: 2001734984367226456}
   m_Layer: 5
   m_Name: IMG_Background
   m_TagString: Untagged
@@ -76,6 +77,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2001734984367226456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103096849445252713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Inverse: 0
+  m_MaskInteraction: 85
+  m_UseStencil: 1
+  m_RaycastFilter: 0
 --- !u!1 &1087294942618454161
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,6 +104,7 @@ GameObject:
   - component: {fileID: 7738021024321148157}
   - component: {fileID: 739262507953716236}
   - component: {fileID: 8218725007814310169}
+  - component: {fileID: 300368229493379391}
   m_Layer: 5
   m_Name: IMG_Hair
   m_TagString: Untagged
@@ -142,7 +160,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 38d30a010981878478557fd1a9b2615e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96a475c87635fff448003fd8bfb777ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -152,6 +170,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &300368229493379391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087294942618454161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Inverse: 0
+  m_MaskInteraction: 85
+  m_UseStencil: 1
+  m_RaycastFilter: 0
 --- !u!1 &1472542948676879994
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +197,7 @@ GameObject:
   - component: {fileID: 1355556508460366503}
   - component: {fileID: 3965552255543914441}
   - component: {fileID: 8424000516238932334}
+  - component: {fileID: 7567605318080928171}
   m_Layer: 5
   m_Name: IMG_Nose
   m_TagString: Untagged
@@ -228,6 +263,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7567605318080928171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472542948676879994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Inverse: 0
+  m_MaskInteraction: 85
+  m_UseStencil: 1
+  m_RaycastFilter: 0
 --- !u!1 &2004084320152306645
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +291,6 @@ GameObject:
   - component: {fileID: 4567482693151558685}
   - component: {fileID: 3223718121666397615}
   - component: {fileID: 1263830688208689816}
-  - component: {fileID: 6931737027373230273}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -330,19 +380,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6931737027373230273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2004084320152306645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
 --- !u!1 &4534502699812644658
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +391,7 @@ GameObject:
   - component: {fileID: 4240401707899655178}
   - component: {fileID: 5781938664730109910}
   - component: {fileID: 2127918702173799607}
+  - component: {fileID: 3643845555608174286}
   m_Layer: 5
   m_Name: IMG_Mouth
   m_TagString: Untagged
@@ -409,7 +447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 321919bc04984834cae21793bf37e4f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 63328a71d9cddb44b93b35bbaf8904d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -419,6 +457,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3643845555608174286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534502699812644658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Inverse: 0
+  m_MaskInteraction: 85
+  m_UseStencil: 1
+  m_RaycastFilter: 0
 --- !u!1 &5839264165975673697
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +484,7 @@ GameObject:
   - component: {fileID: 8923033710700560474}
   - component: {fileID: 3309013809917706904}
   - component: {fileID: 7302065289919815441}
+  - component: {fileID: 1435962003705008808}
   m_Layer: 5
   m_Name: IMG_Body
   m_TagString: Untagged
@@ -495,6 +550,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1435962003705008808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839264165975673697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Inverse: 0
+  m_MaskInteraction: 85
+  m_UseStencil: 1
+  m_RaycastFilter: 0
 --- !u!1 &6550925249729064880
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +609,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4422968953109459879
 CanvasRenderer:
@@ -587,10 +658,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 6550925249729064880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 385b7d1277b6c4007a84c065696e0f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+  m_DownSamplingRate: 1
+  m_Softness: 1
+  m_Alpha: 1
+  m_IgnoreParent: 0
+  m_PartOfParent: 0
+  m_IgnoreSelfGraphic: 0
+  m_IgnoreSelfStencil: 0
 --- !u!1 &7841162287209972733
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +765,7 @@ GameObject:
   - component: {fileID: 830492281252847787}
   - component: {fileID: 160888380036827999}
   - component: {fileID: 3147714572466897567}
+  - component: {fileID: 2192276485802055060}
   m_Layer: 5
   m_Name: IMG_Eyes
   m_TagString: Untagged
@@ -742,7 +821,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6833e83a18f52864eac97600ce71a887, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 41752d829fbc3c349b48e87bd8bbb3a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -752,3 +831,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2192276485802055060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922678917104311501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Inverse: 0
+  m_MaskInteraction: 85
+  m_UseStencil: 1
+  m_RaycastFilter: 0
