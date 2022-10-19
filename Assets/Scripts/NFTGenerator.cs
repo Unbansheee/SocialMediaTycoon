@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class NFTGenerator : MonoBehaviour
@@ -30,12 +31,15 @@ public class NFTGenerator : MonoBehaviour
     
     public void GenerateAvatar()
     {
-        if (!lockBody) body.GetComponent<SpriteRenderer>().sprite = bodySprites[Random.Range(0, bodySprites.Length)];
-        if (!lockNose) nose.GetComponent<SpriteRenderer>().sprite = noseSprites[Random.Range(0, noseSprites.Length)];
-        if (!lockEyes) eyes.GetComponent<SpriteRenderer>().sprite = eyesSprites[Random.Range(0, eyesSprites.Length)];
-        if (!lockMouth) mouth.GetComponent<SpriteRenderer>().sprite = mouthSprites[Random.Range(0, mouthSprites.Length)];
-        if (!lockHair) hair.GetComponent<SpriteRenderer>().sprite = hairSprites[Random.Range(0, hairSprites.Length)];
-        if (!lockBackground) background.GetComponent<SpriteRenderer>().sprite = backgroundSprites[Random.Range(0, backgroundSprites.Length)];
+        if (!lockBody) body.GetComponent<Image>().sprite = bodySprites[Random.Range(0, bodySprites.Length)];
+        if (!lockNose) nose.GetComponent<Image>().sprite = noseSprites[Random.Range(0, noseSprites.Length)];
+        if (!lockEyes) eyes.GetComponent<Image>().sprite = eyesSprites[Random.Range(0, eyesSprites.Length)];
+        if (!lockMouth) mouth.GetComponent<Image>().sprite = mouthSprites[Random.Range(0, mouthSprites.Length)];
+        if (!lockHair) hair.GetComponent<Image>().sprite = hairSprites[Random.Range(0, hairSprites.Length)];
+        if (!lockBackground) background.GetComponent<Image>().sprite = backgroundSprites[Random.Range(0, backgroundSprites.Length)];
+        
+        
+        
     }
     
     
