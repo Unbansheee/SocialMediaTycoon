@@ -28,9 +28,18 @@ public class NFTGenerator : MonoBehaviour
     public bool lockHair = false;
     public bool lockBackground = false;
     
+    public bool GenerateOnStart = true;
+
+    public int Seed = -1;
     
     public void GenerateAvatar()
     {
+        if (Seed == -1)
+        {
+            Seed = Random.Range(0, 100000);
+        }
+        Random.InitState(Seed);
+        
         if (!lockBody) body.GetComponent<Image>().sprite = bodySprites[Random.Range(0, bodySprites.Length)];
         if (!lockNose) nose.GetComponent<Image>().sprite = noseSprites[Random.Range(0, noseSprites.Length)];
         if (!lockEyes) eyes.GetComponent<Image>().sprite = eyesSprites[Random.Range(0, eyesSprites.Length)];
@@ -38,15 +47,14 @@ public class NFTGenerator : MonoBehaviour
         if (!lockHair) hair.GetComponent<Image>().sprite = hairSprites[Random.Range(0, hairSprites.Length)];
         if (!lockBackground) background.GetComponent<Image>().sprite = backgroundSprites[Random.Range(0, backgroundSprites.Length)];
         
-        
-        
+
     }
     
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (GenerateOnStart) GenerateAvatar();
     }
     
 }

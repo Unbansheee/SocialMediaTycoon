@@ -10,8 +10,14 @@ public class NFTGeneratorEditorButtons : Editor
     {
         DrawDefaultInspector();
         NFTGenerator myScript = (NFTGenerator)target;
-        if (GUILayout.Button("Generate Avatar"))
+        if (GUILayout.Button("Generate From Seed"))
         {
+            myScript.GenerateAvatar();
+        }
+        
+        if (GUILayout.Button("Generate Random Avatar"))
+        {
+            myScript.Seed = Random.Range(0, 1000000);
             myScript.GenerateAvatar();
         }
     }
