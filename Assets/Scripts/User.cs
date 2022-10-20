@@ -236,7 +236,7 @@ public class User : MonoBehaviour
         "bird flu", "infinity tattoo meaning", "why are my hands wet", "protonopia colourblindness", "social anxiety", "dog bark different languages", "flying fish", "are flying fish real",
         "do flying fish actually fly", "low hairline no forehead", "is my forehead too big", "how to do makeup", "how to get rid of ants", "painful ear popping when swallowing", "can we make piles in your yard",
         "how to get my neighbour to move away", "is there a stage 5 cancer", "laser lotus", "millennial traits", "over the counter sleeping pills", "how to get tired now", "gigabit vs gigabyte",
-        "electric toothbrush vs manual toothbrush", "cashews vs peanuts", "what if i am allergic to peanuts", "double boiling", "am i gay", "how to come out as gay"
+        "electric toothbrush vs manual toothbrush", "cashews vs peanuts", "what if i am allergic to peanuts", "double boiling", "am i gay", "how to come out as gay", "alcoholics anonymous", "rehab"
         
     };
 }
