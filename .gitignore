@@ -65,3 +65,7 @@ crashlytics-build.properties
 UserSettings/EditorUserSettings.asset
 
 .idea/.idea.SocialMediaTycoon/.idea/
+Assets/NotShared/*
+!Assets/NotShared/FilesHereAreNotPushedToTheGitRepo.txt
+!Assets/NotShared/FilesHereAreNotPushedToTheGitRepo.txt.meta
+
