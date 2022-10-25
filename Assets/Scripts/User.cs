@@ -38,6 +38,7 @@ public class User : MonoBehaviour
     public int children;
     public List<string> searchHistory;
 
+    public int seed = 0;
 
     public void OnValidate()
     {
@@ -60,16 +61,16 @@ public class User : MonoBehaviour
 
     public void GenerateUser()
     {
+
         hobbies.Clear();
         searchHistory.Clear();
-        
-        
+
         if (!IsLoaded)
         {
             AllUserData = CSVReader.Read("RandomUsers");
             IsLoaded = true;
         }
-        Random.InitState((int)System.DateTime.Now.Ticks);
+        
         
         Dictionary<string, object> entry = AllUserData[Random.Range(0, AllUserData.Count)];
         name = entry["First Name"].ToString() + " " + entry["Last Name"].ToString();

@@ -49,7 +49,6 @@ public class NFTGenerator : MonoBehaviour
         {
             Seed = Random.Range(0, 100000);
         }
-        Random.InitState(Seed);
         
         GenderIdentity id = identity;
         if (id == GenderIdentity.Other)
