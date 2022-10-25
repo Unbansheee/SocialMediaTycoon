@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 
 public class NFTGenerator : MonoBehaviour
 {
+    public GenderIdentity identity = GenderIdentity.Other;
+    
     public GameObject body;
     public GameObject nose;
     public GameObject eyes;
@@ -14,11 +16,19 @@ public class NFTGenerator : MonoBehaviour
     public GameObject hair;
     public GameObject background;
 
-    public Sprite[] bodySprites;
-    public Sprite[] noseSprites;
-    public Sprite[] eyesSprites;
-    public Sprite[] mouthSprites;
-    public Sprite[] hairSprites;
+    public Sprite[] mBodySprites;
+    public Sprite[] mNoseSprites;
+    public Sprite[] mEyesSprites;
+    public Sprite[] mMouthSprites;
+    public Sprite[] mHairSprites;
+    
+    public Sprite[] fBodySprites;
+    public Sprite[] fNoseSprites;
+    public Sprite[] fEyesSprites;
+    public Sprite[] fMouthSprites;
+    public Sprite[] fHairSprites;
+    
+    
     public Sprite[] backgroundSprites;
 
     public bool lockBody = false;
@@ -32,6 +42,7 @@ public class NFTGenerator : MonoBehaviour
 
     public int Seed = -1;
     
+    
     public void GenerateAvatar()
     {
         if (Seed == -1)
@@ -40,11 +51,28 @@ public class NFTGenerator : MonoBehaviour
         }
         Random.InitState(Seed);
         
-        if (!lockBody) body.GetComponent<Image>().sprite = bodySprites[Random.Range(0, bodySprites.Length)];
-        if (!lockNose) nose.GetComponent<Image>().sprite = noseSprites[Random.Range(0, noseSprites.Length)];
-        if (!lockEyes) eyes.GetComponent<Image>().sprite = eyesSprites[Random.Range(0, eyesSprites.Length)];
-        if (!lockMouth) mouth.GetComponent<Image>().sprite = mouthSprites[Random.Range(0, mouthSprites.Length)];
-        if (!lockHair) hair.GetComponent<Image>().sprite = hairSprites[Random.Range(0, hairSprites.Length)];
+        GenderIdentity id = identity;
+        if (id == GenderIdentity.Other)
+        {
+            id = (GenderIdentity) Random.Range(0, 2);
+        }
+        if (identity == GenderIdentity.Male)
+        {
+            if (!lockBody) body.GetComponent<Image>().sprite = mBodySprites[Random.Range(0, mBodySprites.Length)];
+            if (!lockNose) nose.GetComponent<Image>().sprite = mNoseSprites[Random.Range(0, mNoseSprites.Length)];
+            if (!lockEyes) eyes.GetComponent<Image>().sprite = mEyesSprites[Random.Range(0, mEyesSprites.Length)];
+            if (!lockMouth) mouth.GetComponent<Image>().sprite = mMouthSprites[Random.Range(0, mMouthSprites.Length)];
+            if (!lockHair) hair.GetComponent<Image>().sprite = mHairSprites[Random.Range(0, mHairSprites.Length)];
+        }
+        else
+        {
+            if (!lockBody) body.GetComponent<Image>().sprite = fBodySprites[Random.Range(0, fBodySprites.Length)];
+            if (!lockNose) nose.GetComponent<Image>().sprite = fNoseSprites[Random.Range(0, fNoseSprites.Length)];
+            if (!lockEyes) eyes.GetComponent<Image>().sprite = fEyesSprites[Random.Range(0, fEyesSprites.Length)];
+            if (!lockMouth) mouth.GetComponent<Image>().sprite = fMouthSprites[Random.Range(0, fMouthSprites.Length)];
+            if (!lockHair) hair.GetComponent<Image>().sprite = fHairSprites[Random.Range(0, fHairSprites.Length)];
+        }
+        
         if (!lockBackground) background.GetComponent<Image>().sprite = backgroundSprites[Random.Range(0, backgroundSprites.Length)];
         
 
