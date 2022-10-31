@@ -74,14 +74,15 @@ public class User : MonoBehaviour
         
         Dictionary<string, object> entry = AllUserData[Random.Range(0, AllUserData.Count)];
         name = entry["First Name"].ToString() + " " + entry["Last Name"].ToString();
-        age = (int) entry["Age"]; 
+        //check if cast is valid
+        age = int.TryParse(entry["Age"].ToString(), out age) ? age : 27;
         email = entry["Email"].ToString();
         phoneNumber = entry["Phone"].ToString();
         education = entry["Education"].ToString();
         occupation = entry["Occupation"].ToString();
-        experience = (int) entry["Experience (Years)"];
-        salary = (int) entry["Salary"];
-        children = (int) entry["Number of Children"];
+        experience = int.TryParse(entry["Experience (Years)"].ToString(), out experience) ? experience : 3;
+        salary = int.TryParse(entry["Salary"].ToString(), out salary) ? salary : 50000;
+        children = int.TryParse(entry["Number of Children"].ToString(), out children) ? children : 0;
 
         //Marriage Status
         int marriage = Random.Range(0, 10);
