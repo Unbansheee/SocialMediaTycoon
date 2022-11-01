@@ -125,7 +125,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3281516662957069693}
         m_TargetAssemblyTypeName: UI_PersonIcon, Assembly-CSharp
-        m_MethodName: GenerateWidget
+        m_MethodName: OpenInfoPage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -229,6 +229,7 @@ MonoBehaviour:
   Name: {fileID: 3281516663451315761}
   user: {fileID: 3281516663358502458}
   avatar: {fileID: 3281516662342165715}
+  infoPageRef: {fileID: 0}
 --- !u!1 &3281516663358502459
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,34 +274,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7a13dd29fc028344adfe31b0d56fd51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Brad Allen
-  age: 31
-  genderIdentity: 0
-  email: b.allen@randatmail.com
-  phoneNumber: 045-8258-01
-  education: Doctoral
-  occupation: Jeweller
-  experience: 7
+  name: Dexter Phillips
+  age: 21
+  genderIdentity: 2
+  email: d.phillips@randatmail.com
+  phoneNumber: 272-0765-94
+  education: Primary
+  occupation: Social Worker
+  experience: 3
   hobbies:
-  - Mathematics
-  - Embroidery
-  - Gardening
-  salary: 158858
-  savings: 4290
-  debt: 13431
-  creditScore: 521
+  - Skydiving
+  - Astronomy
+  - Metalworking
+  salary: 94209
+  savings: 26361
+  debt: 305
+  creditScore: 530
   marriageStatus: 3
-  children: 4
+  children: 2
   searchHistory:
-  - is the sun real
-  - my cat is possessed by the devil
+  - why should you wash rice
+  - where did dad go
+  - what does /s mean
   - who is in the shadow government
-  - snapple facts
-  - why are people so sensitive
-  - how to get tired now
-  - my back hurts
-  - is social media tracking me
-  seed: 544888
+  - feet smell like cheese
+  - do flying fish actually fly
+  - how to get rid of a pimple fast
+  - rehab
+  seed: 629424
 --- !u!1 &3281516663451315774
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +368,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Brad Allen
+  m_text: Dexter Phillips
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -536,6 +537,10 @@ PrefabInstance:
       value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 1092050056085232019, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0e2c59cef4ecedb4b9951da4e76d1976, type: 3}
+    - target: {fileID: 1092050056085232019, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -554,7 +559,7 @@ PrefabInstance:
     - target: {fileID: 2127918702173799607, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 3dcc855c65f5e364ebcc6ffe2f4944f2, type: 3}
     - target: {fileID: 2127918702173799607, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -562,7 +567,7 @@ PrefabInstance:
     - target: {fileID: 2852578038512626116, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: c49404b789e588b42a147c8f65c5441a, type: 3}
     - target: {fileID: 2875424446013237270, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -570,14 +575,14 @@ PrefabInstance:
     - target: {fileID: 3147714572466897567, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: ad4aff76c0ce05d40a2622fcc7eadfdd, type: 3}
     - target: {fileID: 3147714572466897567, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3223718121666397615, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_PresetInfoIsWorld
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3777910552932288520, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_SizeDelta.x
@@ -590,7 +595,7 @@ PrefabInstance:
     - target: {fileID: 7302065289919815441, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6bdd7b78954c64f4cbc257242f867e19, type: 3}
+      objectReference: {fileID: 21300000, guid: 6dd49a123fe17a64d9171bd5ff83cb52, type: 3}
     - target: {fileID: 7302065289919815441, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -601,11 +606,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7841162287209972734, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: Seed
-      value: 544888
+      value: 629424
       objectReference: {fileID: 0}
     - target: {fileID: 7841162287209972734, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: identity
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7841162287209972735, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RootOrder
@@ -666,7 +671,7 @@ PrefabInstance:
     - target: {fileID: 8218725007814310169, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 9480c309e0e72d0448cb2d3c8189297f, type: 3}
     - target: {fileID: 8218725007814310169, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -674,7 +679,7 @@ PrefabInstance:
     - target: {fileID: 8424000516238932334, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 6373440ff8b7bc747847dd85ffb7e352, type: 3}
     - target: {fileID: 8424000516238932334, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -682,7 +687,7 @@ PrefabInstance:
     - target: {fileID: 8950651778079995672, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: e4ad08972b5e9d746a153a87cc7833ad, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
 --- !u!114 &3281516662342165715 stripped

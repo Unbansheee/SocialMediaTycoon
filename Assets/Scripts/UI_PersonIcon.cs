@@ -12,11 +12,19 @@ public class UI_PersonIcon : MonoBehaviour
     public User user;
     public NFTGenerator avatar;
 
+    public UserInfoPage infoPageRef;
+    
     private int seed = 0;
 
+    public void OpenInfoPage()
+    {
+        infoPageRef.Open(user, avatar);
+    }
+    
     private void OnValidate()
     {
         GenerateWidget();
+        infoPageRef = FindObjectOfType<UserInfoPage>();
         
     }
 
@@ -45,7 +53,7 @@ public class UI_PersonIcon : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        GenerateWidget();
+        //GenerateWidget();
     }
 
     // Update is called once per frame

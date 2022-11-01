@@ -51,7 +51,7 @@ public class User : MonoBehaviour
 
     public void Awake()
     {
-        GenerateUser();
+        //GenerateUser();
     }
 
     public void Start()

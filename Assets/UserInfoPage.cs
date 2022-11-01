@@ -11,6 +11,7 @@ public class UserInfoPage : MonoBehaviour
     public NFTGenerator pageIcon;
     public TextMeshProUGUI name;
     
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class UserInfoPage : MonoBehaviour
     }
     
     
-    void Open(User user, NFTGenerator icon)
+    public void Open(User user, NFTGenerator icon)
     {
         userData = user;
         originalIcon = icon;
