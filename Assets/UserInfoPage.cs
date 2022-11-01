@@ -32,6 +32,8 @@ public class UserInfoPage : MonoBehaviour
         
         pageIcon.Set(originalIcon);
         name.text = userData.name;
+        
+        gameObject.SetActive(true);
     }
 
     // Update is called once per frame
