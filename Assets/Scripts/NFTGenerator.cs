@@ -50,7 +50,23 @@ public class NFTGenerator : MonoBehaviour
     public bool GenerateOnStart = true;
 
     public int Seed = -1;
-    
+
+    public void Set(NFTGenerator copy)
+    {
+        identity = copy.identity;
+        Seed = copy.Seed;
+        
+        body.GetComponent<Image>().sprite = copy.body.GetComponent<Image>().sprite;
+        nose.GetComponent<Image>().sprite = copy.nose.GetComponent<Image>().sprite;
+        eyes.GetComponent<Image>().sprite = copy.eyes.GetComponent<Image>().sprite;
+        mouth.GetComponent<Image>().sprite = copy.mouth.GetComponent<Image>().sprite;
+        hair.GetComponent<Image>().sprite = copy.hair.GetComponent<Image>().sprite;
+        extras.GetComponent<Image>().sprite = copy.extras.GetComponent<Image>().sprite;
+        shirt.GetComponent<Image>().sprite = copy.shirt.GetComponent<Image>().sprite;
+        background.GetComponent<Image>().sprite = copy.background.GetComponent<Image>().sprite;
+        
+        
+    }
     
     public void GenerateAvatar()
     {

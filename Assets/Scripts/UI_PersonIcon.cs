@@ -33,6 +33,7 @@ public class UI_PersonIcon : MonoBehaviour
             
             if (avatar != null)
             {
+                
                 avatar.Seed = seed;
                 avatar.identity = user.genderIdentity;
                 avatar.GenerateAvatar();
