@@ -29,9 +29,9 @@ public class SkillTree : MonoBehaviour
 
     public enum Currency
     {
-        Cash,
+        Cash,  
         Data,
-        Influence
+        Favors
     }
 
     [System.Serializable]
@@ -68,6 +68,8 @@ public class SkillTree : MonoBehaviour
         GameObject go = Instantiate(prefab, position, Quaternion.identity);
         go.name = skillData.skill.ToString();
         go.transform.SetParent(parent.transform);
+        RectTransform rt = go.GetComponent<RectTransform>();
+        rt.sizeDelta = buttonSize;
 
         Image bg = go.transform.Find("BG").GetComponent<Image>();
         bg.color = bg_color;
@@ -81,17 +83,14 @@ public class SkillTree : MonoBehaviour
     void InstantiateSkillTree(GameObject buttonPrefab, List<GameObject> skillButtons, List<GameObject> tierObjects, List<SkillTier> skillTree, Vector2 buttonMarginPercentage)
     {
         RectTransform st = (RectTransform)this.transform;
-
-        RectTransform button = (RectTransform)buttonPrefab.transform;
-        float button_width = button.rect.width;
-        float button_height = button.rect.height;
+        float button_width = buttonSize.x;
+        float button_height = buttonSize.y;
 
         float tier_count = skillTree.Count;
         float full_tier_height = tier_count - 1 >= 0 ? (tier_count * button_height) + ((tier_count - 1) * (button_height * buttonMarginPercentage.y)) : (tier_count * button_height);
-        //float start_y = (st.position.y + ((st.rect.height) / 2)) - ((full_tier_height) / 2);
+        float start_y = (st.position.y + ((st.rect.height) / 2)) - ((full_tier_height) / 2);
 
         float y_pos_change = 0;
-        float widest_x_pos_change = 0;
         int tier_counter = 1;
 
         foreach (SkillTier tier in skillTree)
@@ -113,15 +112,10 @@ public class SkillTree : MonoBehaviour
             }
 
             //tierGo.transform.position = tierGo.transform.position + new Vector3(start_x, start_y + y_pos_change, tierGo.transform.position.z);
-            tierGo.transform.position = tierGo.transform.position + new Vector3(start_x, y_pos_change, tierGo.transform.position.z);
+            tierGo.transform.position = tierGo.transform.position + new Vector3(start_x, start_y + y_pos_change, tierGo.transform.position.z);
 
             y_pos_change += button_height + (button_height * buttonMarginPercentage.y);
             tier_counter += 1;
-
-            if (widest_x_pos_change == 0 || x_pos_change > widest_x_pos_change)
-            {
-                widest_x_pos_change = x_pos_change;
-            }
         }
 
 
@@ -141,6 +135,7 @@ public class SkillTree : MonoBehaviour
     [LabeledArray(new string[] { "Color 1", "Color 2", "Color 3", "Color 4", "Color 5", "Color 6", "Color 7", "Color 8", "Color 9", "Color 10" })]
     public Color bg_color;
     public GameObject SkillButtonPrefab;
+    public Vector2 buttonSize;
     public Vector2 buttonMarginPercentage;
 
     [HideInInspector]
