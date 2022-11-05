@@ -104,6 +104,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8583682079658471287, guid: 3b54531a86db7ce4694deb191d29118d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8583682079658471287, guid: 3b54531a86db7ce4694deb191d29118d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8583682079658471287, guid: 3b54531a86db7ce4694deb191d29118d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8583682079658471287, guid: 3b54531a86db7ce4694deb191d29118d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8583682080005206610, guid: 3b54531a86db7ce4694deb191d29118d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -190,7 +206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8583682080005206611, guid: 3b54531a86db7ce4694deb191d29118d, type: 3}
       propertyPath: m_Name
-      value: PageAdvertisements
+      value: Page_Advertisements
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b54531a86db7ce4694deb191d29118d, type: 3}

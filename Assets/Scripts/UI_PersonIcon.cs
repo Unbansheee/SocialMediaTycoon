@@ -54,6 +54,7 @@ public class UI_PersonIcon : MonoBehaviour
     void Awake()
     {
         //GenerateWidget();
+        infoPageRef = FindObjectOfType<UserInfoPage>();
     }
 
     // Update is called once per frame

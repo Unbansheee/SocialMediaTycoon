@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 682401567006550870}
   - component: {fileID: 7841162287209972734}
   m_Layer: 0
-  m_Name: AvatarIcon
+  m_Name: UI_AvatarIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

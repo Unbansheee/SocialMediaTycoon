@@ -15,7 +15,8 @@ public class UserInfoPage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Open (userData, originalIcon);
+        //Open (userData, originalIcon);
+        Close();
     }
 
     void Close()
