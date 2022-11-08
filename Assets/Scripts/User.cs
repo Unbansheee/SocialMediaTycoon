@@ -37,7 +37,10 @@ public class User : MonoBehaviour
     public MarriageStatus marriageStatus;
     public int children;
     public List<string> searchHistory;
+    
+    public Dictionary<string, object> userAttributes = new Dictionary<string, object>();
 
+    public int seed = 0;
 
     public void OnValidate()
     {
@@ -50,7 +53,7 @@ public class User : MonoBehaviour
 
     public void Awake()
     {
-        GenerateUser();
+        //GenerateUser();
     }
 
     public void Start()
@@ -60,27 +63,30 @@ public class User : MonoBehaviour
 
     public void GenerateUser()
     {
+
         hobbies.Clear();
         searchHistory.Clear();
         
-        
+        userAttributes.Clear();
+
         if (!IsLoaded)
         {
             AllUserData = CSVReader.Read("RandomUsers");
             IsLoaded = true;
         }
-        Random.InitState((int)System.DateTime.Now.Ticks);
+        
         
         Dictionary<string, object> entry = AllUserData[Random.Range(0, AllUserData.Count)];
         name = entry["First Name"].ToString() + " " + entry["Last Name"].ToString();
-        age = (int) entry["Age"]; 
+        //check if cast is valid
+        age = int.TryParse(entry["Age"].ToString(), out age) ? age : 27;
         email = entry["Email"].ToString();
         phoneNumber = entry["Phone"].ToString();
         education = entry["Education"].ToString();
         occupation = entry["Occupation"].ToString();
-        experience = (int) entry["Experience (Years)"];
-        salary = (int) entry["Salary"];
-        children = (int) entry["Number of Children"];
+        experience = int.TryParse(entry["Experience (Years)"].ToString(), out experience) ? experience : 3;
+        salary = int.TryParse(entry["Salary"].ToString(), out salary) ? salary : 50000;
+        children = int.TryParse(entry["Number of Children"].ToString(), out children) ? children : 0;
 
         //Marriage Status
         int marriage = Random.Range(0, 10);
@@ -157,6 +163,8 @@ public class User : MonoBehaviour
         {
             children = age - 18;
         }
+        
+
     }
 
     private static List<Dictionary<string, object>> AllUserData;
