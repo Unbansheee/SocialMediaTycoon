@@ -37,6 +37,8 @@ public class User : MonoBehaviour
     public MarriageStatus marriageStatus;
     public int children;
     public List<string> searchHistory;
+    
+    public Dictionary<string, object> userAttributes = new Dictionary<string, object>();
 
     public int seed = 0;
 
@@ -64,6 +66,8 @@ public class User : MonoBehaviour
 
         hobbies.Clear();
         searchHistory.Clear();
+        
+        userAttributes.Clear();
 
         if (!IsLoaded)
         {
@@ -159,6 +163,8 @@ public class User : MonoBehaviour
         {
             children = age - 18;
         }
+        
+
     }
 
     private static List<Dictionary<string, object>> AllUserData;
