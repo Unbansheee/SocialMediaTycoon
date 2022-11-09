@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.coffee.softmask-for-ugui": {
+      "version": "file:SoftMaskForUGUI-1.0.2",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.2d.animation": {
       "version": "7.0.7",
       "depth": 1,

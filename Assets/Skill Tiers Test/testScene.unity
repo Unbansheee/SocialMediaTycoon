@@ -172,7 +172,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747828ae9297b414491762d9ca2a3d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bg_color: {r: 0.233, g: 0.58852494, b: 0.58852494, a: 1}
+  cashAmount: 0
+  dataAmount: 0
+  favorsAmount: 0
+  lockedColor: {r: 0.31672004, g: 0.31274474, b: 0.3962264, a: 1}
+  unlockableColor: {r: 0.46855342, g: 0.57885367, b: 1, a: 1}
+  unlockedColor: {r: 1, g: 0.72176695, b: 0.5803922, a: 1}
   SkillButtonPrefab: {fileID: 2268464654303294115, guid: 29b7341bdb87fff4086eaa1695462494, type: 3}
   buttonSize: {x: 100, y: 100}
   buttonMarginPercentage: {x: 0.5, y: 0.5}
@@ -181,7 +186,7 @@ MonoBehaviour:
   skillTree:
   - tierUnlocked: 0
     skills:
-    - skillUnlocked: 0
+    - skillUnlocked: 1
       skill: 1
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 
