@@ -132,7 +132,7 @@ MonoBehaviour:
   Page_Adverts: {fileID: 0}
   Page_Upgrades: {fileID: 0}
   Page_Outreach: {fileID: 0}
-  CurrentPage: 4
+  CurrentPage: 2
 --- !u!1 &8481178861054159322
 GameObject:
   m_ObjectHideFlags: 0
