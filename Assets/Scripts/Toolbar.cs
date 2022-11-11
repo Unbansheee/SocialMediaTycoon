@@ -18,7 +18,7 @@ public class Toolbar : MonoBehaviour
     GameObject Page_Outreach;
 
     [SerializeField]
-    int CurrentPage = 3;
+    public int CurrentPage = 3;
 
     List<GameObject> Pages;
 
