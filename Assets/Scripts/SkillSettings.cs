@@ -8,7 +8,7 @@ public class SkillSettings : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
     public string skillDescription;
     public Color unlocked, unlockable, locked;
-    public bool skill_unlocked, skill_unlockable, prerequisites_met, has_enough_money;
+    public bool skill_unlocked, skill_unlockable, prerequisites_met, has_enough_currency;
 
     void SetUnlocked()
     {
