@@ -26,7 +26,7 @@ public class Advertisement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GenerateRandom();
+        //GenerateRandom();
     }
 
     // Update is called once per frame
@@ -35,17 +35,17 @@ public class Advertisement : MonoBehaviour
         
     }
 
-    public void GenerateRandom()
+    public void GenerateRandom(AdvertisementData data)
     {
-        if (backgrounds.Count == 0 || items.Count == 0)
+        if (data.backgrounds.Count == 0 || data.items.Count == 0)
             return;
-        if (backgrounds[0] == null || items[0] == null)
+        if (data.backgrounds[0] == null || data.items[0] == null)
             return;
-        int index = Random.Range(0, backgrounds.Count - 1);
-        background.texture = backgrounds[index];
+        int index = Random.Range(0, data.backgrounds.Count - 1);
+        background.texture = data.backgrounds[index];
 
-        index = Random.Range(0, items.Count - 1);
-        item.texture = items[index];
+        index = Random.Range(0, data.items.Count - 1);
+        item.texture = data.items[index];
 
         string desc = "";
         switch (Random.Range(0, 2))
@@ -54,7 +54,7 @@ public class Advertisement : MonoBehaviour
             case 1: desc = "You don't want to be seen with out the new "; break;
             case 2: desc = "You won't recognize yourself with the new "; break;
         }
-        desc += items[index].name;
+        desc += data.items[index].name;
         text.text = desc;
     }
 }
