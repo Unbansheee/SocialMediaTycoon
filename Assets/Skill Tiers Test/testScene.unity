@@ -172,110 +172,121 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747828ae9297b414491762d9ca2a3d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cashAmount: 0
-  dataAmount: 0
-  favorsAmount: 0
+  currentCurrency: 0a0000000a0000000a000000
   lockedColor: {r: 0.31672004, g: 0.31274474, b: 0.3962264, a: 1}
   unlockableColor: {r: 0.46855342, g: 0.57885367, b: 1, a: 1}
-  unlockedColor: {r: 1, g: 0.72176695, b: 0.5803922, a: 1}
+  unlockedColor: {r: 0.632667, g: 1, b: 0.5803922, a: 1}
   SkillButtonPrefab: {fileID: 2268464654303294115, guid: 29b7341bdb87fff4086eaa1695462494, type: 3}
+  skillTreeCenterPosition: {x: 0, y: 0}
   buttonSize: {x: 100, y: 100}
   buttonMarginPercentage: {x: 0.5, y: 0.5}
   skillButtons: []
   tierObjects: []
   skillTree:
-  - tierUnlocked: 0
-    skills:
-    - skillUnlocked: 1
+  - skills:
+    - skillUnlocked: 0
       skill: 1
+      skillDescription: basic skill
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 
       currency: 0
       cost: 0
-  - tierUnlocked: 0
-    skills:
+  - skills:
     - skillUnlocked: 0
       skill: 2
+      skillDescription: 
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 01000000
       currency: 0
       cost: 1
     - skillUnlocked: 0
       skill: 5
+      skillDescription: 
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 01000000
       currency: 0
       cost: 1
     - skillUnlocked: 0
       skill: 11
+      skillDescription: 
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 01000000
       currency: 0
       cost: 1
     - skillUnlocked: 0
       skill: 8
+      skillDescription: 
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 01000000
       currency: 0
       cost: 1
-  - tierUnlocked: 0
-    skills:
+  - skills:
     - skillUnlocked: 0
       skill: 3
+      skillDescription: 
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 02000000
       currency: 0
       cost: 0
     - skillUnlocked: 0
       skill: 4
+      skillDescription: 
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 02000000
       currency: 0
       cost: 0
     - skillUnlocked: 0
       skill: 6
+      skillDescription: 
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 05000000
       currency: 0
       cost: 0
     - skillUnlocked: 0
       skill: 7
+      skillDescription: 
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 05000000
       currency: 0
       cost: 0
     - skillUnlocked: 0
       skill: 9
+      skillDescription: 
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 08000000
       currency: 0
       cost: 0
     - skillUnlocked: 0
       skill: 10
+      skillDescription: 
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 08000000
       currency: 0
       cost: 0
     - skillUnlocked: 0
       skill: 12
+      skillDescription: 
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 0b000000
       currency: 0
       cost: 0
     - skillUnlocked: 0
       skill: 13
+      skillDescription: 
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 0b000000
       currency: 0
       cost: 0
-  - tierUnlocked: 0
-    skills:
+  - skills:
     - skillUnlocked: 0
       skill: 14
+      skillDescription: 
       skillIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
       prerequisiteSkills: 0d0000000c0000000a0000000900000007000000060000000300000004000000
       currency: 0
       cost: 0
+  tooltipBoxPrefab: {fileID: 1837646843438455104, guid: e43d060b3e542e74a84889c4eff2b8ab, type: 3}
+  tooltipBox: {fileID: 0}
 --- !u!1 &684321982
 GameObject:
   m_ObjectHideFlags: 0

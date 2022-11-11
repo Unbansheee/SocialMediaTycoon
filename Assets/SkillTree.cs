@@ -44,6 +44,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         [field: SerializeField]
         public SkillType skill;
 
+        public string skillDescription;
+
         public Sprite skillIcon;
 
         [LabeledArray(new string[] { "Prerequisite 1", "Prerequisite 2", "Prerequisite 3", "Prerequisite 4", "Prerequisite 5", "Prerequisite 6", "Prerequisite 7", "Prerequisite 8", "Prerequisite 9", "Prerequisite 10" })]
@@ -63,11 +65,77 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     [System.Serializable]
     public class SkillTier
     {
-        public bool tierUnlocked;
-
         [LabeledArray(new string[] { "Skill 1", "Skill 2", "Skill 3", "Skill 4", "Skill 5", "Skill 6", "Skill 7", "Skill 8", "Skill 9", "Skill 10" })]
         public List<Skill> skills;
     }
+
+
+
+
+    [LabeledArray(new string[] { "Current Cash Amount", "Current Data Amount", "Current Favor Amount" })]
+    public int[] currentCurrency = new int[3];
+
+    public Color lockedColor;
+    public Color unlockableColor;
+    public Color unlockedColor;
+
+    public GameObject SkillButtonPrefab;
+    public Vector2 skillTreeCenterPosition;
+    public Vector2 buttonSize;
+    public Vector2 buttonMarginPercentage;
+
+    [HideInInspector]
+    public List<GameObject> skillButtons;
+    [HideInInspector]
+    public List<GameObject> tierObjects;
+
+    [LabeledArray(new string[] { "Skill Tier 1", "Skill Tier 2", "Skill Tier 3", "Skill Tier 4", "Skill Tier 5", "Skill Tier 6", "Skill Tier 7", "Skill Tier 8", "Skill Tier 9", "Skill Tier 10" })]
+    public List<SkillTier> skillTree;
+
+    public GameObject tooltipBoxPrefab;
+    public GameObject tooltipBox;
+
+    // Runs once at the beginning
+    void Start()
+    {
+        InstantiateSkillTree(skillButtons, tierObjects, skillTree, buttonMarginPercentage);
+        InstantiateTooltipBox(tooltipBoxPrefab);
+    }
+
+    void Update()
+    {
+        UpdateSkills();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
+        GameObject selectedGameObject = eventData.pointerCurrentRaycast.gameObject;
+
+        Skill selectedSkill;
+        SkillSettings settings;
+        GameObject selectedSkillButton;
+
+        foreach (var skillTier in skillTree)
+        {
+            IEnumerable<Skill>  selectedSkills = skillTier.skills.Where(a => a.skill.ToString() == selectedGameObject.name);
+            IEnumerable<GameObject> skillButtons = this.skillButtons.Where(a => a == selectedGameObject.transform.parent.gameObject);
+
+            if (selectedSkills.Count() > 0)
+            {
+                selectedSkill = selectedSkills.ElementAt(0);
+                settings = selectedGameObject.transform.parent.transform.gameObject.GetComponent<SkillSettings>();
+                selectedSkillButton = skillButtons.ElementAt(0);
+
+                UpdateSkillButton(selectedSkill, settings, true);
+
+                Debug.Log("preqs met: " + settings.prerequisites_met + ", has enough money: " + settings.has_enough_money + ", is unlockable: " + settings.skill_unlockable + ", is unlocked: " + settings.skill_unlocked);
+                break;
+            }
+        }
+    }
+
+
 
     GameObject CreateSkillButton(Skill skillData, GameObject prefab, GameObject parent, Vector3 position)
     {
@@ -78,9 +146,16 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         RectTransform rt = go.GetComponent<RectTransform>();
         rt.sizeDelta = buttonSize;
 
+        // set skill setings (this will update automatically from now)
+        SkillSettings skillSettings = go.transform.gameObject.GetComponent<SkillSettings>();
+        skillSettings.unlockable = unlockableColor;
+        skillSettings.unlocked = unlockedColor;
+        skillSettings.locked = lockedColor;
+        skillSettings.skill_unlocked = skillData.skillUnlocked;
+        skillSettings.skillDescription = "<b>" + skillData.skill.ToString() + "</b>\n\n" + skillData.skillDescription + "\n\n<b>Cost</b>: " + skillData.currency + " " + skillData.cost + "\n<b>Prerequisites</b>: " + string.Join(", ", skillData.prerequisiteSkills);
+
         Image bg = go.transform.Find("BG").GetComponent<Image>();
         bg.color = lockedColor;
-        //go.transform.Find("BG").name = go.name + "_BG";
 
         Image icon = go.transform.Find("ICON").GetComponent<Image>();
         icon.sprite = skillData.skillIcon;
@@ -89,37 +164,6 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         return go;
     }
 
-    //void UpdateSkillButtons()
-    //{
-    //    foreach (var preq in skill.prerequisiteSkills)
-    //    {
-    //        var s = skillButtons
-    //        . // For all my buildings
-    //        .Select(b => b.Apartments // Select the apartments
-    //            .Where(a => a.State == ApartmentState.Approved // where x
-    //                && a.Accessibility == AccessibilityState.Saleable));
-    //    }
-
-    //    foreach (var skillTier in skillTree)
-    //    {
-    //        var skills = skillTier.skills.Where(a => a.skill.ToString() == eventData.pointerCurrentRaycast.gameObject.name);
-    //        var skillButtonBGs = this.skillButtons.Where(a => a.name.ToString() == eventData.pointerCurrentRaycast.gameObject.parent.transform.Find("BG").GetComponent<Image>());
-
-    //        if (skills.Count() > 0)
-    //        {
-    //            foreach (var skill in skills)
-    //            {
-    //                skill.PrintSkill();
-    //            }
-
-    //            foreach (var skillButton in skillButtons)
-    //            {
-    //                skill.PrintSkill();
-    //            }
-    //        }
-    //    }
-    //}
-
     void InstantiateSkillTree(List<GameObject> skillButtons, List<GameObject> tierObjects, List<SkillTier> skillTree, Vector2 buttonMarginPercentage)
     {
         RectTransform st = (RectTransform)this.transform;
@@ -127,8 +171,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         float button_height = buttonSize.y;
 
         float tier_count = skillTree.Count;
-        float full_tier_height = tier_count - 1 >= 0 ? (tier_count * button_height) + ((tier_count - 1) * (button_height * buttonMarginPercentage.y)) : (tier_count * button_height);
-        float start_y = (st.position.y + ((st.rect.height) / 2)) - ((full_tier_height) / 2);
+        float full_tier_height = tier_count - 1 >= 0 ? (tier_count * button_height) + ((tier_count - 1) * (button_height * buttonMarginPercentage.y)) - button_height : ((tier_count - 1) * button_height) - button_height;
+        float start_y = st.position.y - (full_tier_height / 2);
 
         float y_pos_change = 0;
         int tier_counter = 1;
@@ -136,8 +180,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         foreach (SkillTier tier in skillTree)
         {
             float skill_count = tier.skills.Count;
-            float full_tier_width = skill_count - 1 >= 0 ? (skill_count * button_width) + ((skill_count - 1) * (button_width * buttonMarginPercentage.x)) : (skill_count * button_width);
-            float start_x = (st.position.x + ((st.rect.width)/2)) - ((full_tier_width)/2);
+            float full_tier_width = skill_count - 1 >= 0 ? (skill_count * button_width) + ((skill_count - 1) * (button_width * buttonMarginPercentage.x) - button_width) : ((skill_count - 1) * button_width) - button_width;
+            float start_x = st.position.x - (full_tier_width / 2);
 
             float x_pos_change = 0;
 
@@ -157,7 +201,6 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             tier_counter += 1;
         }
 
-
         GameObject parent = new("Tiers", typeof(RectTransform));
         parent.transform.SetParent(this.transform);
 
@@ -165,159 +208,109 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         {
             tierGo.transform.SetParent(parent.transform);
         }
-
-        Vector3[] v = new Vector3[4];
-        this.transform.Find("Tiers").GetComponent<RectTransform>().GetWorldCorners(v);
-
     }
 
-    public int cashAmount;
-    public int dataAmount;
-    public int favorsAmount;
-
-    public Color lockedColor;
-    public Color unlockableColor;
-    public Color unlockedColor;
-
-    public GameObject SkillButtonPrefab;
-    public Vector2 buttonSize;
-    public Vector2 buttonMarginPercentage;
-
-    [HideInInspector]
-    public List<GameObject> skillButtons;
-    [HideInInspector]
-    public List<GameObject> tierObjects;
-
-    [LabeledArray(new string[] { "Skill Tier 1", "Skill Tier 2", "Skill Tier 3", "Skill Tier 4", "Skill Tier 5", "Skill Tier 6", "Skill Tier 7", "Skill Tier 8", "Skill Tier 9", "Skill Tier 10" })]
-    public List<SkillTier> skillTree;
-
-    // Runs once at the beginning
-    void Start()
+    public void InstantiateTooltipBox(GameObject tooltipBoxPrefab)
     {
-        InstantiateSkillTree(skillButtons, tierObjects, skillTree, buttonMarginPercentage);
+        tooltipBox = Instantiate(tooltipBoxPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        tooltipBox.name = "TooltipBox";
+        tooltipBox.transform.SetParent(transform.parent);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateSkillButton(Skill selectedSkill, SkillSettings settings, bool selected_for_purchase = false)
     {
 
-    }
+        // count the number of prerequites that have been unlocked
+        List<SkillType> unlocked_prerequisites = new();
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
-
-        //foreach (var skillTier in skillTree)
-        //{
-        //    var skills = skillTier.skills
-        //        .Where(a => a.skill.ToString() == eventData.pointerCurrentRaycast.gameObject.name);
-        //    // Do whatever.
-        //    if (skills.Count() > 0)
-        //    {
-        //        foreach (var skill in skills)
-        //        {
-        //            skill.PrintSkill();
-        //        }
-        //    }
-        //}
-
-        foreach (var skillTier in skillTree)
+        foreach (var preq in selectedSkill.prerequisiteSkills)
         {
-            var selectedSkills = skillTier.skills.Where(a => a.skill.ToString() == eventData.pointerCurrentRaycast.gameObject.name);
-            var skillButtons = this.skillButtons
-                .Where(a => a == eventData.pointerCurrentRaycast.gameObject.transform.parent.gameObject);
-
-            Debug.Log("Skills: " + selectedSkills.Count());
-            Debug.Log("skillButtons: " + skillButtons.Count());
-
-            var all_skills = skillTier.skills.Where(a => a.skill.ToString() == eventData.pointerCurrentRaycast.gameObject.transform.parent.name).Select(a => a.skill);
-
-            if (selectedSkills.Count() > 0)
+            foreach (var skillTier in skillTree)
             {
-                Image bg = skillButtons.ElementAt(0).transform.Find("BG").GetComponent<Image>();
-
-                if (selectedSkills.ElementAt(0).skillUnlocked)
-                {
-                    // if unlocked
-                    bg.color = unlockedColor;
-
-                    Debug.Log("UNLOCKED: " + eventData.pointerCurrentRaycast.gameObject.name);
-                }
-                else
-                {
-                    List<SkillType> unlocked_prerequisites = new();
-
-                    foreach (var preq in selectedSkills.ElementAt(0).prerequisiteSkills)
-                    {
-                        var unlocked_prerequisite = skillTier.skills.Where(a => a.skill == preq).Select(a => a.skill);
-                        unlocked_prerequisites.AddRange(unlocked_prerequisite);
-                    }
-
-                    if (unlocked_prerequisites.Count == selectedSkills.ElementAt(0).prerequisiteSkills.Count)
-                    {
-                        // prerequisites unlocked
-                        bg.color = unlockableColor;
-                        Debug.Log("UNLOCKABLE: " + eventData.pointerCurrentRaycast.gameObject.name);
-                    }
-                    else
-                    {
-                        bg.color = lockedColor;
-                        Debug.Log("LOCKED: " + eventData.pointerCurrentRaycast.gameObject.name);
-                    }
-                }
+                // select prerequisite skills in this tier
+                var prerequisite = skillTier.skills.Where(a => a.skill == preq).Select(a => a);
+                // select unlocked prerequisites
+                var unlocked_prerequisite = prerequisite.Where(a => a.skillUnlocked == true).Select(a => a.skill);
+                // add to list of unlocked prerequisites
+                unlocked_prerequisites.AddRange(unlocked_prerequisite);
             }
-            
+        }
 
-            //List<SkillType> unlocked_prerequisites = new();
 
-            //        foreach (var preq in skill.prerequisiteSkills)
-            //        {
-            //            var unlocked_prerequisite = skillTier.skills.Where(a => a.skill == preq).Select(a => a.skill);
-            //            unlocked_prerequisites.AddRange(unlocked_prerequisite);
-            //        }
+        // have the prerequisite skills been unlocked?
+        if (selectedSkill.prerequisiteSkills.Count > 0)
+        {
+            selectedSkill.prerequisiteSkills.Sort();
+            unlocked_prerequisites.Sort();
+            settings.prerequisites_met = unlocked_prerequisites.Count == selectedSkill.prerequisiteSkills.Count;
+        }
+        else
+        {
+            settings.prerequisites_met = true;
+        }
 
-            //        bool prerequisites_unlocked = unlocked_prerequisites.Count == skill.prerequisiteSkills.Count ? true : false;
 
-            //if (skills.Count() > 0)
-            //{
-            //    foreach (var skill in skills)
-            //    {
-            //        skill.PrintSkill();
+        // do they have enough of the right currency?
+        if (selectedSkill.currency == Currency.Cash && currentCurrency[0] >= selectedSkill.cost)
+        {
+            settings.has_enough_money = true;
+        }
+        else if (selectedSkill.currency == Currency.Data && currentCurrency[1] >= selectedSkill.cost)
+        {
+            settings.has_enough_money = true;
+        }
+        else if (selectedSkill.currency == Currency.Favors && currentCurrency[2] >= selectedSkill.cost)
+        {
+            settings.has_enough_money = true;
+        }
+        else
+        {
+            settings.has_enough_money = false;
+        }
 
-            //        List<SkillType> unlocked_prerequisites = new();
 
-            //        foreach (var preq in skill.prerequisiteSkills)
-            //        {
-            //            var unlocked_prerequisite = skillTier.skills.Where(a => a.skill == preq).Select(a => a.skill);
-            //            unlocked_prerequisites.AddRange(unlocked_prerequisite);
-            //        }
 
-            //        bool prerequisites_unlocked = unlocked_prerequisites.Count == skill.prerequisiteSkills.Count ? true : false;
+        if (settings.prerequisites_met && settings.has_enough_money)
+        {
+            settings.skill_unlockable = true;
+        }
 
-            //        foreach (var BG in skillButtonBGImages)
-            //        {
-            //            if (skill.skillUnlocked)
-            //            {
-            //                // if unlocked
-            //                BG.GetComponent<Image>().color = unlockedColor;
-            //                Debug.Log("UNLOCKED: " + eventData.pointerCurrentRaycast.gameObject.name);
-            //            }
-            //            else
-            //            {
-            //                if (prerequisites_unlocked)
-            //                {
-            //                    BG.GetComponent<Image>().color = unlockableColor;
-            //                    Debug.Log("UNLOCKABLE: " + eventData.pointerCurrentRaycast.gameObject.name);
-            //                }
-            //                else
-            //                {
-            //                    BG.GetComponent<Image>().color = lockedColor;
-            //                    Debug.Log("LOCKED: " + eventData.pointerCurrentRaycast.gameObject.name);
-            //                }
-            //            }
-            //        }
-            //    }
-            //}
+
+
+        if (settings.skill_unlockable && selected_for_purchase)
+        {
+            if (selectedSkill.currency == Currency.Cash)
+            {
+                currentCurrency[0] -= selectedSkill.cost;
+            }
+            else if (selectedSkill.currency == Currency.Data)
+            {
+                currentCurrency[1] -= selectedSkill.cost;
+            }
+            else if (selectedSkill.currency == Currency.Favors)
+            {
+                currentCurrency[2] -= selectedSkill.cost;
+            }
+
+            settings.skill_unlocked = true;
+        }
+
+        // update skill object in skill tree
+        selectedSkill.skillUnlocked = settings.skill_unlocked;
+
+    }
+
+    public void UpdateSkills()
+    {
+        foreach (SkillTier skillTier in skillTree)
+        {
+            foreach (Skill skill in skillTier.skills)
+            {
+                // foreach skill update their current UI settings
+                GameObject skillButton = GameObject.Find(skill.skill.ToString());
+                SkillSettings settings = skillButton.transform.gameObject.GetComponent<SkillSettings>();
+                UpdateSkillButton(skill, settings);
+            }
         }
     }
 }
