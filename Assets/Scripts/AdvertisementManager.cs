@@ -1,13 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+public enum AdvertType
+{
+    Alcohol,
+    Food,
+    Vape,
+    Vehicle
+}
+
+[System.Serializable]
+public struct AdvertisementData
+{
+    public AdvertType type;
+    public List<Texture2D> items;
+    public List<Texture2D> backgrounds;
+}
 
 public class AdvertisementManager : MonoBehaviour
 {
     [SerializeField]
     List<Advertisement> Advertisements;
 
+    [SerializeField]
+    List<AdvertisementData> advertismenetData;
+
+
     PlayerData playerData;
+
+    void Awake()
+    {
+
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +50,16 @@ public class AdvertisementManager : MonoBehaviour
 
     void RefreshAds()
     {
-        foreach (Advertisement ad in Advertisements)
+        if (advertismenetData.Count == 0)
         {
-            ad.GenerateRandom();
+            Debug.LogError("Tried to generate ad but no input data.");
+            return;
+        }
+        foreach (Advertisement ad in Advertisements)
+        { 
+            int index = Random.Range(0, advertismenetData.Count - 1);
+            if (index >= 0)
+                ad.GenerateRandom(advertismenetData[index]);
         }
     }
 

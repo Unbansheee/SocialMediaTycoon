@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 26.57779}
-  m_SizeDelta: {x: -102.844406, y: -102.844406}
+  m_AnchoredPosition: {x: 0, y: -0.00010681152}
+  m_SizeDelta: {x: 0.000061035, y: -0.00015259}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3452897997473876702
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 585c215b4fc56554e88ee38872597fa9, type: 3}
+  m_Texture: {fileID: 2800000, guid: f08433f622033e0428d87f66c2635dd6, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -158,7 +158,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2494104752951400631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,25 +184,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgrounds:
-  - {fileID: 2800000, guid: 281f4b44d933f1948867d3d3e6ae08f8, type: 3}
-  - {fileID: 2800000, guid: 6f778473031c17a47abb6be3fe585334, type: 3}
-  - {fileID: 2800000, guid: 709729c9178724549b0558be8fe74f53, type: 3}
-  - {fileID: 2800000, guid: ae5cfb4482b4c3c49b2e9416d7ffb8e3, type: 3}
-  - {fileID: 2800000, guid: 35a3ab8440465d04ab7830ee2eeba9d7, type: 3}
-  - {fileID: 2800000, guid: b7a1fdd34efc4654dab4ac3b511cf991, type: 3}
-  - {fileID: 2800000, guid: f2ef265ef2288ed4ab48097c97b8224b, type: 3}
-  - {fileID: 2800000, guid: 4e578c179a2ef2d4680a3629d7d295b8, type: 3}
-  - {fileID: 2800000, guid: 19fee8c1ba1e83b4191d8659eb3c4d9a, type: 3}
-  - {fileID: 2800000, guid: 56f3ad00753ab484d88e68977fb93a1c, type: 3}
-  - {fileID: 2800000, guid: 088a93837bc6904409e3ef6b984e76a6, type: 3}
+  - {fileID: 2800000, guid: 269adbc9d5e8c114eb252da5d0628642, type: 3}
+  - {fileID: 2800000, guid: ec334784e9fc2a14399cd6b5a6a911d8, type: 3}
+  - {fileID: 2800000, guid: 9b5750ab76dd1d246bcc135a0925eb6e, type: 3}
   items:
-  - {fileID: 2800000, guid: 816bab68f77ad58409ef1086df9fe202, type: 3}
-  - {fileID: 2800000, guid: 585c215b4fc56554e88ee38872597fa9, type: 3}
-  - {fileID: 2800000, guid: c2bffc1df06faf84cbeba1409f53c819, type: 3}
-  - {fileID: 2800000, guid: 94c658a637b133e49818e0502bf59487, type: 3}
-  - {fileID: 2800000, guid: 9f626c5055ffd3d4c87b8e618b772139, type: 3}
-  - {fileID: 2800000, guid: 4b68df8f1f9c55b4e9669d414422d84a, type: 3}
-  - {fileID: 2800000, guid: b83727fdab4505041be655ebe6732278, type: 3}
+  - {fileID: 2800000, guid: f08433f622033e0428d87f66c2635dd6, type: 3}
+  - {fileID: 2800000, guid: fbaac9e184dcefd48b630b6da65dfcc4, type: 3}
+  - {fileID: 2800000, guid: cfff2b74ccf59ad4495618167dac7895, type: 3}
   background: {fileID: 2701364811320089147}
   item: {fileID: 2919607243326038404}
   text: {fileID: 1878634241177618203}
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 281f4b44d933f1948867d3d3e6ae08f8, type: 3}
+  m_Texture: {fileID: 2800000, guid: 269adbc9d5e8c114eb252da5d0628642, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -284,7 +284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4499104412908344688
 RectTransform:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.21000001}
-  m_AnchoredPosition: {x: 0, y: -0.25001526}
+  m_AnchoredPosition: {x: 0, y: -0.25}
   m_SizeDelta: {x: 0, y: -0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7711155778552177924
@@ -360,7 +360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3079942087974126798
 RectTransform:
   m_ObjectHideFlags: 0

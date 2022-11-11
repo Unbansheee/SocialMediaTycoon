@@ -9,6 +9,8 @@ public class InfoBar : MonoBehaviour
     public TextMeshProUGUI UserCount;
     public TextMeshProUGUI Money;
     public TextMeshProUGUI Data;
+    public TextMeshProUGUI PageNameText;
+    public Toolbar Toolbar;
     
     void Awake()
     {
@@ -54,6 +56,24 @@ public class InfoBar : MonoBehaviour
             dataMagnitude = "TB";
         }
         Data.text = data.ToString() + " " + dataMagnitude;
-        
+
+
+        switch (Toolbar.CurrentPage)
+        {
+            case 1:
+                PageNameText.text = "NEWS";
+                break;
+            case 2:
+                PageNameText.text = "USERS";
+                break;
+
+            case 3:
+                PageNameText.text = "UPGRADES";
+                break;
+
+            default:
+                PageNameText.text = "???";
+                break;
+        }
     }
 }
