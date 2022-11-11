@@ -27,10 +27,6 @@ public class Toolbar : MonoBehaviour
     {
 
         Pages = new List<GameObject> { Page_Settings, Page_News, Page_Profiles, Page_Upgrades , Page_Adverts, Page_Outreach };
-        foreach (GameObject page in Pages)
-        {
-            Debug.Log(page);
-        }
         ShowPage(CurrentPage);
     }
 
