@@ -8,25 +8,16 @@ using TMPro;
 public class Advertisement : MonoBehaviour
 {
     [SerializeField]
-    List<Texture2D> backgrounds;
-    [SerializeField]
-    List<Texture2D> items;
-    [SerializeField]
     RawImage background;
     [SerializeField]
     RawImage item;
     [SerializeField]
     TextMeshProUGUI text;
 
-    //private void Awake()
-    //{
-    //    
-    //}
-
     // Start is called before the first frame update
     void Start()
     {
-        //GenerateRandom();
+        
     }
 
     // Update is called once per frame
