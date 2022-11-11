@@ -30,7 +30,7 @@ public class TooltipManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position = Input.mousePosition + new Vector3(-((transform.GetComponent<RectTransform>().rect.height/4) + 3), (transform.GetComponent<RectTransform>().rect.height/2) + 3, 0); ;
+        transform.position = Input.mousePosition + new Vector3(-(3), (transform.GetComponent<RectTransform>().rect.height/2) + 3, 0);
     }
 
     public void SetAndShowToolTip(string message)
