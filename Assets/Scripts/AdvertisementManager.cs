@@ -11,12 +11,6 @@ public enum AdvertType
     Vehicle
 }
 
-//[System.Serializable]
-//public class ListWrapper<T>
-//{
-//    public List<T> list;
-//}
-
 [System.Serializable]
 public struct AdvertisementData
 {
@@ -33,29 +27,12 @@ public class AdvertisementManager : MonoBehaviour
     [SerializeField]
     List<AdvertisementData> advertismenetData;
 
-    List<AdvertisementData> advertismenetData2;
 
     PlayerData playerData;
 
     void Awake()
     {
-        advertismenetData2 = new List<AdvertisementData>();
-        foreach (AdvertisementData data in advertismenetData)
-        {
-            AdvertisementData copy;
-            copy.type = data.type;
-            copy.items = new List<Texture2D>();
-            foreach (Texture2D img in data.items)
-            {
-                copy.items.Add(img);
-            }
-            copy.backgrounds = new List<Texture2D>();
-            foreach (Texture2D img in data.backgrounds)
-            {
-                copy.backgrounds.Add(img);
-            }
-            advertismenetData2.Add(copy);
-        }
+
     }
 
     // Start is called before the first frame update
@@ -73,16 +50,16 @@ public class AdvertisementManager : MonoBehaviour
 
     void RefreshAds()
     {
-        if (advertismenetData2.Count == 0)
+        if (advertismenetData.Count == 0)
         {
             Debug.LogError("Tried to generate ad but no input data.");
             return;
         }
         foreach (Advertisement ad in Advertisements)
         { 
-            int index = Random.Range(0, advertismenetData2.Count - 1);
+            int index = Random.Range(0, advertismenetData.Count - 1);
             if (index >= 0)
-                ad.GenerateRandom(advertismenetData2[index]);
+                ad.GenerateRandom(advertismenetData[index]);
         }
     }
 
