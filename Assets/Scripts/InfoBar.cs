@@ -61,14 +61,14 @@ public class InfoBar : MonoBehaviour
         switch (Toolbar.CurrentPage)
         {
             case 1:
-                PageNameText.text = "News";
+                PageNameText.text = "NEWS";
                 break;
             case 2:
-                PageNameText.text = "Users";
+                PageNameText.text = "USERS";
                 break;
 
             case 3:
-                PageNameText.text = "Upgrades";
+                PageNameText.text = "UPGRADES";
                 break;
 
             default:
