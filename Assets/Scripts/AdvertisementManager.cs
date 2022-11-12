@@ -58,7 +58,7 @@ public class AdvertisementManager : MonoBehaviour
         }
         foreach (Advertisement ad in Advertisements)
         { 
-            int index = Random.Range(0, advertismenetData.Count - 1);
+            int index = Random.Range(0, advertismenetData.Count);
             if (index >= 0)
                 ad.GenerateRandom(advertismenetData[index]);
         }
