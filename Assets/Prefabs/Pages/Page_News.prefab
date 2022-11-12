@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Inertia: 1
   m_DecelerationRate: 0.135
   m_ScrollSensitivity: 10
-  m_Viewport: {fileID: 2853058489755067269}
+  m_Viewport: {fileID: 281819716701595306}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
   m_HorizontalScrollbarVisibility: 0
@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2853058489755067269}
   - component: {fileID: 3914503744110401917}
+  - component: {fileID: 5437524622423997282}
   m_Layer: 0
   m_Name: VerticalLayoutGroup
   m_TagString: Untagged
@@ -119,8 +120,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000010014, y: 0.018677}
-  m_SizeDelta: {x: 1080, y: 1666.6}
+  m_AnchoredPosition: {x: -0.000010014, y: 0.00021479119}
+  m_SizeDelta: {x: 1080, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3914503744110401917
 MonoBehaviour:
@@ -148,6 +149,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &5437524622423997282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573430704495440200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
 --- !u!1001 &3998794133442311610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -380,6 +395,31 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8583682080005206610, guid: 3b54531a86db7ce4694deb191d29118d, type: 3}
   m_PrefabInstance: {fileID: 4537827408593479018}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5325159817237911353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8583682080005206611, guid: 3b54531a86db7ce4694deb191d29118d, type: 3}
+  m_PrefabInstance: {fileID: 4537827408593479018}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1168410470412200347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5325159817237911353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd177ce62ea7204ba8bca23f8c47e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newsItemPrefab: {fileID: 5272412320015797908, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
+  parentContainer: {fileID: 2853058489755067269}
+  newsDatabase:
+  - id: 1
+    headline: Finally! Useful advertisements!
+    blurb: Users of Social Media Tycoon are raving about how frequently they see
+      advertisements for products they could have sworn they were just talking about!
+  scheduledNews: 
 --- !u!1001 &8060782119404808226
 PrefabInstance:
   m_ObjectHideFlags: 0
