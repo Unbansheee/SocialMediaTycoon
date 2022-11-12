@@ -44,6 +44,12 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         Ban_Encryption,         // ++ data
         Prohibitive_Regulation, // ++users
         Acquire_Competition,
+
+        // Special 'upgrades' granted automatically
+        // Might need to rename these with ctrl+R, R
+        Minimum_10000_Users,
+        Minimum_1000000_Money,
+        Minimum_1000_Data,
     }
 
     [System.Serializable]
@@ -182,7 +188,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         skillSettings.locked = lockedColor;
         skillSettings.skill_unlocked = skillData.skillUnlocked;
         string preq = skillData.prerequisiteSkills.Count > 0 ? "\n<b>Prerequisites</b>: " + string.Join(", ", skillData.prerequisiteSkills) : ""; //TODO join SkillName()
-        skillSettings.skillDescription = "<b>" + skillData.SkillName() + "</b>\n\n" + skillData.skillDescription + "\n\n<b>Cost</b>: " + skillData.currency.ToString() + " " + skillData.cost + preq; 
+        skillSettings.skillDescription = "<b>" + skillData.SkillName() + "</b>\n\n" + skillData.skillDescription + "\n\n<b>Cost</b>: " + skillData.currency.ToString() + " " + skillData.cost + preq.Replace('_',' '); 
 
         //Image bg = go.transform.Find("BG").GetComponent<Image>();
         //bg.color = lockedColor;

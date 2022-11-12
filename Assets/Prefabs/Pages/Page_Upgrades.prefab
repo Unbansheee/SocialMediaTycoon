@@ -562,7 +562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[0].skills.Array.data[0].prerequisiteSkills.Array.data[0]
-      value: 0
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[1].skills.Array.data[0].prerequisiteSkills.Array.data[0]
@@ -829,8 +829,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[0].skills.Array.data[0].prerequisiteSkills.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[1].prerequisiteSkills.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[2].prerequisiteSkills.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[0].skills.Array.data[0].prerequisiteSkills.Array.data[0]
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[1].skills.Array.data[0].prerequisiteSkills.Array.data[0]
@@ -1184,7 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
       propertyPath: m_text
-      value: Expansion
+      value: Corporate Expansion
       objectReference: {fileID: 0}
     - target: {fileID: 7947261883946647712, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
       propertyPath: m_Pivot.x
