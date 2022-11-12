@@ -9,6 +9,14 @@ using System.Linq;
 public class SkillTree : MonoBehaviour, IPointerClickHandler
 {
 
+    public enum CurrencyType
+    {
+        Money,
+        DataMB,
+        Users,
+        Favours,
+    }
+
     [System.Serializable]
     public class Skill
     {
@@ -27,7 +35,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         [LabeledArray(new string[] { "Prerequisite 1", "Prerequisite 2", "Prerequisite 3", "Prerequisite 4", "Prerequisite 5", "Prerequisite 6", "Prerequisite 7", "Prerequisite 8", "Prerequisite 9", "Prerequisite 10" })]
         public List<string> prerequisiteSkills;
 
-        public string currency;
+        public CurrencyType currency;
 
         [Min(0)]
         public int cost;
@@ -135,7 +143,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         skillSettings.locked = lockedColor;
         skillSettings.skill_unlocked = skillData.skillUnlocked;
         string preq = skillData.prerequisiteSkills.Count > 0 ? "\n<b>Prerequisites</b>: " + string.Join(", ", skillData.prerequisiteSkills) : "";
-        skillSettings.skillDescription = "<b>" + skillData.skill.ToString() + "</b>\n\n" + skillData.skillDescription + "\n\n<b>Cost</b>: " + skillData.currency + " " + skillData.cost + preq; 
+        skillSettings.skillDescription = "<b>" + skillData.skill.ToString() + "</b>\n\n" + skillData.skillDescription + "\n\n<b>Cost</b>: " + skillData.currency.ToString() + " " + skillData.cost + preq; 
 
         //Image bg = go.transform.Find("BG").GetComponent<Image>();
         //bg.color = lockedColor;
@@ -239,15 +247,15 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
 
         // do they have enough of the right currency?
-        if (selectedSkill.currency == "Money" && playerData.Money >= selectedSkill.cost)
+        if (selectedSkill.currency == CurrencyType.Money && playerData.Money >= selectedSkill.cost)
         {
             settings.has_enough_currency = true;
         }
-        else if (selectedSkill.currency == "DataMB" && playerData.DataMB >= selectedSkill.cost)
+        else if (selectedSkill.currency == CurrencyType.DataMB && playerData.DataMB >= selectedSkill.cost)
         {
             settings.has_enough_currency = true;
         }
-        else if (selectedSkill.currency == "SiteUsers" && playerData.SiteUsers >= selectedSkill.cost)
+        else if (selectedSkill.currency == CurrencyType.Users && playerData.SiteUsers >= selectedSkill.cost)
         {
             settings.has_enough_currency = true;
         }
@@ -267,17 +275,17 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         // if skill unlockable and the user clicked on the skill in order to buy it
         if (settings.skill_unlockable && selected_for_purchase)
         {
-            if (selectedSkill.currency == "Money")
+            if (selectedSkill.currency == CurrencyType.Money)
             {
                 settings.has_enough_currency = true;
                 playerData.Money -= selectedSkill.cost;
             }
-            else if (selectedSkill.currency == "DataMB" && playerData.DataMB >= selectedSkill.cost)
+            else if (selectedSkill.currency == CurrencyType.Money && playerData.DataMB >= selectedSkill.cost)
             {
                 settings.has_enough_currency = true;
                 //playerData.DataMB -= selectedSkill.cost;
             }
-            else if (selectedSkill.currency == "SiteUsers" && playerData.SiteUsers >= selectedSkill.cost)
+            else if (selectedSkill.currency == CurrencyType.Money && playerData.SiteUsers >= selectedSkill.cost)
             {
                 settings.has_enough_currency = true;
                 //playerData.SiteUsers -= selectedSkill.cost;
