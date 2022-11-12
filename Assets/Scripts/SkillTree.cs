@@ -14,6 +14,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     {
         public bool skillUnlocked = false;
 
+        public SkillSettings settings;
+
         [field: SerializeField]
         public string skill;
 
@@ -69,12 +71,12 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         playerData = GameObject.FindWithTag("Player").GetComponent<PlayerData>();
     }
 
-
     // Runs once at the beginning
     void Start()
     {
         InstantiateSkillTree(skillButtons, tierObjects, skillTree, buttonMarginPercentage);
         InstantiateTooltipBox(tooltipBoxPrefab);
+        UpdateSkills();
     }
 
 
@@ -102,7 +104,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             if (selectedSkills.Count() > 0)
             {
                 selectedSkill = selectedSkills.ElementAt(0);
-                settings = selectedGameObject.transform.parent.transform.gameObject.GetComponent<SkillSettings>();
+                settings = selectedSkill.settings;
                 selectedSkillButton = skillButtons.ElementAt(0);
 
                 UpdateSkillButton(selectedSkill, settings, true);
@@ -112,6 +114,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
                 break;
             }
         }
+        UpdateSkills();
     }
 
 
@@ -139,6 +142,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         Image icon = go.transform.Find("ICON").GetComponent<Image>();
         icon.sprite = skillData.skillIcon;
         go.transform.Find("ICON").name = go.name;
+
+        skillData.settings = skillSettings;
 
         return go;
     }
@@ -294,7 +299,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             {
                 // foreach skill update their current UI settings
                 GameObject skillButton = GameObject.Find(skill.skill.ToString());
-                SkillSettings settings = skillButton.transform.gameObject.GetComponent<SkillSettings>();
+                SkillSettings settings = skill.settings;
                 UpdateSkillButton(skill, settings);
             }
         }
