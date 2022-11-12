@@ -78,6 +78,9 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         [Min(0)]
         public int cost;
 
+        [SerializeField]
+        public List<NewsID> triggeredNews;
+
         public void PrintSkill()
         {
             Debug.Log("name: " + SkillName() + '\n' + "cost: "+ currency.ToString() + " " + cost.ToString() + '\n' + "unlocked: " + skillUnlocked);
@@ -119,10 +122,12 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     public Transform tooltipParent;
 
     PlayerData playerData;
+    //NewsManager newsManager;
 
     void Awake()
     {
         playerData = GameObject.FindWithTag("Player").GetComponent<PlayerData>();
+        //newsManager = GameObject.FindObjectOfType<NewsManager>();
     }
 
     // Runs once at the beginning
@@ -344,6 +349,13 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
         // update skill object in skill tree
         selectedSkill.skillUnlocked = settings.skill_unlocked;
+
+        
+        // TODO tell news manager to schedule triggered news
+        //foreach (NewsID id in selectedSkill.triggeredNews)
+        //{
+        //    NewsManager.instance.ScheduleNewsFromID(id);
+        //}
 
     }
 
