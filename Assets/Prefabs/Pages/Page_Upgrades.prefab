@@ -362,6 +362,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3120156658646793917}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[0].skills.Array.data[0].skillDescription
+      value: Helps our users recieve ads that that are more relevant to them. Increases
+        our revenue too.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[1].skills.Array.data[0].skillDescription
+      value: AI is used to group like-minded users together, allowing you to delive
+        multiple ads at once.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[1].skills.Array.data[1].skillDescription
+      value: Allows Users to tag themselves and their friends for better social connections
+        and generates data for the company.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[0].skillDescription
+      value: With enough data an AI can automatically select ads comparable to if
+        not better than a human.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[1].skillDescription
+      value: Allows for the automatic tagginig of content, generating connections
+        and data. No User confirmation required!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[2].skillDescription
+      value: By integrating knowledge of human psychology our users prefer to spend
+        mrooe time on our App, supplying more data.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[0].skills.Array.data[0].prerequisiteSkills.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -541,16 +571,35 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 554a30a45860f494ca38586c54b7e5d9, type: 3}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[0].skills.Array.data[0].skillDescription
-      value: Mine your users for all the data they're worth.
+      value: Mine your users for all the data they're worth to better serve their
+        needs.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[1].skills.Array.data[0].skillDescription
+      value: Research the process of anonomyzing data so that this information can
+        be shared for the bettermetn of humanity, and a profit.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[1].skills.Array.data[1].skillDescription
+      value: If we find potenttial exploints in hardware and operating systems we
+        can improve device security and potentially collect data to better know our
+        users.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[0].skillDescription
+      value: Allows the company to sell anonymized data to third parties with similar
+        concerns for their users.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[1].skillDescription
-      value: Make things much easier for yourself by just paying to change those
-        annoying "Privacy Laws".
+      value: We can better serve our users by associating data from areas of their
+        life they would assuem to be unrelated.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[2].skillDescription
-      value: Get rid of your competitors to see a big boost in users.
+      value: Better serving our users and business partners by accessing device features
+        such as biometric data, always-on microphones, and reading files stored on
+        the device.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[0].skills.Array.data[0].prerequisiteSkills.Array.size
@@ -827,6 +876,36 @@ PrefabInstance:
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[2].currency
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[0].skills.Array.data[0].skillDescription
+      value: Add a new departmentt with the goal of advocating for the benefit of
+        the company and our users.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[1].skills.Array.data[0].skillDescription
+      value: Adds a method for trusted company and government officials to access
+        private user data for the sake of security and a better government relationship.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[1].skills.Array.data[1].skillDescription
+      value: Provides users with the conveneice of logging into other services with
+        our account, and provides use with data regarding those servieces.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[0].skillDescription
+      value: Our lobbyists succeed in making civillian encryption illegial to curb
+        criminal activity and allow us to monitor for concerning content.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[1].skillDescription
+      value: Since most of our competiors offer a subpar product, it is better for
+        our currrent and future users to legislate a high stamdard for such companies.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[2].skillDescription
+      value: We graciously integrate the users, feature and data of companies unable
+        to lawfully operate within operating costs.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[0].skills.Array.data[0].prerequisiteSkills.Array.size
