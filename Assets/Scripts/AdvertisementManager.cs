@@ -8,7 +8,8 @@ public enum AdvertType
     Alcohol,
     Food,
     Vape,
-    Vehicle
+    Vehicle,
+    Tech,
 }
 
 [System.Serializable]
