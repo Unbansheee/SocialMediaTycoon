@@ -24,7 +24,11 @@ public class UI_PersonIcon : MonoBehaviour
     private void OnValidate()
     {
         GenerateWidget();
-        infoPageRef = FindObjectOfType<UserInfoPage>();
+        if (!infoPageRef)
+        {
+            infoPageRef = FindObjectOfType<UserInfoPage>();
+        }
+
         
     }
 
@@ -54,7 +58,10 @@ public class UI_PersonIcon : MonoBehaviour
     void Awake()
     {
         //GenerateWidget();
-        infoPageRef = FindObjectOfType<UserInfoPage>();
+        if (!infoPageRef)
+        {
+            infoPageRef = FindObjectOfType<UserInfoPage>();
+        }
     }
 
     // Update is called once per frame

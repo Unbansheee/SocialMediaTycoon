@@ -6,13 +6,13 @@ using UnityEngine;
 public class PlayerData : MonoBehaviour
 {
     
-    public int SiteUsers;
-    public int SiteUsersPerSecond;
-    public int DataMB;
-    public int DataMBPerSecond;
-    public int Money;
-    public int MoneyPerSecond;
-    public int Reputation;
+    public int SiteUsers = 1;
+    public int SiteUsersPerSecond = 0;
+    public int DataMB = 0;
+    public int DataMBPerSecond = 0;
+    public int Money = 200;
+    public int MoneyPerSecond = 0;
+    public int Reputation = 0;
     
     public bool SaveAndLoad = true;
     
@@ -38,9 +38,9 @@ public class PlayerData : MonoBehaviour
         Reputation = PlayerPrefs.GetInt("Reputation");
     }
 
-    private void Reset()
+    public void Reset()
     {
-        SiteUsers = 10;
+        SiteUsers = 1;
         SiteUsersPerSecond = 0;
         DataMB = 0;
         DataMBPerSecond = 0;

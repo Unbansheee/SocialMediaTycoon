@@ -21,6 +21,8 @@ public enum MarriageStatus
 
 public class User : MonoBehaviour
 {
+    public int adsWatched = 0;
+    
     public new string name;
     public int age;
     public GenderIdentity genderIdentity;
