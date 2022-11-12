@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
-
+using Random = UnityEngine.Random;
 
 
 public class UserInfoPage : MonoBehaviour
@@ -20,10 +21,13 @@ public class UserInfoPage : MonoBehaviour
     
     public NFTGenerator AdPanelIcon;
     public TextMeshProUGUI AdPanelName;
+    public TextMeshProUGUI BuyDataCostText;
     
     
     public List<TextMeshProUGUI> dataTexts;
-    
+
+    public float DataBuyCostMultiplier = 1.5f;
+    public int DataBuyBaseCost = 1000;
     
     struct DataElement
     {
@@ -86,17 +90,23 @@ public class UserInfoPage : MonoBehaviour
         gameObject.SetActive(true);
     }
     
-    int CalculateDataValue()
+    int GetDiscoveredDataCount()
     {
-        int fields = 0;
-        foreach (var entry in Info)
+        int count = 0;
+        foreach (var data in Info)
         {
-            if (entry.Value.discovered)
+            if (data.Value.discovered)
             {
-                fields++;
+                count++;
             }
         }
-        return (int)(fields * DataFieldValue);
+
+        return count;
+    }
+    
+    int CalculateDataValue()
+    {
+        return (int)(GetDiscoveredDataCount() * DataFieldValue);
     }
     
     public void UnlockRandomData()
@@ -121,9 +131,29 @@ public class UserInfoPage : MonoBehaviour
         RefreshFields();
     }
     
+    public int GetFieldUnlockCost()
+    {
+        int cost = DataBuyBaseCost;
+        int discovered = GetDiscoveredDataCount();
+        for (int i = 0; i < discovered; i++)
+        {
+            cost = (int)(cost * DataBuyCostMultiplier);
+        }
+        return cost;
+    }
+    
     public void BuyData()
     {
-        UnlockRandomData();
+
+        int cost = GetFieldUnlockCost();
+        
+        PlayerData playerData = FindObjectOfType<PlayerData>();
+        if (playerData.Money >= cost)
+        {
+            playerData.Money -= cost;
+            UnlockRandomData();
+        }
+
     }
 
     public void RefreshFields()
@@ -142,6 +172,8 @@ public class UserInfoPage : MonoBehaviour
                 entry.text = "???";
                 entry.color = Color.gray;
             }
+            
+            BuyDataCostText.text = "$" + GetFieldUnlockCost();
         }
         
         int value = CalculateDataValue();
