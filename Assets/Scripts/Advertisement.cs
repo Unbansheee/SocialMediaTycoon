@@ -32,10 +32,10 @@ public class Advertisement : MonoBehaviour
             return;
         if (data.backgrounds[0] == null || data.items[0] == null)
             return;
-        int index = Random.Range(0, data.backgrounds.Count - 1);
+        int index = Random.Range(0, data.backgrounds.Count);
         background.texture = data.backgrounds[index];
 
-        index = Random.Range(0, data.items.Count - 1);
+        index = Random.Range(0, data.items.Count);
         item.texture = data.items[index];
 
         string desc = "";
