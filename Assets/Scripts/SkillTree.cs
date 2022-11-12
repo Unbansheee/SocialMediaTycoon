@@ -170,7 +170,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     {
         // Instantiate at position (0, 0, 0) and zero rotation.
         GameObject go = Instantiate(prefab, position, Quaternion.identity);
-        go.name = skillData.skill.ToString();
+        go.name = skillData.SkillName(); //skillData.skill.ToString();
         go.transform.SetParent(parent.transform);
         RectTransform rt = go.GetComponent<RectTransform>();
         rt.sizeDelta = buttonSize;
@@ -182,7 +182,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         skillSettings.locked = lockedColor;
         skillSettings.skill_unlocked = skillData.skillUnlocked;
         string preq = skillData.prerequisiteSkills.Count > 0 ? "\n<b>Prerequisites</b>: " + string.Join(", ", skillData.prerequisiteSkills) : "";
-        skillSettings.skillDescription = "<b>" + skillData.skill.ToString() + "</b>\n\n" + skillData.skillDescription + "\n\n<b>Cost</b>: " + skillData.currency.ToString() + " " + skillData.cost + preq; 
+        skillSettings.skillDescription = "<b>" + skillData.SkillName() + "</b>\n\n" + skillData.skillDescription + "\n\n<b>Cost</b>: " + skillData.currency.ToString() + " " + skillData.cost + preq; 
 
         //Image bg = go.transform.Find("BG").GetComponent<Image>();
         //bg.color = lockedColor;
