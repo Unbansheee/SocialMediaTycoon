@@ -30,6 +30,8 @@ public class AdvertisementManager : MonoBehaviour
 
 
     PlayerData playerData;
+    public UserInfoPage userInfoPage;
+    public int MaxAdsToServe = 3;
 
     void Awake()
     {
@@ -71,7 +73,15 @@ public class AdvertisementManager : MonoBehaviour
 
     public void SelectAd(int id)
     {
-        RefreshAds();
-        playerData.Money += Random.Range(100, 500);
+        if (userInfoPage.userData.adsWatched < MaxAdsToServe)
+        {
+            RefreshAds();
+            playerData.Money += Random.Range(100, 500);
+            userInfoPage.userData.adsWatched++;
+        }
+        else
+        {
+            Debug.Log("Max ads watched");
+        }
     }
 }
