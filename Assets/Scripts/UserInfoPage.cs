@@ -18,6 +18,10 @@ public class UserInfoPage : MonoBehaviour
     public GameObject ServeAdButton;
     public GameObject SaveButton;
     
+    public NFTGenerator AdPanelIcon;
+    public TextMeshProUGUI AdPanelName;
+    
+    
     public List<TextMeshProUGUI> dataTexts;
     
     
@@ -54,6 +58,8 @@ public class UserInfoPage : MonoBehaviour
         userData = user;
         originalIcon = icon;
 
+        AdPanelIcon.Set(icon);
+        AdPanelName.text = userData.name;
 
         pageIcon.Set(originalIcon);
         name.text = userData.name;
