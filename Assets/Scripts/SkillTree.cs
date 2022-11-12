@@ -80,7 +80,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
     void Update()
     {
-        UpdateSkills();
+        //UpdateSkills();
     }
 
 
