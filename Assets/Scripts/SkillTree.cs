@@ -11,10 +11,39 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
     public enum CurrencyType
     {
-        Money,
-        DataMB,
         Users,
+        Money,
+        Data,
         Favours,
+    }
+
+    public enum SkillID
+    {
+        None,
+
+        // User interaction
+        Targeted_Advertising,
+        AI_Assisted_Advertising,
+        Automated_Advertising,
+        User_Tagging,
+        Facial_Recognition,
+        Addictive_UX,
+
+        // Data harvesting and trading
+        Data_Scraping,
+        Anonymized_Data,        // Allows selling to data brokers (req min users)
+        Data_Broker,
+        Research_Device_Vulnerabilities,
+        Expand_App_Permissions,         // ++ fines, ++ data -users
+        Deanonymization_Research,
+
+        // Outreach
+        Lobbying,               // 
+        Sign_In_With_SM_Tycoon,// 
+        Add_Backdoor,           // 
+        Ban_Encryption,         // ++ data
+        Prohibitive_Regulation, // ++users
+        Acquire_Competition,
     }
 
     [System.Serializable]
@@ -24,6 +53,9 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
         [HideInInspector]
         public SkillSettings settings;
+
+        [SerializeField]
+        SkillID skillID;
 
         [field: SerializeField]
         public string skill;
@@ -43,6 +75,11 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         public void PrintSkill()
         {
             Debug.Log("name: " + skill.ToString() + '\n' + "cost: "+ currency.ToString() + " " + cost.ToString() + '\n' + "unlocked: " + skillUnlocked);
+        }
+
+        public string SkillName()
+        {
+            return skillID.ToString().Replace('_', ' ');
         }
     }
 
@@ -256,7 +293,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         {
             settings.has_enough_currency = true;
         }
-        else if (selectedSkill.currency == CurrencyType.DataMB && playerData.DataMB >= selectedSkill.cost)
+        else if (selectedSkill.currency == CurrencyType.Data && playerData.DataMB >= selectedSkill.cost)
         {
             settings.has_enough_currency = true;
         }
