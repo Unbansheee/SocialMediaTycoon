@@ -32,6 +32,7 @@ public class AdvertisementManager : MonoBehaviour
     PlayerData playerData;
     public UserInfoPage userInfoPage;
     public int MaxAdsToServe = 3;
+    public GameObject MaxAdsPanel;
 
     void Awake()
     {
@@ -69,6 +70,7 @@ public class AdvertisementManager : MonoBehaviour
     public void ServeAds()
     {
         RefreshAds();
+        MaxAdsPanel.SetActive(false);
     }
 
     public void SelectAd(int id)
@@ -78,10 +80,12 @@ public class AdvertisementManager : MonoBehaviour
             RefreshAds();
             playerData.Money += Random.Range(100, 500);
             userInfoPage.userData.adsWatched++;
+            MaxAdsPanel.SetActive(false);
         }
         else
         {
             Debug.Log("Max ads watched");
-        }
+            MaxAdsPanel.SetActive(true);
+}
     }
 }
