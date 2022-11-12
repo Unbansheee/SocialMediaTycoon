@@ -14,6 +14,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     {
         public bool skillUnlocked = false;
 
+        [HideInInspector]
         public SkillSettings settings;
 
         [field: SerializeField]
