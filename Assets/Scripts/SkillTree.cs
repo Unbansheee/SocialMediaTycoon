@@ -55,17 +55,17 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         public SkillSettings settings;
 
         [SerializeField]
-        SkillID skillID;
+        public SkillID skillID;
 
-        [field: SerializeField]
-        public string skill;
+        //[field: SerializeField]
+        //public string skill;
 
         public string skillDescription;
 
         public Sprite skillIcon;
 
         [LabeledArray(new string[] { "Prerequisite 1", "Prerequisite 2", "Prerequisite 3", "Prerequisite 4", "Prerequisite 5", "Prerequisite 6", "Prerequisite 7", "Prerequisite 8", "Prerequisite 9", "Prerequisite 10" })]
-        public List<string> prerequisiteSkills;
+        public List<SkillID> prerequisiteSkills;
 
         public CurrencyType currency;
 
@@ -74,7 +74,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
         public void PrintSkill()
         {
-            Debug.Log("name: " + skill.ToString() + '\n' + "cost: "+ currency.ToString() + " " + cost.ToString() + '\n' + "unlocked: " + skillUnlocked);
+            Debug.Log("name: " + SkillName() + '\n' + "cost: "+ currency.ToString() + " " + cost.ToString() + '\n' + "unlocked: " + skillUnlocked);
         }
 
         public string SkillName()
@@ -146,7 +146,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
         foreach (var skillTier in skillTree)
         {
-            IEnumerable<Skill>  selectedSkills = skillTier.skills.Where(a => a.skill.ToString() == selectedGameObject.name);
+            IEnumerable<Skill>  selectedSkills = skillTier.skills.Where(a => a.SkillName() == selectedGameObject.name);
             IEnumerable<GameObject> skillButtons = this.skillButtons.Where(a => a == selectedGameObject.transform.parent.gameObject);
 
             if (selectedSkills.Count() > 0)
@@ -181,7 +181,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         skillSettings.unlocked = unlockedColor;
         skillSettings.locked = lockedColor;
         skillSettings.skill_unlocked = skillData.skillUnlocked;
-        string preq = skillData.prerequisiteSkills.Count > 0 ? "\n<b>Prerequisites</b>: " + string.Join(", ", skillData.prerequisiteSkills) : "";
+        string preq = skillData.prerequisiteSkills.Count > 0 ? "\n<b>Prerequisites</b>: " + string.Join(", ", skillData.prerequisiteSkills) : ""; //TODO join SkillName()
         skillSettings.skillDescription = "<b>" + skillData.SkillName() + "</b>\n\n" + skillData.skillDescription + "\n\n<b>Cost</b>: " + skillData.currency.ToString() + " " + skillData.cost + preq; 
 
         //Image bg = go.transform.Find("BG").GetComponent<Image>();
@@ -259,16 +259,16 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     {
 
         // count the number of prerequites that have been unlocked
-        List<string> unlocked_prerequisites = new();
+        List<SkillID> unlocked_prerequisites = new();
 
-        foreach (var preq in selectedSkill.prerequisiteSkills)
+        foreach (SkillID preq in selectedSkill.prerequisiteSkills)
         {
             foreach (var skillTier in skillTree)
             {
                 // select prerequisite skills in this tier
-                var prerequisite = skillTier.skills.Where(a => a.skill == preq).Select(a => a);
+                var prerequisite = skillTier.skills.Where(a => a.skillID == preq).Select(a => a);
                 // select unlocked prerequisites
-                var unlocked_prerequisite = prerequisite.Where(a => a.skillUnlocked == true).Select(a => a.skill);
+                var unlocked_prerequisite = prerequisite.Where(a => a.skillUnlocked == true).Select(a => a.skillID);
                 // add to list of unlocked prerequisites
                 unlocked_prerequisites.AddRange(unlocked_prerequisite);
             }
@@ -349,7 +349,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             foreach (Skill skill in skillTier.skills)
             {
                 // foreach skill update their current UI settings
-                GameObject skillButton = GameObject.Find(skill.skill.ToString());
+                GameObject skillButton = GameObject.Find(skill.SkillName());
                 SkillSettings settings = skill.settings;
                 UpdateSkillButton(skill, settings);
             }
