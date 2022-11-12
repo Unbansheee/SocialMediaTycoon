@@ -9,29 +9,86 @@ using System.Linq;
 public class SkillTree : MonoBehaviour, IPointerClickHandler
 {
 
+    public enum CurrencyType
+    {
+        Users,
+        Money,
+        Data,
+        Favours,
+    }
+
+    public enum SkillID
+    {
+        None,
+
+        // User interaction
+        Targeted_Advertising,
+        AI_Assisted_Advertising,
+        Automated_Advertising,
+        User_Tagging,
+        Facial_Recognition,
+        Addictive_UX,
+
+        // Data harvesting and trading
+        Data_Scraping,
+        Anonymized_Data,        // Allows selling to data brokers (req min users)
+        Data_Broker,
+        Research_Device_Vulnerabilities,
+        Expand_App_Permissions,         // ++ fines, ++ data -users
+        Deanonymization_Research,
+
+        // Outreach
+        Lobbying,               // 
+        Sign_In_With_SM_Tycoon,// 
+        Add_Backdoor,           // 
+        Ban_Encryption,         // ++ data
+        Prohibitive_Regulation, // ++users
+        Acquire_Competition,
+
+        // Special 'upgrades' granted automatically
+        // Might need to rename these with ctrl+R, R
+        Minimum_10000_Users,
+        Minimum_1000000_Money,
+        Minimum_1000_Data,
+    }
+
     [System.Serializable]
     public class Skill
     {
         public bool skillUnlocked = false;
 
-        [field: SerializeField]
-        public string skill;
+        [HideInInspector]
+        public SkillSettings settings;
+
+        [SerializeField]
+        public SkillID skillID;
+
+        //[field: SerializeField]
+        //public string skill;
 
         public string skillDescription;
 
         public Sprite skillIcon;
 
         [LabeledArray(new string[] { "Prerequisite 1", "Prerequisite 2", "Prerequisite 3", "Prerequisite 4", "Prerequisite 5", "Prerequisite 6", "Prerequisite 7", "Prerequisite 8", "Prerequisite 9", "Prerequisite 10" })]
-        public List<string> prerequisiteSkills;
+        public List<SkillID> prerequisiteSkills;
 
-        public string currency;
+        public CurrencyType currency;
 
         [Min(0)]
         public int cost;
 
+        [SerializeField]
+        public List<NewsID> triggeredNews;
+
         public void PrintSkill()
         {
-            Debug.Log("name: " + skill.ToString() + '\n' + "cost: "+ currency.ToString() + " " + cost.ToString() + '\n' + "unlocked: " + skillUnlocked);
+            Debug.Log("name: " + SkillName() + '\n' + "cost: "+ currency.ToString() + " " + cost.ToString() + '\n' + "unlocked: " + skillUnlocked);
+        }
+
+        public string SkillName()
+        {
+            return skillID.ToString().Replace('_', ' ');
         }
     }
 
@@ -62,19 +119,23 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     public GameObject tooltipBoxPrefab;
     private GameObject instantiatedTooltipBox;
 
+    public Transform tooltipParent;
+
     PlayerData playerData;
+    //NewsManager newsManager;
 
     void Awake()
     {
         playerData = GameObject.FindWithTag("Player").GetComponent<PlayerData>();
+        //newsManager = GameObject.FindObjectOfType<NewsManager>();
     }
-
 
     // Runs once at the beginning
     void Start()
     {
         InstantiateSkillTree(skillButtons, tierObjects, skillTree, buttonMarginPercentage);
         InstantiateTooltipBox(tooltipBoxPrefab);
+        UpdateSkills();
     }
 
 
@@ -96,13 +157,13 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
         foreach (var skillTier in skillTree)
         {
-            IEnumerable<Skill>  selectedSkills = skillTier.skills.Where(a => a.skill.ToString() == selectedGameObject.name);
+            IEnumerable<Skill>  selectedSkills = skillTier.skills.Where(a => a.SkillName() == selectedGameObject.name);
             IEnumerable<GameObject> skillButtons = this.skillButtons.Where(a => a == selectedGameObject.transform.parent.gameObject);
 
             if (selectedSkills.Count() > 0)
             {
                 selectedSkill = selectedSkills.ElementAt(0);
-                settings = selectedGameObject.transform.parent.transform.gameObject.GetComponent<SkillSettings>();
+                settings = selectedSkill.settings;
                 selectedSkillButton = skillButtons.ElementAt(0);
 
                 UpdateSkillButton(selectedSkill, settings, true);
@@ -112,6 +173,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
                 break;
             }
         }
+        UpdateSkills();
     }
 
 
@@ -119,7 +181,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     {
         // Instantiate at position (0, 0, 0) and zero rotation.
         GameObject go = Instantiate(prefab, position, Quaternion.identity);
-        go.name = skillData.skill.ToString();
+        go.name = skillData.SkillName(); //skillData.skill.ToString();
         go.transform.SetParent(parent.transform);
         RectTransform rt = go.GetComponent<RectTransform>();
         rt.sizeDelta = buttonSize;
@@ -130,8 +192,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         skillSettings.unlocked = unlockedColor;
         skillSettings.locked = lockedColor;
         skillSettings.skill_unlocked = skillData.skillUnlocked;
-        string preq = skillData.prerequisiteSkills.Count > 0 ? "\n<b>Prerequisites</b>: " + string.Join(", ", skillData.prerequisiteSkills) : "";
-        skillSettings.skillDescription = "<b>" + skillData.skill.ToString() + "</b>\n\n" + skillData.skillDescription + "\n\n<b>Cost</b>: " + skillData.currency + " " + skillData.cost + preq; 
+        string preq = skillData.prerequisiteSkills.Count > 0 ? "\n<b>Prerequisites</b>: " + string.Join(", ", skillData.prerequisiteSkills) : ""; //TODO join SkillName()
+        skillSettings.skillDescription = "<b>" + skillData.SkillName() + "</b>\n\n" + skillData.skillDescription + "\n\n<b>Cost</b>: " + skillData.currency.ToString() + " " + skillData.cost + preq.Replace('_',' '); 
 
         //Image bg = go.transform.Find("BG").GetComponent<Image>();
         //bg.color = lockedColor;
@@ -140,6 +202,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         icon.sprite = skillData.skillIcon;
         go.transform.Find("ICON").name = go.name;
 
+        skillData.settings = skillSettings;
+
         return go;
     }
 
@@ -147,6 +211,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     void InstantiateSkillTree(List<GameObject> skillButtons, List<GameObject> tierObjects, List<SkillTier> skillTree, Vector2 buttonMarginPercentage)
     {
         RectTransform st = (RectTransform)this.transform;
+        st.Rotate(0, 0, 90); // Hack to draw tree horizontally
         float button_width = buttonSize.x;
         float button_height = buttonSize.y;
 
@@ -173,6 +238,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             {
                 skillButtons.Add(CreateSkillButton(skill, SkillButtonPrefab, tierGo, new Vector3(x_pos_change, 0, 0)));
                 x_pos_change += button_width + (button_width * buttonMarginPercentage.x);
+                skillButtons[skillButtons.Count - 1].transform.Rotate(0, 0, 90); // Hack to draw tree horizontally (rotate the icons back)
             }
 
             tierGo.transform.position = tierGo.transform.position + new Vector3(start_x, start_y + y_pos_change, tierGo.transform.position.z);
@@ -188,6 +254,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         {
             tierGo.transform.SetParent(parent.transform);
         }
+        st.Rotate(0, 0, -90); // Hack to draw tree horizontally (rotate parent back, tree now horizonal)
     }
 
     // this is the information box
@@ -195,7 +262,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     {
         instantiatedTooltipBox = Instantiate(tooltipBoxPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         instantiatedTooltipBox.name = "TooltipBox";
-        instantiatedTooltipBox.transform.SetParent(transform.parent);
+        instantiatedTooltipBox.transform.SetParent(tooltipParent == null ? transform.parent : tooltipParent);
     }
 
     // updates if a skill is unlockable, unlocked or locked
@@ -203,16 +270,16 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     {
 
         // count the number of prerequites that have been unlocked
-        List<string> unlocked_prerequisites = new();
+        List<SkillID> unlocked_prerequisites = new();
 
-        foreach (var preq in selectedSkill.prerequisiteSkills)
+        foreach (SkillID preq in selectedSkill.prerequisiteSkills)
         {
             foreach (var skillTier in skillTree)
             {
                 // select prerequisite skills in this tier
-                var prerequisite = skillTier.skills.Where(a => a.skill == preq).Select(a => a);
+                var prerequisite = skillTier.skills.Where(a => a.skillID == preq).Select(a => a);
                 // select unlocked prerequisites
-                var unlocked_prerequisite = prerequisite.Where(a => a.skillUnlocked == true).Select(a => a.skill);
+                var unlocked_prerequisite = prerequisite.Where(a => a.skillUnlocked == true).Select(a => a.skillID);
                 // add to list of unlocked prerequisites
                 unlocked_prerequisites.AddRange(unlocked_prerequisite);
             }
@@ -233,15 +300,15 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
 
         // do they have enough of the right currency?
-        if (selectedSkill.currency == "Money" && playerData.Money >= selectedSkill.cost)
+        if (selectedSkill.currency == CurrencyType.Money && playerData.Money >= selectedSkill.cost)
         {
             settings.has_enough_currency = true;
         }
-        else if (selectedSkill.currency == "DataMB" && playerData.DataMB >= selectedSkill.cost)
+        else if (selectedSkill.currency == CurrencyType.Data && playerData.DataMB >= selectedSkill.cost)
         {
             settings.has_enough_currency = true;
         }
-        else if (selectedSkill.currency == "SiteUsers" && playerData.SiteUsers >= selectedSkill.cost)
+        else if (selectedSkill.currency == CurrencyType.Users && playerData.SiteUsers >= selectedSkill.cost)
         {
             settings.has_enough_currency = true;
         }
@@ -261,17 +328,17 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         // if skill unlockable and the user clicked on the skill in order to buy it
         if (settings.skill_unlockable && selected_for_purchase)
         {
-            if (selectedSkill.currency == "Money")
+            if (selectedSkill.currency == CurrencyType.Money)
             {
                 settings.has_enough_currency = true;
                 playerData.Money -= selectedSkill.cost;
             }
-            else if (selectedSkill.currency == "DataMB" && playerData.DataMB >= selectedSkill.cost)
+            else if (selectedSkill.currency == CurrencyType.Money && playerData.DataMB >= selectedSkill.cost)
             {
                 settings.has_enough_currency = true;
                 //playerData.DataMB -= selectedSkill.cost;
             }
-            else if (selectedSkill.currency == "SiteUsers" && playerData.SiteUsers >= selectedSkill.cost)
+            else if (selectedSkill.currency == CurrencyType.Money && playerData.SiteUsers >= selectedSkill.cost)
             {
                 settings.has_enough_currency = true;
                 //playerData.SiteUsers -= selectedSkill.cost;
@@ -283,6 +350,13 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         // update skill object in skill tree
         selectedSkill.skillUnlocked = settings.skill_unlocked;
 
+        
+        // TODO tell news manager to schedule triggered news
+        //foreach (NewsID id in selectedSkill.triggeredNews)
+        //{
+        //    NewsManager.instance.ScheduleNewsFromID(id);
+        //}
+
     }
 
     // updates status for all skill buttons
@@ -293,8 +367,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             foreach (Skill skill in skillTier.skills)
             {
                 // foreach skill update their current UI settings
-                GameObject skillButton = GameObject.Find(skill.skill.ToString());
-                SkillSettings settings = skillButton.transform.gameObject.GetComponent<SkillSettings>();
+                GameObject skillButton = GameObject.Find(skill.SkillName());
+                SkillSettings settings = skill.settings;
                 UpdateSkillButton(skill, settings);
             }
         }

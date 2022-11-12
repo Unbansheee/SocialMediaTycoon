@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5850414422940178094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2055772552620405176}
+  - component: {fileID: 1313412400879110845}
+  m_Layer: 5
+  m_Name: UpgradeTree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2055772552620405176
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5850414422940178094}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1080, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1313412400879110845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5850414422940178094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747828ae9297b414491762d9ca2a3d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedColor: {r: 0.15294118, g: 0.16078432, b: 0.18431373, a: 1}
+  unlockableColor: {r: 0.3529412, g: 0.3647059, b: 0.41568628, a: 1}
+  unlockedColor: {r: 0.6431373, g: 0.6627451, b: 0.7529412, a: 1}
+  SkillButtonPrefab: {fileID: 2268464654303294115, guid: 29b7341bdb87fff4086eaa1695462494, type: 3}
+  buttonSize: {x: 200, y: 200}
+  buttonMarginPercentage: {x: 0.25, y: 0.5}
+  skillButtons: []
+  tierObjects: []
+  skillTree:
+  - skills:
+    - skillUnlocked: 0
+      settings: {fileID: 0}
+      skillID: 1
+      skill: Targeted Advertising
+      skillDescription: (earn users, some money). Company wants to grow revenue and
+        users. Users want to connect socially, get useful ads.
+      skillIcon: {fileID: 21300000, guid: a56b84f780e8aef439e9a83d60ca7420, type: 3}
+      prerequisiteSkills: []
+      currency: 1
+      cost: 0
+  - skills:
+    - skillUnlocked: 0
+      settings: {fileID: 0}
+      skillID: 2
+      skill: Data Scraping
+      skillDescription: Mine your users for all the data they're worth.
+      skillIcon: {fileID: 21300000, guid: 331471288f938f94990c93f2ed132e67, type: 3}
+      prerequisiteSkills:
+      - Targeted Advertising
+      currency: 2
+      cost: 0
+    - skillUnlocked: 0
+      settings: {fileID: 0}
+      skillID: 4
+      skill: Selling Data
+      skillDescription: enter description
+      skillIcon: {fileID: 21300000, guid: 6a602996d6fa53542b8801a9adda8538, type: 3}
+      prerequisiteSkills:
+      - Targeted Advertising
+      currency: 1
+      cost: 0
+  - skills:
+    - skillUnlocked: 0
+      settings: {fileID: 0}
+      skillID: 3
+      skill: Trade Influence
+      skillDescription: enter description
+      skillIcon: {fileID: 21300000, guid: 748ae8b33df036b46a86e0387f1602cf, type: 3}
+      prerequisiteSkills:
+      - Selling Data
+      currency: 2
+      cost: 0
+    - skillUnlocked: 0
+      settings: {fileID: 0}
+      skillID: 5
+      skill: Monopolise
+      skillDescription: Get rid of your competitors to see a big boost in users.
+      skillIcon: {fileID: 21300000, guid: 554a30a45860f494ca38586c54b7e5d9, type: 3}
+      prerequisiteSkills:
+      - Data Scraping
+      - Selling Data
+      currency: 2
+      cost: 0
+    - skillUnlocked: 0
+      settings: {fileID: 0}
+      skillID: 6
+      skill: Lobby Groups
+      skillDescription: Make things much easier for yourself by just paying to change
+        those annoying "Privacy Laws".
+      skillIcon: {fileID: 21300000, guid: d115ff9a725dc50469a374968da2845b, type: 3}
+      prerequisiteSkills:
+      - Data Scraping
+      currency: 2
+      cost: 0
+  tooltipBoxPrefab: {fileID: 1837646843438455104, guid: e43d060b3e542e74a84889c4eff2b8ab, type: 3}
+  tooltipParent: {fileID: 0}
