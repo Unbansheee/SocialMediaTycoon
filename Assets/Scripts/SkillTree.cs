@@ -161,6 +161,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     void InstantiateSkillTree(List<GameObject> skillButtons, List<GameObject> tierObjects, List<SkillTier> skillTree, Vector2 buttonMarginPercentage)
     {
         RectTransform st = (RectTransform)this.transform;
+        st.Rotate(0, 0, 90); // Hack to draw tree horizontally
         float button_width = buttonSize.x;
         float button_height = buttonSize.y;
 
@@ -187,6 +188,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             {
                 skillButtons.Add(CreateSkillButton(skill, SkillButtonPrefab, tierGo, new Vector3(x_pos_change, 0, 0)));
                 x_pos_change += button_width + (button_width * buttonMarginPercentage.x);
+                skillButtons[skillButtons.Count - 1].transform.Rotate(0, 0, 90); // Hack to draw tree horizontally (rotate the icons back)
             }
 
             tierGo.transform.position = tierGo.transform.position + new Vector3(start_x, start_y + y_pos_change, tierGo.transform.position.z);
@@ -202,6 +204,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         {
             tierGo.transform.SetParent(parent.transform);
         }
+        st.Rotate(0, 0, -90); // Hack to draw tree horizontally (rotate parent back, tree now horizonal)
     }
 
     // this is the information box
@@ -209,7 +212,6 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     {
         instantiatedTooltipBox = Instantiate(tooltipBoxPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         instantiatedTooltipBox.name = "TooltipBox";
-        instantiatedTooltipBox.transform.SetParent(transform.parent);
     }
 
     // updates if a skill is unlockable, unlocked or locked
