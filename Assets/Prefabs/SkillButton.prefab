@@ -65,8 +65,9 @@ MonoBehaviour:
   unlockable: {r: 0, g: 0, b: 0, a: 0}
   locked: {r: 0, g: 0, b: 0, a: 0}
   skill_unlocked: 0
+  skill_unlockable: 0
   prerequisites_met: 0
-  has_enough_money: 0
+  has_enough_currency: 0
 --- !u!1 &4907991383195203669
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +134,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 36036cddade08df4d9cb52a2a7eec0bb, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -211,7 +212,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

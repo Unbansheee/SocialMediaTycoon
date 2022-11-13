@@ -274,34 +274,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7a13dd29fc028344adfe31b0d56fd51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Jenna Clark
-  age: 47
+  adsWatched: 0
+  name: Nicole Thomas
+  age: 20
   genderIdentity: 2
-  email: j.clark@randatmail.com
-  phoneNumber: 872-5112-50
-  education: Bachelor
-  occupation: Astronomer
-  experience: 11
+  email: n.thomas@randatmail.com
+  phoneNumber: 354-5010-11
+  education: Doctoral
+  occupation: Singer
+  experience: 2
   hobbies:
-  - Brewing Kombucha
-  - Video Games
-  - Mathematics
-  salary: 51194
-  savings: 4126
-  debt: 60587
-  creditScore: 315
-  marriageStatus: 0
-  children: 0
+  - Gaming
+  - Journaling
+  - Pottery
+  salary: 104798
+  savings: 12165
+  debt: 5626
+  creditScore: 490
+  marriageStatus: 2
+  children: 1
   searchHistory:
-  - how to get stain off wall
-  - why is my eardrum sensitive
-  - how to write a cv
-  - is it normal to have suicidal thoughts
-  - where do I get my sense of hearing from
-  - are ads bad for you
-  - is it normal to have suicidal thoughts
-  - can searching up symptoms cause symptoms
-  seed: 417681
+  - what is a smartphone
+  - how to survive in the wild
+  - why dont people like me
+  - red stain on carpet
+  - top 10 soup recipes
+  - what to do when you are bored
+  - how do trains work
+  - why are my hands wet
+  seed: 253916
 --- !u!1 &3281516663451315774
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -77.7}
+  m_AnchoredPosition: {x: 0, y: -76.5}
   m_SizeDelta: {x: 194.1, y: 64.3}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!222 &3281516663451315760
@@ -368,7 +369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jenna Clark
+  m_text: Nicole Thomas
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -377,8 +378,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292468194
-  m_fontColor: {r: 0.8867924, g: 0.867969, b: 0.8491456, a: 1}
+    rgba: 4292929516
+  m_fontColor: {r: 0.9245283, g: 0.9039694, b: 0.87655747, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -401,7 +402,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -539,7 +540,7 @@ PrefabInstance:
     - target: {fileID: 1092050056085232019, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: dcc844692ca88a04ba42aa61687d618c, type: 3}
+      objectReference: {fileID: 21300000, guid: 18d626d9487dff646ae32a00ce34b74b, type: 3}
     - target: {fileID: 1092050056085232019, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -559,7 +560,7 @@ PrefabInstance:
     - target: {fileID: 2127918702173799607, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f1b4d108f4ab0ec43b07567834f5d739, type: 3}
+      objectReference: {fileID: 21300000, guid: 9a4c2ab2972cfb349952fc09b7040b24, type: 3}
     - target: {fileID: 2127918702173799607, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -575,7 +576,7 @@ PrefabInstance:
     - target: {fileID: 3147714572466897567, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 65ca0767c5e09684a8f61e0a222267ed, type: 3}
+      objectReference: {fileID: 21300000, guid: 23620727cf59efb4eb0d58899675b785, type: 3}
     - target: {fileID: 3147714572466897567, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -595,7 +596,7 @@ PrefabInstance:
     - target: {fileID: 7302065289919815441, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: cab37d134e803af46b10a1245d2d25fa, type: 3}
+      objectReference: {fileID: 21300000, guid: 9425444c4a33afc43a77f9ec96ae92be, type: 3}
     - target: {fileID: 7302065289919815441, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -606,7 +607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7841162287209972734, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: Seed
-      value: 417681
+      value: 253916
       objectReference: {fileID: 0}
     - target: {fileID: 7841162287209972734, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: identity
@@ -671,7 +672,7 @@ PrefabInstance:
     - target: {fileID: 8218725007814310169, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9480c309e0e72d0448cb2d3c8189297f, type: 3}
+      objectReference: {fileID: 21300000, guid: 29362e3ea1d3bee43a4bd7fc8188593f, type: 3}
     - target: {fileID: 8218725007814310169, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
