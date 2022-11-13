@@ -18,8 +18,6 @@ public struct NewsData
 
 public class NewsManager : MonoBehaviour
 {
-    public static NewsManager instance;
-
     [SerializeField]
     GameObject newsItemPrefab;
 
@@ -31,11 +29,6 @@ public class NewsManager : MonoBehaviour
 
     [SerializeField]
     private List<NewsID> scheduledNews;
-
-    private void Awake()
-    {
-        instance = this;
-    }
 
     // Start is called before the first frame update
     void Start()
