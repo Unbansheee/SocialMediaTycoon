@@ -523,6 +523,18 @@ PrefabInstance:
       value: -2.72
       objectReference: {fileID: 0}
     - target: {fileID: 6340609536072170328, guid: ccacefb4d68e90843b3596eef0095bd0, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340609536072170328, guid: ccacefb4d68e90843b3596eef0095bd0, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ea56b0d002a819d46be69ff99ffd2ae6, type: 3}
+    - target: {fileID: 6340609536072170328, guid: ccacefb4d68e90843b3596eef0095bd0, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8ee2a9e5cc1ed9b4abd47a0cf4970519, type: 3}
+    - target: {fileID: 6340609536072170328, guid: ccacefb4d68e90843b3596eef0095bd0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1887604663}
@@ -561,6 +573,22 @@ PrefabInstance:
     - target: {fileID: 7155361190760419846, guid: ccacefb4d68e90843b3596eef0095bd0, type: 3}
       propertyPath: m_Maskable
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178750964957658817, guid: ccacefb4d68e90843b3596eef0095bd0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 107.6049
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178750964957658817, guid: ccacefb4d68e90843b3596eef0095bd0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 144.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178750964957658817, guid: ccacefb4d68e90843b3596eef0095bd0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -13.2572
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178750964957658817, guid: ccacefb4d68e90843b3596eef0095bd0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.931
       objectReference: {fileID: 0}
     - target: {fileID: 7558496335234811927, guid: ccacefb4d68e90843b3596eef0095bd0, type: 3}
       propertyPath: m_fontSize
