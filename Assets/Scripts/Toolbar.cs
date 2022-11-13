@@ -11,6 +11,8 @@ public enum PageID
     Settings,
 }
 
+public delegate bool NewsPost();
+
 public class Toolbar : MonoBehaviour
 {
     [SerializeField]
@@ -19,12 +21,8 @@ public class Toolbar : MonoBehaviour
     GameObject Page_News;
     [SerializeField]
     GameObject Page_Profiles;
-    //[SerializeField]
-    //GameObject Page_Adverts;
     [SerializeField]
     GameObject Page_Upgrades;
-    //[SerializeField]
-    //GameObject Page_Outreach;
 
     [SerializeField]
     private List<ToolbarButton> buttons;
@@ -37,7 +35,6 @@ public class Toolbar : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-
         Pages = new List<GameObject> { Page_News, Page_Profiles, Page_Upgrades, Page_Settings };
         ShowPage(CurrentPage);
     }
@@ -53,6 +50,7 @@ public class Toolbar : MonoBehaviour
         buttons[(int)id].ClearNotifications();
     }
 
+    // Used by OnClick gameobject components
     public void ShowPage(int id)
     {
         if (id >= 0 && id < Pages.Count)
@@ -66,13 +64,20 @@ public class Toolbar : MonoBehaviour
         return buttons[(int)id];
     }
 
-    public void ScheduleNewsNotificaiton(IEnumerator func)
+    public void ScheduleNewsNotificaiton(NewsPost func, float delay = 10f)
     {
-        StartCoroutine(func);
+        StartCoroutine(NotifyNews(func, delay));
     }
 
-    //IEnumerator NotifyNews()
-    //{
-    //
-    //}
+    IEnumerator NotifyNews(NewsPost func, float delay = 10f)
+    {
+        bool active = true;
+        do
+        {
+            float waitTime = (1f + Random.value) * delay;
+            yield return new WaitForSeconds(delay);
+            active = func();
+        } while (active);
+
+    }
 }
