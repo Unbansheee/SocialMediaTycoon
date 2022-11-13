@@ -36,7 +36,8 @@ public class NewsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // temporary testing, should have delay
+        // Adding starting posts
+        //toolbar.GetButtonFromPageID(PageID.News).AddNotification(scheduledNews.Count);
         foreach (NewsID id in scheduledNews)
         {
             foreach (NewsData data in newsDatabase)
@@ -47,7 +48,6 @@ public class NewsManager : MonoBehaviour
                     break;
                 }
             }
-            
         }
     }
 
@@ -66,42 +66,29 @@ public class NewsManager : MonoBehaviour
 
     public void ScheduleNewsFromID(NewsID id)
     {
-        //scheduledNews.Add(id);
-
-        // temp
-        foreach (NewsData data in newsDatabase)
+        scheduledNews.Add(id);
+        if (scheduledNews.Count == 1)
         {
-            if (data.id == id)
-            {
-                PostNewsStory(data);
-                break;
-            }
+            toolbar.ScheduleNewsNotificaiton(PostNextNewsStory, 10f);
         }
-
-        //StartCoroutine(UpdateNewsFeed());
-        toolbar.ScheduleNewsNotificaiton(UpdateNewsFeed());
-        ToolbarButton button = toolbar.GetButtonFromPageID(PageID.News);
-        button.AddNotification(1);
     }
 
-    IEnumerator UpdateNewsFeed(float timeMult = 1.0f)
+    // Returns true if there are more scheduled stories
+    public bool PostNextNewsStory()
     {
-        ToolbarButton button = toolbar.GetButtonFromPageID(PageID.News);
-        while (scheduledNews.Count > 0)
+        if (scheduledNews.Count == 0)
+            return false;
+        NewsID id = scheduledNews[0];
+        scheduledNews.RemoveAt(0);
+        NewsData data = GetNewsDataFromID(id);
+        if (data.id != NewsID.None)
         {
-            float newsDelay = timeMult * 10.0f * (1.0f + Random.value);
-            yield return new WaitForSeconds(newsDelay);
-            NewsData data = GetNewsDataFromID(scheduledNews[0]);
-            if (data.id != NewsID.None)
-            {
-                PostNewsStory(data);
-                //if (!gameObject.activeInHierarchy)
-                //{
-                    button.AddNotification(1);
-                //}
-            }
-            scheduledNews.RemoveAt(0);
+            PostNewsStory(data);
+            ToolbarButton button = toolbar.GetButtonFromPageID(PageID.News);
+            if (!this.isActiveAndEnabled)
+                button.AddNotification(1);
         }
+        return scheduledNews.Count > 0;
     }
 
     void PostNewsStory(NewsData data)
