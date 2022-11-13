@@ -18,8 +18,6 @@ public struct NewsData
 
 public class NewsManager : MonoBehaviour
 {
-    public static NewsManager instance;
-
     [SerializeField]
     GameObject newsItemPrefab;
 
@@ -27,15 +25,13 @@ public class NewsManager : MonoBehaviour
     Transform parentContainer;
 
     [SerializeField]
+    Toolbar toolbar;
+
+    [SerializeField]
     private List<NewsData> newsDatabase;
 
     [SerializeField]
     private List<NewsID> scheduledNews;
-
-    private void Awake()
-    {
-        instance = this;
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -55,10 +51,17 @@ public class NewsManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+
+    NewsData GetNewsDataFromID(NewsID id)
     {
-        
+        foreach (NewsData data in newsDatabase)
+        {
+            if (data.id == id)
+            {
+                return data;
+            }
+        }
+        return new();
     }
 
     public void ScheduleNewsFromID(NewsID id)
@@ -73,6 +76,31 @@ public class NewsManager : MonoBehaviour
                 PostNewsStory(data);
                 break;
             }
+        }
+
+        //StartCoroutine(UpdateNewsFeed());
+        toolbar.ScheduleNewsNotificaiton(UpdateNewsFeed());
+        ToolbarButton button = toolbar.GetButtonFromPageID(PageID.News);
+        button.AddNotification(1);
+    }
+
+    IEnumerator UpdateNewsFeed(float timeMult = 1.0f)
+    {
+        ToolbarButton button = toolbar.GetButtonFromPageID(PageID.News);
+        while (scheduledNews.Count > 0)
+        {
+            float newsDelay = timeMult * 10.0f * (1.0f + Random.value);
+            yield return new WaitForSeconds(newsDelay);
+            NewsData data = GetNewsDataFromID(scheduledNews[0]);
+            if (data.id != NewsID.None)
+            {
+                PostNewsStory(data);
+                //if (!gameObject.activeInHierarchy)
+                //{
+                    button.AddNotification(1);
+                //}
+            }
+            scheduledNews.RemoveAt(0);
         }
     }
 
