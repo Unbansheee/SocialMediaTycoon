@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockedColor: {r: 0.18039216, g: 0.18823531, b: 0.21568629, a: 1}
-  unlockableColor: {r: 0.6862745, g: 0.7058824, b: 0.7686275, a: 1}
-  unlockedColor: {r: 0.6862745, g: 0.2901961, b: 0.28627452, a: 1}
+  unlockableColor: {r: 0.40000004, g: 0.41960788, b: 0.47450984, a: 1}
+  unlockedColor: {r: 0.6862745, g: 0.7058824, b: 0.7686275, a: 1}
   SkillButtonPrefab: {fileID: 2268464654303294115, guid: 29b7341bdb87fff4086eaa1695462494, type: 3}
   buttonSize: {x: 200, y: 200}
   buttonMarginPercentage: {x: 0.25, y: 0.5}
