@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 310.01, y: -225.67786}
+  m_AnchoredPosition: {x: 310.01, y: -207.7}
   m_SizeDelta: {x: 617.8, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &827008505625391503
@@ -185,8 +185,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: FINANCES
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 29f55410a064dae4787536d85799956e, type: 2}
+  m_sharedMaterial: {fileID: 8512131419364253981, guid: 29f55410a064dae4787536d85799956e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -811,8 +811,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: HISTORY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 29f55410a064dae4787536d85799956e, type: 2}
+  m_sharedMaterial: {fileID: 8512131419364253981, guid: 29f55410a064dae4787536d85799956e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1267,7 +1267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 310.01, y: -139.91174}
+  m_AnchoredPosition: {x: 310.01, y: -120.4}
   m_SizeDelta: {x: 623, y: 60.6}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &8781884087854285789
@@ -1364,8 +1364,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PROFESSION
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 29f55410a064dae4787536d85799956e, type: 2}
+  m_sharedMaterial: {fileID: 8512131419364253981, guid: 29f55410a064dae4787536d85799956e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1570,7 +1570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7137255, g: 0.3019608, b: 0.29803923, a: 1}
+  m_Color: {r: 0.6862745, g: 0.2901961, b: 0.28627452, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1951,7 +1951,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &7836188837639366842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1988,6 +1988,9 @@ MonoBehaviour:
   BuyButton: {fileID: 8842565436124218115}
   ServeAdButton: {fileID: 0}
   SaveButton: {fileID: 5088394753223102471}
+  AdPanelIcon: {fileID: 0}
+  AdPanelName: {fileID: 0}
+  BuyDataCostText: {fileID: 0}
   dataTexts:
   - {fileID: 9145061487429161289}
   - {fileID: 2936787145751451379}
@@ -2003,6 +2006,8 @@ MonoBehaviour:
   - {fileID: 383367180691348743}
   - {fileID: 2715417005512864331}
   - {fileID: 7728786045036680367}
+  DataBuyCostMultiplier: 1.5
+  DataBuyBaseCost: 1000
 --- !u!114 &8949661647719871671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2020,6 +2025,8 @@ MonoBehaviour:
   - {fileID: 4889922194590649174}
   - {fileID: 2034146141290638876}
   advertismenetData: []
+  userInfoPage: {fileID: 0}
+  MaxAdsToServe: 3
 --- !u!1 &7836188838117263516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,7 +2062,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -7.200348}
+  m_AnchoredPosition: {x: 0, y: -1.435}
   m_SizeDelta: {x: 642.8558, y: 77.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7836188838117263518
@@ -2090,8 +2097,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 29f55410a064dae4787536d85799956e, type: 2}
+  m_sharedMaterial: {fileID: 8512131419364253981, guid: 29f55410a064dae4787536d85799956e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2123,7 +2130,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2697,8 +2704,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: FAMILY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 29f55410a064dae4787536d85799956e, type: 2}
+  m_sharedMaterial: {fileID: 8512131419364253981, guid: 29f55410a064dae4787536d85799956e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5493,6 +5500,10 @@ PrefabInstance:
     - target: {fileID: 4551062257593169228, guid: fe0a6e3cd1e49634092454fb77680e1d, type: 3}
       propertyPath: m_Name
       value: AdvertisementPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551062257593169228, guid: fe0a6e3cd1e49634092454fb77680e1d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866592731841094517, guid: fe0a6e3cd1e49634092454fb77680e1d, type: 3}
       propertyPath: m_AnchorMax.y
