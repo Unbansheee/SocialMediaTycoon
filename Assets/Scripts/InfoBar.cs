@@ -70,7 +70,7 @@ public class InfoBar : MonoBehaviour
                 PageNameText.text = "UPGRADES";
                 break;
             case PageID.Settings:
-                PageNameText.text = "SETTINGS";
+                PageNameText.text = "INSTRUCTIONS";
                 break;
             default:
                 PageNameText.text = "???";
