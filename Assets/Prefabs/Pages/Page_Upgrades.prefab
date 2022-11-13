@@ -1171,6 +1171,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2551781602034586605}
     m_Modifications:
+    - target: {fileID: 911082960287284934, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_text
+      value: Data Trading
+      objectReference: {fileID: 0}
     - target: {fileID: 4844573764165910104, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
       propertyPath: m_Name
       value: Title_DataTrading
@@ -1277,6 +1281,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2551781602034586605}
     m_Modifications:
+    - target: {fileID: 911082960287284934, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_text
+      value: Corporate Expansion
+      objectReference: {fileID: 0}
     - target: {fileID: 4844573764165910104, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
       propertyPath: m_Name
       value: Title_Expansion

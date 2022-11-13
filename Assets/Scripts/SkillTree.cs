@@ -121,6 +121,9 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
     public Transform tooltipParent;
 
+    [SerializeField]
+    private NewsManager newsManager;
+
     PlayerData playerData;
     //NewsManager newsManager;
 
@@ -268,6 +271,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     // updates if a skill is unlockable, unlocked or locked
     public void UpdateSkillButton(Skill selectedSkill, SkillSettings settings, bool selected_for_purchase = false)
     {
+        if (settings.skill_unlocked)
+            return;
 
         // count the number of prerequites that have been unlocked
         List<SkillID> unlocked_prerequisites = new();
@@ -345,17 +350,14 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             }
 
             settings.skill_unlocked = true;
+            foreach (NewsID id in selectedSkill.triggeredNews)
+            {
+                newsManager.ScheduleNewsFromID(id);
+            }
         }
 
         // update skill object in skill tree
         selectedSkill.skillUnlocked = settings.skill_unlocked;
-
-        
-        // TODO tell news manager to schedule triggered news
-        //foreach (NewsID id in selectedSkill.triggeredNews)
-        //{
-        //    NewsManager.instance.ScheduleNewsFromID(id);
-        //}
 
     }
 

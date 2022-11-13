@@ -18,8 +18,6 @@ public struct NewsData
 
 public class NewsManager : MonoBehaviour
 {
-    public static NewsManager instance;
-
     [SerializeField]
     GameObject newsItemPrefab;
 
@@ -27,20 +25,19 @@ public class NewsManager : MonoBehaviour
     Transform parentContainer;
 
     [SerializeField]
+    Toolbar toolbar;
+
+    [SerializeField]
     private List<NewsData> newsDatabase;
 
     [SerializeField]
     private List<NewsID> scheduledNews;
 
-    private void Awake()
-    {
-        instance = this;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        // temporary testing, should have delay
+        // Adding starting posts
+        //toolbar.GetButtonFromPageID(PageID.News).AddNotification(scheduledNews.Count);
         foreach (NewsID id in scheduledNews)
         {
             foreach (NewsData data in newsDatabase)
@@ -51,29 +48,47 @@ public class NewsManager : MonoBehaviour
                     break;
                 }
             }
-            
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    public void ScheduleNewsFromID(NewsID id)
+    NewsData GetNewsDataFromID(NewsID id)
     {
-        //scheduledNews.Add(id);
-
-        // temp
         foreach (NewsData data in newsDatabase)
         {
             if (data.id == id)
             {
-                PostNewsStory(data);
-                break;
+                return data;
             }
         }
+        return new();
+    }
+
+    public void ScheduleNewsFromID(NewsID id)
+    {
+        scheduledNews.Add(id);
+        if (scheduledNews.Count == 1)
+        {
+            toolbar.ScheduleNewsNotificaiton(PostNextNewsStory, 10f);
+        }
+    }
+
+    // Returns true if there are more scheduled stories
+    public bool PostNextNewsStory()
+    {
+        if (scheduledNews.Count == 0)
+            return false;
+        NewsID id = scheduledNews[0];
+        scheduledNews.RemoveAt(0);
+        NewsData data = GetNewsDataFromID(id);
+        if (data.id != NewsID.None)
+        {
+            PostNewsStory(data);
+            ToolbarButton button = toolbar.GetButtonFromPageID(PageID.News);
+            if (!this.isActiveAndEnabled)
+                button.AddNotification(1);
+        }
+        return scheduledNews.Count > 0;
     }
 
     void PostNewsStory(NewsData data)
