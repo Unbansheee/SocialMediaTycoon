@@ -121,6 +121,7 @@ MonoBehaviour:
   tooltipBoxPrefab: {fileID: 1837646843438455104, guid: e43d060b3e542e74a84889c4eff2b8ab, type: 3}
   tooltipParent: {fileID: 0}
   newsManager: {fileID: 0}
+  treeRoot: {fileID: 2392500416895845103}
 --- !u!1001 &6467416508795484368
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -124,6 +124,9 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private NewsManager newsManager;
 
+    [SerializeField]
+    private Transform treeRoot;
+
     PlayerData playerData;
     //NewsManager newsManager;
 
@@ -187,7 +190,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         go.name = skillData.SkillName(); //skillData.skill.ToString();
         go.transform.SetParent(parent.transform);
         RectTransform rt = go.GetComponent<RectTransform>();
-        rt.sizeDelta = buttonSize;
+        rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 100f);
+        rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100f);
 
         // set skill setings (this will update automatically from now)
         SkillSettings skillSettings = go.transform.gameObject.GetComponent<SkillSettings>();
@@ -227,6 +231,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
         foreach (SkillTier tier in skillTree)
         {
+
             float skill_count = tier.skills.Count;
             float full_tier_width = skill_count - 1 >= 0 ? (skill_count * button_width) + ((skill_count - 1) * (button_width * buttonMarginPercentage.x) - button_width) : ((skill_count - 1) * button_width) - button_width;
             float start_x = st.position.x - (full_tier_width / 2);
@@ -237,11 +242,13 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             tierGo.transform.SetParent(this.transform);
             tierObjects.Add(tierGo);
 
+            Transform tierTransform = treeRoot.GetChild(tier_counter - 1);
             foreach (Skill skill in tier.skills)
             {
-                skillButtons.Add(CreateSkillButton(skill, SkillButtonPrefab, tierGo, new Vector3(x_pos_change, 0, 0)));
-                x_pos_change += button_width + (button_width * buttonMarginPercentage.x);
-                skillButtons[skillButtons.Count - 1].transform.Rotate(0, 0, 90); // Hack to draw tree horizontally (rotate the icons back)
+                //skillButtons.Add(CreateSkillButton(skill, SkillButtonPrefab, tierGo, new Vector3(x_pos_change, 0, 0)));
+                //x_pos_change += button_width + (button_width * buttonMarginPercentage.x);
+                //skillButtons[skillButtons.Count - 1].transform.Rotate(0, 0, 90); // Hack to draw tree horizontally (rotate the icons back)
+                skillButtons.Add(CreateSkillButton(skill, SkillButtonPrefab, tierTransform.gameObject, new Vector3(0, 0, 0)));
             }
 
             tierGo.transform.position = tierGo.transform.position + new Vector3(start_x, start_y + y_pos_change, tierGo.transform.position.z);
@@ -249,6 +256,15 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             y_pos_change += button_height + (button_height * buttonMarginPercentage.y);
             tier_counter += 1;
         }
+
+        // attempt to reseize buttons
+        //foreach (GameObject skill in skillButtons)
+        //{
+        //    RectTransform rt = skill.GetComponent<RectTransform>();
+        //    rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 100f);
+        //    rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100f);
+        //    
+        //}
 
         GameObject parent = new("Tiers", typeof(RectTransform));
         parent.transform.SetParent(this.transform);
