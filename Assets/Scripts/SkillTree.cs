@@ -153,7 +153,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        //Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
+        Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
 
         GameObject selectedGameObject = eventData.pointerCurrentRaycast.gameObject;
 
@@ -189,9 +189,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         GameObject go = Instantiate(prefab, position, Quaternion.identity);
         go.name = skillData.SkillName(); //skillData.skill.ToString();
         go.transform.SetParent(parent.transform);
-        RectTransform rt = go.GetComponent<RectTransform>();
-        rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 100f);
-        rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100f);
+
 
         // set skill setings (this will update automatically from now)
         SkillSettings skillSettings = go.transform.gameObject.GetComponent<SkillSettings>();
@@ -208,9 +206,12 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         Image icon = go.transform.Find("ICON").GetComponent<Image>();
         icon.sprite = skillData.skillIcon;
         go.transform.Find("ICON").name = go.name;
+        
+        go.transform.localScale = new Vector3(1, 1, 1);
+        go.transform.rotation = Quaternion.identity;
 
         skillData.settings = skillSettings;
-
+        
         return go;
     }
 
@@ -218,7 +219,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     void InstantiateSkillTree(List<GameObject> skillButtons, List<GameObject> tierObjects, List<SkillTier> skillTree, Vector2 buttonMarginPercentage)
     {
         RectTransform st = (RectTransform)this.transform;
-        st.Rotate(0, 0, 90); // Hack to draw tree horizontally
+        //st.Rotate(0, 0, 90); // Hack to draw tree horizontally
         float button_width = buttonSize.x;
         float button_height = buttonSize.y;
 
@@ -238,9 +239,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
             float x_pos_change = 0;
 
-            GameObject tierGo = new("Tier " + tier_counter);
-            tierGo.transform.SetParent(this.transform);
-            tierObjects.Add(tierGo);
+ 
 
             Transform tierTransform = treeRoot.GetChild(tier_counter - 1);
             foreach (Skill skill in tier.skills)
@@ -251,7 +250,6 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
                 skillButtons.Add(CreateSkillButton(skill, SkillButtonPrefab, tierTransform.gameObject, new Vector3(0, 0, 0)));
             }
 
-            tierGo.transform.position = tierGo.transform.position + new Vector3(start_x, start_y + y_pos_change, tierGo.transform.position.z);
 
             y_pos_change += button_height + (button_height * buttonMarginPercentage.y);
             tier_counter += 1;
@@ -266,14 +264,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         //    
         //}
 
-        GameObject parent = new("Tiers", typeof(RectTransform));
-        parent.transform.SetParent(this.transform);
-
-        foreach (GameObject tierGo in tierObjects)
-        {
-            tierGo.transform.SetParent(parent.transform);
-        }
-        st.Rotate(0, 0, -90); // Hack to draw tree horizontally (rotate parent back, tree now horizonal)
+        
+        //st.Rotate(0, 0, -90); // Hack to draw tree horizontally (rotate parent back, tree now horizonal)
     }
 
     // this is the information box
