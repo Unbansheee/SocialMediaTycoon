@@ -1436,6 +1436,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5325159817237911353, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
   m_PrefabInstance: {fileID: 818681504}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &818681507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+  m_PrefabInstance: {fileID: 818681504}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818681506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd177ce62ea7204ba8bca23f8c47e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &893325120 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 51608366819146039, guid: 9aca681c7d201084296cee7878be61f0, type: 3}
@@ -1569,6 +1580,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 366136826489574998, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: newsManager
+      value: 
+      objectReference: {fileID: 818681507}
     - target: {fileID: 687499239940264488, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1621,6 +1636,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2149149090571813874, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: newsManager
+      value: 
+      objectReference: {fileID: 818681507}
     - target: {fileID: 2452920789147085010, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_fontColor.b
       value: 0.21176472
@@ -1769,6 +1788,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4526667927123981675, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: newsManager
+      value: 
+      objectReference: {fileID: 818681507}
     - target: {fileID: 5291695364680410608, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_IsActive
       value: 1
