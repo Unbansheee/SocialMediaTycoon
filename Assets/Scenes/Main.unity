@@ -1805,32 +1805,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 818681507}
     - target: {fileID: 2149149090571813874, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: skillTree.Array.data[0].skills.Array.data[0].triggeredNews.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2149149090571813874, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: skillTree.Array.data[0].skills.Array.data[0].triggeredNews.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2149149090571813874, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: skillTree.Array.data[0].skills.Array.data[0].triggeredNews.Array.data[1]
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2452920789147085010, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0.21176472
-      objectReference: {fileID: 0}
-    - target: {fileID: 2452920789147085010, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.18431373
-      objectReference: {fileID: 0}
-    - target: {fileID: 2452920789147085010, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0.1764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 2452920789147085010, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4281741101
       objectReference: {fileID: 0}
     - target: {fileID: 2551781602034586605, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1839,22 +1815,6 @@ PrefabInstance:
     - target: {fileID: 2892955289393151715, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_ScrollSensitivity
       value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025777920773016460, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0.21176472
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025777920773016460, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.18431373
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025777920773016460, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0.1764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025777920773016460, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4281741101
       objectReference: {fileID: 0}
     - target: {fileID: 3120156658646793916, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_Name
@@ -1975,22 +1935,6 @@ PrefabInstance:
     - target: {fileID: 5976167793701202336, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6263608289675068075, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0.21176472
-      objectReference: {fileID: 0}
-    - target: {fileID: 6263608289675068075, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.18431373
-      objectReference: {fileID: 0}
-    - target: {fileID: 6263608289675068075, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0.1764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 6263608289675068075, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4281741101
       objectReference: {fileID: 0}
     - target: {fileID: 6564637953423025832, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_Color.b
@@ -15919,6 +15863,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 54920357}
     m_Modifications:
+    - target: {fileID: 2020981715, guid: 13f0bbf26369b75498deecac47eba95a, type: 3}
+      propertyPath: m_text
+      value: "Read Terms and Conditions\n\n\tBig Bird games reserves the right all
+        data provided through the app either directly or through permissions set
+        on your device. Such data may be used by Big Bird Games, our partners and
+        may be sold in an 'anonymized' format at the discretion of Big Bird Games.
+        In the case that Big Bird Games is purchased or meged into another entity,
+        ownership of the data harvested from you will be transferred to that new
+        entity. \n\n\tYou additionally grant the following device permission to Big
+        Bird Games: -  access to your device's camera and microphone at all times,
+        even when Social Media Tycoon (c) is not active\n- Access to real-time GPS
+        location data\n- Access to your device's search history\n- Access to your
+        device's file system\n- Access to your contacts and correspondence\n- Access
+        to any biometric data stored on the device\n- Access to install additional
+        software such as, but not limited to, trackers with the ability to monitor
+        your behaviour on other applications\n\n\tBy Installing Social Media Tycoon
+        (c) on your device you are  agreeing to everything in these terms and conditions.\n\n\t"
+      objectReference: {fileID: 0}
     - target: {fileID: 1275719137248474538, guid: 13f0bbf26369b75498deecac47eba95a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -15993,6 +15955,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6268730291892024663, guid: 13f0bbf26369b75498deecac47eba95a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268730292669866972, guid: 13f0bbf26369b75498deecac47eba95a, type: 3}
+      propertyPath: m_PresetInfoIsWorld
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -358,38 +358,42 @@ PrefabInstance:
     m_TransformParent: {fileID: 2551781602034586605}
     m_Modifications:
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: newsManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: tooltipParent
       value: 
       objectReference: {fileID: 3120156658646793917}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[0].skills.Array.data[0].skillDescription
-      value: Helps our users recieve ads that that are more relevant to them. Increases
+      value: Helps our users receive ads that that are more relevant to them. Increases
         our revenue too.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[1].skills.Array.data[0].skillDescription
-      value: AI is used to group like-minded users together, allowing you to delive
-        multiple ads at once.
+      value: AI is implemented to group like-minded users together, allowing you
+        to deliver multiple ads at once.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[1].skills.Array.data[1].skillDescription
-      value: Allows Users to tag themselves and their friends for better social connections
-        and generates data for the company.
+      value: Allows Users to tag themselves and their friends for better social connections.
+        Generates more data for the company.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[0].skillDescription
-      value: With enough data an AI can automatically select ads comparable to if
-        not better than a human.
+      value: With enough data, AI can automatically select ads comparable to - if
+        not better than - a human.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[1].skillDescription
-      value: Allows for the automatic tagginig of content, generating connections
+      value: Allows for the automatic tagging of content, generating connections
         and data. No User confirmation required!
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[2].skillDescription
-      value: By integrating knowledge of human psychology our users prefer to spend
-        mrooe time on our App, supplying more data.
+      value: By integrating knowledge of human psychology, our users prefer to spend
+        more time on our app, supplying more data.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[0].skills.Array.data[0].triggeredNews.Array.size
@@ -530,6 +534,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2551781602034586605}
     m_Modifications:
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: newsManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: tooltipParent
       value: 
       objectReference: {fileID: 3120156658646793917}
@@ -579,17 +587,16 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 554a30a45860f494ca38586c54b7e5d9, type: 3}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[0].skills.Array.data[0].skillDescription
-      value: Mine your users for all the data they're worth to better serve their
-        needs.
+      value: Mine your users for all the data they're worth to improve their experience.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[1].skills.Array.data[0].skillDescription
       value: Research the process of anonomyzing data so that this information can
-        be shared for the bettermetn of humanity, and a profit.
+        be shared for the betterment of humanity, and a profit.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[1].skills.Array.data[1].skillDescription
-      value: If we find potenttial exploints in hardware and operating systems we
+      value: If we find potenttial exploits in hardware and operating systems we
         can improve device security and potentially collect data to better know our
         users.
       objectReference: {fileID: 0}
@@ -601,7 +608,7 @@ PrefabInstance:
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[1].skillDescription
       value: We can better serve our users by associating data from areas of their
-        life they would assuem to be unrelated.
+        life they would assume to be unrelated.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[2].skillDescription
@@ -755,6 +762,22 @@ PrefabInstance:
       propertyPath: m_text
       value: User Features
       objectReference: {fileID: 0}
+    - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.21176472
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.18431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281741101
+      objectReference: {fileID: 0}
     - target: {fileID: 7947261883946647712, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -854,6 +877,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2551781602034586605}
     m_Modifications:
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: newsManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: tooltipParent
       value: 
       objectReference: {fileID: 3120156658646793917}
@@ -887,7 +914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[0].skills.Array.data[0].skillDescription
-      value: Add a new departmentt with the goal of advocating for the benefit of
+      value: Add a new department with the goal of advocating for the benefit of
         the company and our users.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
@@ -897,17 +924,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[1].skills.Array.data[1].skillDescription
-      value: Provides users with the conveneice of logging into other services with
-        our account, and provides use with data regarding those servieces.
+      value: Provides users with the convenience of logging into other services with
+        our account, and provides us with data regarding those services.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[0].skillDescription
-      value: Our lobbyists succeed in making civillian encryption illegial to curb
+      value: Our lobbyists succeed in making civillian encryption illegal to curb
         criminal activity and allow us to monitor for concerning content.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[1].skillDescription
-      value: Since most of our competiors offer a subpar product, it is better for
+      value: Since most of our competitors offer a subpar product, it is better for
         our currrent and future users to legislate a high stamdard for such companies.
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
@@ -1183,6 +1210,22 @@ PrefabInstance:
       propertyPath: m_text
       value: Data Trading
       objectReference: {fileID: 0}
+    - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.21176472
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.18431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281741101
+      objectReference: {fileID: 0}
     - target: {fileID: 7947261883946647712, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1292,6 +1335,22 @@ PrefabInstance:
     - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
       propertyPath: m_text
       value: Corporate Expansion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.21176472
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.18431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228261569633300004, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281741101
       objectReference: {fileID: 0}
     - target: {fileID: 7947261883946647712, guid: 25e533c6e184d5c49a8f28fd3d2dd6b8, type: 3}
       propertyPath: m_Pivot.x
