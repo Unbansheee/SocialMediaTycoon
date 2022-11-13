@@ -2172,7 +2172,7 @@ PrefabInstance:
     - target: {fileID: 1332581395582872586, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 93527ae7aefc8bf4590e3f06d0ae8134, type: 3}
+      objectReference: {fileID: 21300000, guid: 2074f10dc15e223498204ae76adf218b, type: 3}
     - target: {fileID: 1332581395582872586, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
       propertyPath: m_Color.b
       value: 0.7686275
@@ -2269,6 +2269,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2783155055323999405, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783155055323999405, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ca19f52ac5877ff4ebc2c98a0ac96e3b, type: 3}
+    - target: {fileID: 2783155055323999405, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b4e78bbf0413560459bc8bd3c1022cad, type: 3}
     - target: {fileID: 3803882428814532804, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2309,6 +2321,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -20.46466
       objectReference: {fileID: 0}
+    - target: {fileID: 3999799350585253805, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9afafd077e85c6e49a77ed99ca84a3ae, type: 3}
     - target: {fileID: 3999799350585253805, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
       propertyPath: m_Color.b
       value: 0.7725491
@@ -2401,6 +2417,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5592800851136795885, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5592800851136795885, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b87fe9f5c038d084da7ebb1c0e152806, type: 3}
+    - target: {fileID: 5592800851136795885, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2074f10dc15e223498204ae76adf218b, type: 3}
     - target: {fileID: 5671513053662705012, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
       propertyPath: m_Name
       value: Toolbar
@@ -2517,6 +2545,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7521571393024616266, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521571393024616266, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a369f56e297b05e4e9a5895a0e4524d0, type: 3}
+    - target: {fileID: 7521571393024616266, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9afafd077e85c6e49a77ed99ca84a3ae, type: 3}
     - target: {fileID: 7721918470477518883, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
       propertyPath: m_Color.b
       value: 0.7686275
@@ -2649,6 +2689,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8753900101462348874, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b4e78bbf0413560459bc8bd3c1022cad, type: 3}
     - target: {fileID: 8753900101462348874, guid: 1430fc557cb2c724287ba8f7f32c980e, type: 3}
       propertyPath: m_Color.b
       value: 0.7686275
