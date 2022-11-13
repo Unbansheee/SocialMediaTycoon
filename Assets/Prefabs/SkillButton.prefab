@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3324125559237122414}
   - component: {fileID: 5564561294797601773}
   - component: {fileID: 4276492790744320109}
+  - component: {fileID: 1639404961118537080}
   m_Layer: 5
   m_Name: SkillButton
   m_TagString: Untagged
@@ -25,7 +26,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2268464654303294115}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
@@ -68,6 +69,20 @@ MonoBehaviour:
   skill_unlockable: 0
   prerequisites_met: 0
   has_enough_currency: 0
+--- !u!114 &1639404961118537080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2268464654303294115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 1
 --- !u!1 &4907991383195203669
 GameObject:
   m_ObjectHideFlags: 0
