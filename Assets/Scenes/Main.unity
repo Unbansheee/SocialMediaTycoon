@@ -260,11 +260,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89be7611bd19a9b4095c5a6a5cce0b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SiteUsers: 0
+  SiteUsers: 1
   SiteUsersPerSecond: 0
   DataMB: 0
   DataMBPerSecond: 0
-  Money: 0
+  Money: 200
   MoneyPerSecond: 0
   Reputation: 0
   MoneyPerAdMultiplier: 1
@@ -1932,11 +1932,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2551781602034586605, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.2507935
+      value: -3.2507324
       objectReference: {fileID: 0}
     - target: {fileID: 2551781602034586605, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -718.71
+      value: -642.999
       objectReference: {fileID: 0}
     - target: {fileID: 2892955289393151715, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_ScrollSensitivity
