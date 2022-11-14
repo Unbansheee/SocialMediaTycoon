@@ -120,7 +120,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000010014, y: 0.00021479119}
+  m_AnchoredPosition: {x: 26, y: 0.00016719959}
   m_SizeDelta: {x: 1080, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3914503744110401917
@@ -141,7 +141,7 @@ MonoBehaviour:
     m_Top: 10
     m_Bottom: 10
   m_ChildAlignment: 1
-  m_Spacing: 1.8
+  m_Spacing: 150
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -414,6 +414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newsItemPrefab: {fileID: 5272412320015797908, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
   parentContainer: {fileID: 2853058489755067269}
+  toolbar: {fileID: 0}
   newsDatabase:
   - id: 1
     headline: Finally! Useful advertisements!
