@@ -1890,7 +1890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2551781602034586605, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -639.1
+      value: -718.71
       objectReference: {fileID: 0}
     - target: {fileID: 2892955289393151715, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_ScrollSensitivity
@@ -2064,6 +2064,26 @@ PrefabInstance:
       propertyPath: skillTree.Array.data[2].skills.Array.data[2].skillIcon
       value: 
       objectReference: {fileID: 21300000, guid: 7e336e25e6a6dd24980a7319939812e1, type: 3}
+    - target: {fileID: 4925925914930562142, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: m_Spacing
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925925914930562142, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925925914930562142, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925925914930562142, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: m_Padding.m_Right
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925925914930562142, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5290137319943493400, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2155,6 +2175,10 @@ PrefabInstance:
     - target: {fileID: 6564637953423025832, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_Color.r
       value: 0.86666673
+      objectReference: {fileID: 0}
+    - target: {fileID: 7161832341826686902, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: m_Spacing
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7161832341826686902, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_Padding.m_Top
@@ -2267,6 +2291,26 @@ PrefabInstance:
     - target: {fileID: 8263933942034183205, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194473000222238563, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: m_Spacing
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194473000222238563, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194473000222238563, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194473000222238563, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: m_Padding.m_Right
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194473000222238563, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
