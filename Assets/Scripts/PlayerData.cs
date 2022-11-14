@@ -14,17 +14,17 @@ enum GainSource
 public class PlayerData : MonoBehaviour
 {
     
-    public int SiteUsers = 1;
-    public int SiteUsersPerSecond = 0;
-    public int DataMB = 0;
-    public int DataMBPerSecond = 0;
-    public int Money = 200;
-    public int MoneyPerSecond = 0;
-    public int Reputation = 0;
+    public double SiteUsers = 1;
+    public double SiteUsersPerSecond = 0.05;
+    public double DataMB = 0;
+    public double DataMBPerSecond = 0;
+    public double Money = 200;
+    public double MoneyPerSecond = 0;
+    public double Reputation = 0;
     
-    public float MoneyPerAdMultiplier = 1;
-    public float CostPerUpgradeMultiplier = 1;
-    public float MoneyPerDataScrapeMultiplier = 1;
+    public double MoneyPerAdMultiplier = 1;
+    public double CostPerUpgradeMultiplier = 1;
+    public double MoneyPerDataScrapeMultiplier = 1;
     
 
     public bool SaveAndLoad = true;
@@ -33,30 +33,40 @@ public class PlayerData : MonoBehaviour
 
     void Save()
     {
-        PlayerPrefs.SetInt("SiteUsers", SiteUsers);
-        PlayerPrefs.SetInt("SiteUsersPerSecond", SiteUsersPerSecond);
-        PlayerPrefs.SetInt("DataMB", DataMB);
-        PlayerPrefs.SetInt("DataMBPerSecond", DataMBPerSecond);
-        PlayerPrefs.SetInt("Money", Money);
-        PlayerPrefs.SetInt("MoneyPerSecond", MoneyPerSecond);
-        PlayerPrefs.SetInt("Reputation", Reputation);
+        PlayerPrefs.SetString("SiteUsers", SiteUsers.ToString());
+        PlayerPrefs.SetString("SiteUsersPerSecond", SiteUsersPerSecond.ToString());
+        PlayerPrefs.SetString("DataMB", DataMB.ToString());
+        PlayerPrefs.SetString("DataMBPerSecond", DataMBPerSecond.ToString());
+        PlayerPrefs.SetString("Money", Money.ToString());
+        PlayerPrefs.SetString("MoneyPerSecond", MoneyPerSecond.ToString());
+        PlayerPrefs.SetString("Reputation", Reputation.ToString());
+        PlayerPrefs.SetString("MoneyPerAdMultiplier", MoneyPerAdMultiplier.ToString());
+        PlayerPrefs.SetString("CostPerUpgradeMultiplier", CostPerUpgradeMultiplier.ToString());
+        PlayerPrefs.SetString("MoneyPerDataScrapeMultiplier", MoneyPerDataScrapeMultiplier.ToString());
+        
+        
     }
     
     void Load()
     {
-        SiteUsers = PlayerPrefs.GetInt("SiteUsers");
-        SiteUsersPerSecond = PlayerPrefs.GetInt("SiteUsersPerSecond");
-        DataMB = PlayerPrefs.GetInt("DataMB");
-        DataMBPerSecond = PlayerPrefs.GetInt("DataMBPerSecond");
-        Money = PlayerPrefs.GetInt("Money");
-        MoneyPerSecond = PlayerPrefs.GetInt("MoneyPerSecond");
-        Reputation = PlayerPrefs.GetInt("Reputation");
+        SiteUsers = double.Parse(PlayerPrefs.GetString("SiteUsers", "1"));
+        SiteUsersPerSecond = double.Parse(PlayerPrefs.GetString("SiteUsersPerSecond", "0.05"));
+        DataMB = double.Parse(PlayerPrefs.GetString("DataMB", "0"));
+        DataMBPerSecond = double.Parse(PlayerPrefs.GetString("DataMBPerSecond", "0"));
+        Money = double.Parse(PlayerPrefs.GetString("Money", "200"));
+        MoneyPerSecond = double.Parse(PlayerPrefs.GetString("MoneyPerSecond", "0"));
+        Reputation = double.Parse(PlayerPrefs.GetString("Reputation", "0"));
+        MoneyPerAdMultiplier = double.Parse(PlayerPrefs.GetString("MoneyPerAdMultiplier", "1"));
+        CostPerUpgradeMultiplier = double.Parse(PlayerPrefs.GetString("CostPerUpgradeMultiplier", "1"));
+        MoneyPerDataScrapeMultiplier = double.Parse(PlayerPrefs.GetString("MoneyPerDataScrapeMultiplier", "1"));
+        
+        
     }
 
     public void Reset()
     {
         SiteUsers = 1;
-        SiteUsersPerSecond = 0;
+        SiteUsersPerSecond = 0.05;
         DataMB = 0;
         DataMBPerSecond = 0;
         Money = 200;

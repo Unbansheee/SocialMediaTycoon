@@ -14,7 +14,7 @@ public class ProfilePage : MonoBehaviour
     public void Refresh()
     {
         
-        var users = playerData.SiteUsers;
+        var users = (int)Math.Floor(playerData.SiteUsers);
         int usersCount = Math.Clamp(users, 1, 30);
 
         while (personGrid.transform.childCount < usersCount)

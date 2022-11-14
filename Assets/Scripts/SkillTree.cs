@@ -364,7 +364,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
                 newsManager.ScheduleNewsFromID(id);
             }
             
-            //playerData.ApplySkill(selectedSkill.skillID);
+            playerData.ApplySkill(selectedSkill.skillID);
         }
 
         // update skill object in skill tree

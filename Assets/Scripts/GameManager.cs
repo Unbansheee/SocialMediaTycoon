@@ -16,10 +16,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        playerData.SiteUsers += (int)(playerData.SiteUsersPerSecond * Time.deltaTime);
-        playerData.DataMB += (int)(playerData.DataMBPerSecond * Time.deltaTime);
-        playerData.Money += (int)(playerData.MoneyPerSecond * Time.deltaTime);
+        playerData.SiteUsers += playerData.SiteUsersPerSecond * Time.deltaTime;
+        playerData.DataMB += playerData.DataMBPerSecond * Time.deltaTime;
+        playerData.Money += playerData.MoneyPerSecond * Time.deltaTime;
     }
     
     void RunOncePerSecond()

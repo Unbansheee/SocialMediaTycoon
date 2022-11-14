@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -26,8 +27,8 @@ public class InfoBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UserCount.text = playerData.SiteUsers.ToString();
-        string money = playerData.Money.ToString();
+        UserCount.text = ((int)Math.Floor(playerData.SiteUsers)).ToString();
+        string money = ((int)Math.Floor(playerData.Money)).ToString();
         
         //format money with commas
         int count = 0;
@@ -43,7 +44,7 @@ public class InfoBar : MonoBehaviour
         Money.text = "$" + money;
 
         string dataMagnitude = "MB";
-        long data = playerData.DataMB;
+        double data = playerData.DataMB;
         //format GB and TB
         if (data > 1000)
         {
@@ -55,7 +56,7 @@ public class InfoBar : MonoBehaviour
             data = data / 1000;
             dataMagnitude = "TB";
         }
-        Data.text = data.ToString() + " " + dataMagnitude;
+        Data.text = (int)Math.Floor(data) + " " + dataMagnitude;
 
 
         switch (Toolbar.CurrentPage)
