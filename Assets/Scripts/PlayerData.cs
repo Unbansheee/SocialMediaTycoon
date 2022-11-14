@@ -3,6 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+enum GainSource
+{
+    AD,
+    UPGRADE,
+    DATASCRAPE,
+    FLAT
+}
+
 public class PlayerData : MonoBehaviour
 {
     
@@ -14,8 +22,15 @@ public class PlayerData : MonoBehaviour
     public int MoneyPerSecond = 0;
     public int Reputation = 0;
     
-    public bool SaveAndLoad = true;
+    public float MoneyPerAdMultiplier = 1;
+    public float CostPerUpgradeMultiplier = 1;
+    public float MoneyPerDataScrapeMultiplier = 1;
     
+
+    public bool SaveAndLoad = true;
+
+
+
     void Save()
     {
         PlayerPrefs.SetInt("SiteUsers", SiteUsers);
@@ -65,6 +80,63 @@ public class PlayerData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+    
+    public void ApplySkill(SkillTree.SkillID id)
+    {
+        switch (id)
+        {
+            case SkillTree.SkillID.None:
+                break;
+            case SkillTree.SkillID.Targeted_Advertising:
+                MoneyPerAdMultiplier *= 1.5f;
+                break;
+            case SkillTree.SkillID.AI_Assisted_Advertising:
+                MoneyPerSecond += 5;
+                break;
+            case SkillTree.SkillID.Automated_Advertising:
+                MoneyPerSecond *= 3;
+                break;
+            case SkillTree.SkillID.User_Tagging:
+                break;
+            case SkillTree.SkillID.Facial_Recognition:
+                break;
+            case SkillTree.SkillID.Addictive_UX:
+                break;
+            case SkillTree.SkillID.Data_Scraping:
+                break;
+            case SkillTree.SkillID.Anonymized_Data:
+                break;
+            case SkillTree.SkillID.Data_Broker:
+                break;
+            case SkillTree.SkillID.Research_Device_Vulnerabilities:
+                break;
+            case SkillTree.SkillID.Expand_App_Permissions:
+                break;
+            case SkillTree.SkillID.Deanonymization_Research:
+                break;
+            case SkillTree.SkillID.Lobbying:
+                break;
+            case SkillTree.SkillID.Sign_In_With_SM_Tycoon:
+                break;
+            case SkillTree.SkillID.Add_Backdoor:
+                break;
+            case SkillTree.SkillID.Ban_Encryption:
+                break;
+            case SkillTree.SkillID.Prohibitive_Regulation:
+                break;
+            case SkillTree.SkillID.Acquire_Competition:
+                break;
+            case SkillTree.SkillID.Minimum_10000_Users:
+                break;
+            case SkillTree.SkillID.Minimum_1000000_Money:
+                break;
+            case SkillTree.SkillID.Minimum_1000_Data:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(id), id, null);
+        }
         
     }
 }

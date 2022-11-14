@@ -275,34 +275,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adsWatched: 0
-  name: Nicole Thomas
-  age: 20
-  genderIdentity: 2
-  email: n.thomas@randatmail.com
-  phoneNumber: 354-5010-11
-  education: Doctoral
-  occupation: Singer
-  experience: 2
+  name: Ellia Adams
+  age: 54
+  genderIdentity: 1
+  email: e.adams@randatmail.com
+  phoneNumber: 553-6597-43
+  education: Lower secondary
+  occupation: Physicist
+  experience: 26
   hobbies:
+  - Walking
   - Gaming
-  - Journaling
-  - Pottery
-  salary: 104798
-  savings: 12165
-  debt: 5626
-  creditScore: 490
-  marriageStatus: 2
+  - Crocheting
+  salary: 116725
+  savings: 233483
+  debt: 19
+  creditScore: 850
+  marriageStatus: 1
   children: 1
   searchHistory:
-  - what is a smartphone
-  - how to survive in the wild
-  - why dont people like me
-  - red stain on carpet
-  - top 10 soup recipes
-  - what to do when you are bored
-  - how do trains work
-  - why are my hands wet
-  seed: 253916
+  - pink ice cream cones
+  - financial planner
+  - why can i smell burning toast
+  - what is really in area 51
+  - why does it hurt to pee
+  - are ads bad for the economy
+  - bmi calculator
+  - how to make friends
+  seed: 992193
 --- !u!1 &3281516663451315774
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nicole Thomas
+  m_text: Ellia Adams
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -560,7 +560,7 @@ PrefabInstance:
     - target: {fileID: 2127918702173799607, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9a4c2ab2972cfb349952fc09b7040b24, type: 3}
+      objectReference: {fileID: 21300000, guid: 3dcc855c65f5e364ebcc6ffe2f4944f2, type: 3}
     - target: {fileID: 2127918702173799607, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -568,7 +568,7 @@ PrefabInstance:
     - target: {fileID: 2852578038512626116, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4b638bc1beb3c1b4d8e456d68d55d5c2, type: 3}
+      objectReference: {fileID: 21300000, guid: bb56ceed12ac17e4ea6e1c7246b47100, type: 3}
     - target: {fileID: 2875424446013237270, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -576,7 +576,7 @@ PrefabInstance:
     - target: {fileID: 3147714572466897567, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 23620727cf59efb4eb0d58899675b785, type: 3}
+      objectReference: {fileID: 21300000, guid: 8b1b708161b62d244a34272c6b099ca6, type: 3}
     - target: {fileID: 3147714572466897567, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -596,7 +596,7 @@ PrefabInstance:
     - target: {fileID: 7302065289919815441, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9425444c4a33afc43a77f9ec96ae92be, type: 3}
+      objectReference: {fileID: 21300000, guid: 6dd49a123fe17a64d9171bd5ff83cb52, type: 3}
     - target: {fileID: 7302065289919815441, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -607,11 +607,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7841162287209972734, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: Seed
-      value: 253916
+      value: 992193
       objectReference: {fileID: 0}
     - target: {fileID: 7841162287209972734, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: identity
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7841162287209972735, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RootOrder
@@ -672,7 +672,7 @@ PrefabInstance:
     - target: {fileID: 8218725007814310169, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 29362e3ea1d3bee43a4bd7fc8188593f, type: 3}
+      objectReference: {fileID: 21300000, guid: 6ad2abb0abbe68c48be1ce1526c49ec7, type: 3}
     - target: {fileID: 8218725007814310169, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -680,7 +680,7 @@ PrefabInstance:
     - target: {fileID: 8424000516238932334, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6373440ff8b7bc747847dd85ffb7e352, type: 3}
+      objectReference: {fileID: 21300000, guid: 0ab03226431ff9147bd42d4aa78d96f5, type: 3}
     - target: {fileID: 8424000516238932334, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -688,7 +688,7 @@ PrefabInstance:
     - target: {fileID: 8950651778079995672, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b897fe0bef250e046ab340845d6fb51d, type: 3}
+      objectReference: {fileID: 21300000, guid: d5e6fc5ce8a577f4684c7372589b4132, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
 --- !u!114 &3281516662342165715 stripped

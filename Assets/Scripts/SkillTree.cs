@@ -147,7 +147,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
 
     void Update()
     {
-        //UpdateSkills();
+        UpdateSkills();
     }
 
 
@@ -363,10 +363,13 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             {
                 newsManager.ScheduleNewsFromID(id);
             }
+            
+            //playerData.ApplySkill(selectedSkill.skillID);
         }
 
         // update skill object in skill tree
         selectedSkill.skillUnlocked = settings.skill_unlocked;
+        
 
     }
 

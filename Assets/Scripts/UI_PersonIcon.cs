@@ -55,7 +55,7 @@ public class UI_PersonIcon : MonoBehaviour
     
     
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         //GenerateWidget();
         if (!infoPageRef)

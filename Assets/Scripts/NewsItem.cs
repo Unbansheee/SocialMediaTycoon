@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class NewsItem : MonoBehaviour
 {
@@ -17,11 +18,16 @@ public class NewsItem : MonoBehaviour
     {
         
     }
+    
+    public void DesroyNewsItem()
+    {
+        Destroy(gameObject);
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.localScale = new Vector3(1, 1, 1);
     }
 
     public void SetHeadline(string text)

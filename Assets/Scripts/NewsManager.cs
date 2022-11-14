@@ -99,5 +99,10 @@ public class NewsManager : MonoBehaviour
         newsItem.SetHeadline(data.headline);
         newsItem.SetBlurb(data.blurb);
         item.transform.SetParent(parentContainer);
+        //get rect transform
+        RectTransform rectTransform = item.GetComponent<RectTransform>();
+        transform.localScale = new Vector3(1, 1, 1);
+
+        rectTransform.sizeDelta = new Vector2(1125.863f, rectTransform.sizeDelta.y);
     }
 }
