@@ -9,6 +9,7 @@ public class TooltipManager : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public RectTransform bounds;
 
+    public float ScreenTopPadding = 100.0f;
     // make sure there is only ever one tooltip manager instance
     private void Awake()
     {
@@ -31,20 +32,20 @@ public class TooltipManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position = Input.mousePosition + new Vector3(-(3), (transform.GetComponent<RectTransform>().rect.height/2) + 3, 0);
+        transform.position = Input.mousePosition + new Vector3(0, 0, 0);
         // if RectTransform overlap the edge of the screen, move the tooltip
-        if (transform.position.x + (bounds.rect.width * 0.5) > Screen.width)
+        if (transform.position.x + (bounds.rect.width * 0.25) > Screen.width)
         {
-            transform.position = new Vector3(Screen.width - (bounds.rect.width * 0.5f), transform.position.y, transform.position.z);
+            transform.position = new Vector3(Screen.width - (bounds.rect.width * 0.26f), transform.position.y, transform.position.z);
         }
-        else if (transform.position.x - (bounds.rect.width * 0.5) < 0)
+        else if (transform.position.x - (bounds.rect.width * 0.25) < 0)
         {
-            transform.position = new Vector3((bounds.rect.width * 0.5f), transform.position.y, transform.position.z);
+            transform.position = new Vector3((bounds.rect.width * 0.26f), transform.position.y, transform.position.z);
         }
 
-        if (transform.position.y + bounds.rect.height > Screen.height + 32.0f)
+        if (transform.position.y + bounds.rect.height > Screen.height + ScreenTopPadding)
         {
-            transform.position = new Vector3(transform.position.x, Screen.height + 32.0f - bounds.rect.height, transform.position.z);
+            transform.position = new Vector3(transform.position.x, Screen.height + ScreenTopPadding - (bounds.rect.height), transform.position.z);
         }
         
         

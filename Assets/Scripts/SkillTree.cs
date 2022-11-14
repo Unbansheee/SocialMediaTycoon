@@ -274,6 +274,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         instantiatedTooltipBox = Instantiate(tooltipBoxPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         instantiatedTooltipBox.name = "TooltipBox";
         instantiatedTooltipBox.transform.SetParent(tooltipParent == null ? transform.parent : tooltipParent);
+        instantiatedTooltipBox.transform.localScale = new Vector3(1, 1, 1);
     }
 
     // updates if a skill is unlockable, unlocked or locked
