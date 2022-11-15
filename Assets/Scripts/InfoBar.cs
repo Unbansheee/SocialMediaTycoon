@@ -45,18 +45,25 @@ public class InfoBar : MonoBehaviour
 
         string dataMagnitude = "MB";
         double data = playerData.DataMB;
-        //format GB and TB
-        if (data > 1000)
+        //format GB and TB with 2 decimal places
+        if (data >= 1000)
         {
-            data = data / 1000;
+            data /= 1000;
             dataMagnitude = "GB";
+            if (data >= 1000)
+            {
+                data /= 1000;
+                dataMagnitude = "TB";
+            }
         }
-        if (data > 1000)
+        else
         {
-            data = data / 1000;
-            dataMagnitude = "TB";
+            data = Math.Floor(data);
         }
-        Data.text = (int)Math.Floor(data) + " " + dataMagnitude;
+        //filter data to 2 deimal places
+        data = Math.Round(data, 2);
+        
+        Data.text = data + " " + dataMagnitude;
 
 
         switch (Toolbar.CurrentPage)

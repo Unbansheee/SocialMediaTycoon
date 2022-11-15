@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: AdMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 7968608461882198625, guid: ae4ca4e3660b91d4994ba86b205a7aca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968608461882198625, guid: ae4ca4e3660b91d4994ba86b205a7aca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968608461882198625, guid: ae4ca4e3660b91d4994ba86b205a7aca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8456669620998376403, guid: ae4ca4e3660b91d4994ba86b205a7aca, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

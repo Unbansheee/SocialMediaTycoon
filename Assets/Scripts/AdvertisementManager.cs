@@ -78,8 +78,10 @@ public class AdvertisementManager : MonoBehaviour
         if (userInfoPage.userData.adsWatched < MaxAdsToServe)
         {
             RefreshAds();
-            playerData.Money += Random.Range(100, 500);
+            playerData.Money += Random.Range(1, 20) * playerData.MoneyPerAdMultiplier;
+            playerData.DataMB += Random.Range(1, 3) * playerData.DataPerFieldMultiplier;
             userInfoPage.userData.adsWatched++;
+            if (Random.Range(0,1) == 1) userInfoPage.UnlockRandomData();
             MaxAdsPanel.SetActive(false);
         }
         else

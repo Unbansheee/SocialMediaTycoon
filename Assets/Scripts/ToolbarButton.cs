@@ -11,11 +11,15 @@ public class ToolbarButton : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI NotificationText;
 
+    [SerializeField]
+    GameObject Alert;
+
     private int count = 0;
 
     void Awake()
     {
         Notification.SetActive(false);
+        Alert.SetActive(false);
     }
 
     public void AddNotification(int num)
@@ -23,6 +27,7 @@ public class ToolbarButton : MonoBehaviour
         if (count == 0)
         {
             Notification.SetActive(true);
+            Alert.SetActive(true);
         }
         count += num;
         NotificationText.text = count.ToString();
@@ -32,6 +37,7 @@ public class ToolbarButton : MonoBehaviour
     {
         count = 0;
         Notification.SetActive(false);
+        Alert.SetActive(false);
     }
 
 }

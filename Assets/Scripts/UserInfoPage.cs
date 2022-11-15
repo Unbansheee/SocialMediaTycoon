@@ -84,6 +84,15 @@ public class UserInfoPage : MonoBehaviour
         Info.Add("Savings", new DataElement(userData.savings.ToString(), false));
         Info.Add("Debt", new DataElement(userData.debt.ToString(), false));
         Info.Add("Credit", new DataElement(userData.creditScore.ToString(), false));
+        
+        Info.Add("History_0", new DataElement(userData.searchHistory[0].ToString(), false));
+        Info.Add("History_1", new DataElement(userData.searchHistory[1].ToString(), false));
+        Info.Add("History_2", new DataElement(userData.searchHistory[2].ToString(), false));
+        Info.Add("History_3", new DataElement(userData.searchHistory[3].ToString(), false));
+        Info.Add("History_4", new DataElement(userData.searchHistory[4].ToString(), false));
+        Info.Add("History_5", new DataElement(userData.searchHistory[5].ToString(), false));
+        Info.Add("History_6", new DataElement(userData.searchHistory[6].ToString(), false));
+        Info.Add("History_7", new DataElement(userData.searchHistory[7].ToString(), false));
 
         RefreshFields();
         
@@ -106,7 +115,8 @@ public class UserInfoPage : MonoBehaviour
     
     int CalculateDataValue()
     {
-        return (int)(GetDiscoveredDataCount() * DataFieldValue);
+        var playerData = FindObjectOfType<PlayerData>();
+        return (int)(GetDiscoveredDataCount() * DataFieldValue * playerData.DataPerFieldMultiplier);
     }
     
     public void UnlockRandomData()
@@ -125,6 +135,7 @@ public class UserInfoPage : MonoBehaviour
             int index = Random.Range(0, undiscovered.Count);
             string key = undiscovered[index];
             Info[key] = new DataElement(Info[key].value, true);
+            Debug.Log("Unlocked " + key);
 
         }
         

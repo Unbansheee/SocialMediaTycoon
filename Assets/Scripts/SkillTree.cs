@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 public class SkillTree : MonoBehaviour, IPointerClickHandler
 {
@@ -197,8 +198,36 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         skillSettings.unlocked = unlockedColor;
         skillSettings.locked = lockedColor;
         skillSettings.skill_unlocked = skillData.skillUnlocked;
+
         string preq = skillData.prerequisiteSkills.Count > 0 ? "\n<b>Prerequisites</b>: " + string.Join(", ", skillData.prerequisiteSkills) : ""; //TODO join SkillName()
-        skillSettings.skillDescription = "<b>" + skillData.SkillName() + "</b>\n\n" + skillData.skillDescription + "\n\n<b>Cost</b>: " + skillData.currency.ToString() + " " + skillData.cost + preq.Replace('_',' '); 
+
+        string cost = skillData.cost.ToString();
+        if (skillData.currency == CurrencyType.Data)
+        {
+            double data = skillData.cost;
+            string dataMagnitude = "MB";
+            //format GB and TB
+            if (data >= 1000)
+            {
+                data = data / 1000;
+                dataMagnitude = "GB";
+            }
+            if (data >= 1000)
+            {
+                data = data / 1000;
+                dataMagnitude = "TB";
+            }
+            cost = (int)Math.Floor(data) + " " + dataMagnitude;
+        }
+        else if (skillData.currency == CurrencyType.Money)
+        {
+            cost = "$" + skillData.cost.ToString();
+            cost = Regex.Replace(cost, @"(\d)(?=(\d{3})+(?!\d))", "$1,");
+        }
+        
+        
+        skillSettings.skillDescription = "<b>" + skillData.SkillName() + "</b>\n\n" + skillData.skillDescription + "\n\n<b>Cost</b>: " + skillData.currency.ToString() + " " + cost + preq.Replace('_',' '); 
+
 
         //Image bg = go.transform.Find("BG").GetComponent<Image>();
         //bg.color = lockedColor;
@@ -342,22 +371,19 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         // if skill unlockable and the user clicked on the skill in order to buy it
         if (settings.skill_unlockable && selected_for_purchase)
         {
-            if (selectedSkill.currency == CurrencyType.Money)
+            switch (selectedSkill.currency)
             {
-                settings.has_enough_currency = true;
-                playerData.Money -= selectedSkill.cost;
-            }
-            else if (selectedSkill.currency == CurrencyType.Money && playerData.DataMB >= selectedSkill.cost)
-            {
-                settings.has_enough_currency = true;
-                //playerData.DataMB -= selectedSkill.cost;
-            }
-            else if (selectedSkill.currency == CurrencyType.Money && playerData.SiteUsers >= selectedSkill.cost)
-            {
-                settings.has_enough_currency = true;
-                //playerData.SiteUsers -= selectedSkill.cost;
+                case CurrencyType.Money:
+                    playerData.Money -= selectedSkill.cost;
+                    break;
+                case CurrencyType.Data:
+                    playerData.DataMB -= selectedSkill.cost;
+                    break;
+
             }
 
+            
+            
             settings.skill_unlocked = true;
             foreach (NewsID id in selectedSkill.triggeredNews)
             {
