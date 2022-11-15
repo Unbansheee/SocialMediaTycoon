@@ -214,6 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Notification: {fileID: 2537484261586528622}
   NotificationText: {fileID: 8548897648962483005}
+  Alert: {fileID: 1877453685444867234, guid: 031f7a5fb8d305b4f89e84349ed21475, type: 3}
 --- !u!1 &7594283944258617330
 GameObject:
   m_ObjectHideFlags: 0
