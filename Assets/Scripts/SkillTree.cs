@@ -198,6 +198,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         skillSettings.unlocked = unlockedColor;
         skillSettings.locked = lockedColor;
         skillSettings.skill_unlocked = skillData.skillUnlocked;
+<<<<<<< HEAD
         string preq = skillData.prerequisiteSkills.Count > 0 ? "\n<b>Prerequisites</b>: " + string.Join(", ", skillData.prerequisiteSkills) : ""; //TODO join SkillName()
 
         string cost = skillData.cost.ToString();
@@ -226,6 +227,10 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         
         
         skillSettings.skillDescription = "<b>" + skillData.SkillName() + "</b>\n\n" + skillData.skillDescription + "\n\n<b>Cost</b>: " + skillData.currency.ToString() + " " + cost + preq.Replace('_',' '); 
+=======
+        string preq = skillData.prerequisiteSkills.Count > 0 ? "<b>Prerequisites</b>: " + string.Join(", ", skillData.prerequisiteSkills) : ""; //TODO join SkillName()
+        skillSettings.skillDescription = "<b>" + skillData.SkillName() + "</b>\n\n" + skillData.skillDescription + "\n\n" + preq.Replace('_',' '); 
+>>>>>>> main
 
         //Image bg = go.transform.Find("BG").GetComponent<Image>();
         //bg.color = lockedColor;
