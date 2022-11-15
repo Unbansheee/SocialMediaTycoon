@@ -330,7 +330,57 @@ MonoBehaviour:
     blurb: 'Researchers describe how notifications with randomized delays and non-chronologial
       newsfeeds keeps users on the app for longer,  increasing users'' egagement
       with ads  '
-  scheduledNews: 
+  - id: 7
+    headline: New Study Shows How Social Media Keeps You Hooked
+    blurb: 'Researchers describe how notifications with randomized delays and non-chronologial
+      newsfeeds keeps users on the app for longer,  increasing users'' egagement
+      with ads  '
+  - id: 8
+    headline: Are Your Messages Really Private?
+    blurb: '"I sent a privte message to my brother over CloudMedia about buying a
+      new car and within an hour I saw nothing but vehicle ads. I thought they couldn''t
+      read that stuff?"'
+  - id: 9
+    headline: CloudMedia Announces Anonomized Data
+    blurb: '"...you information is completey untracable." - CloudMedia Representative.
+      The move comes in response to growing discomfort about online data usage.'
+  - id: 10
+    headline: CloudMedia Can See What You Copy and Paste
+    blurb: ... had recently changed thier password to 'ILikeBurgers' and became suspecious
+      when they recieved a sudden jump in number of ads regarding fast food. "It
+      beats typing it every...
+  - id: 11
+    headline: Contianment Breach
+    blurb: The kinds of targeted ads that people  used to only get on platforms like
+      CloudMedia are spreading to other services according to media analysts.
+  - id: 12
+    headline: Are Insurance Companies Buying Your Data?
+    blurb: MediaCloud user John Craig swears that his insurance rates skyrocketed
+      after posting to his friends abouth is declining health. "I hadn't even told
+      my doctor yet."
+  - id: 13
+    headline: How does CloudMedia Know?
+    blurb: '"I don''t post much on CloudMedia" said Alisa Ellis, "so it really wierded
+      me out when I made a web search for vaping and a like a day later my CM newsfeed
+      is like a vape shop."'
+  - id: 14
+    headline: 'Study: Most Users Don''t Check Permiissions'
+    blurb: ... it can often be an innocent mistake but some app developers use this
+      fact to gather data that theirs users don't even realize they're giving up.
+  - id: 15
+    headline: Please Stop Notifying Me When I'm Close To a Liquor Store.
+    blurb: ..., a recovering Alcoholic, demonstrated that every time he comes in
+      range of a liquor store his CloudMedia app notfifies him of that store's current
+      bargains.
+  - id: 16
+    headline: Targeted Billboards Are No Longer Science Fiction
+    blurb: The new technology uses your phone's GPS location to deliver personalized
+      advertisements in reality. Do we really want to accept this brave new world?
+  - id: 17
+    headline: CloudMedia Is Listening
+    blurb: ... all apps were closed, and yet CloudMedia started advertising showtimes
+      for the movie she had just be speaking about with a coworker moments before
+  scheduledNews: 08000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
 --- !u!1001 &8060782119404808226
 PrefabInstance:
   m_ObjectHideFlags: 0

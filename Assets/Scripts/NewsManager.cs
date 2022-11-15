@@ -12,6 +12,16 @@ public enum NewsID
     Easier_Picture_Tagging,
     Uneasy_Picture_Tagging,
     Social_Media_Additicion,
+    Are_My_Messages_Private,
+    Announcing_Anon_Data,
+    Cloudmedia_Using_Bug,
+    Targeted_Ads_Spreading,
+    Incerased_Insurance,
+    Unexpected_Ads_On_Platform,
+    Most_Users_Dont_Check_Permissions,
+    Location_Based_Ads,
+    Targeted_Billboards,
+    Always_On_Microphone,
 }
 
 [System.Serializable]
