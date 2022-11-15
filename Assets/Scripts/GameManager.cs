@@ -17,8 +17,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         playerData.SiteUsers += playerData.SiteUsersPerSecond * Time.deltaTime;
-        playerData.DataMB += playerData.DataMBPerSecond * Time.deltaTime;
-        playerData.Money += playerData.MoneyPerSecond * Time.deltaTime;
+        playerData.DataMB += playerData.DataMBPerSecond * playerData.SiteUsers * Time.deltaTime;
+        playerData.Money += playerData.MoneyPerSecond * playerData.SiteUsers * Time.deltaTime;
     }
     
     void RunOncePerSecond()

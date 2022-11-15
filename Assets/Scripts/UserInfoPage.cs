@@ -106,7 +106,8 @@ public class UserInfoPage : MonoBehaviour
     
     int CalculateDataValue()
     {
-        return (int)(GetDiscoveredDataCount() * DataFieldValue);
+        var playerData = FindObjectOfType<PlayerData>();
+        return (int)(GetDiscoveredDataCount() * DataFieldValue * playerData.DataPerFieldMultiplier);
     }
     
     public void UnlockRandomData()
@@ -125,6 +126,7 @@ public class UserInfoPage : MonoBehaviour
             int index = Random.Range(0, undiscovered.Count);
             string key = undiscovered[index];
             Info[key] = new DataElement(Info[key].value, true);
+            Debug.Log("Unlocked " + key);
 
         }
         

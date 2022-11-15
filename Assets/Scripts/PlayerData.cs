@@ -25,6 +25,7 @@ public class PlayerData : MonoBehaviour
     public double MoneyPerAdMultiplier = 1;
     public double CostPerUpgradeMultiplier = 1;
     public double MoneyPerDataScrapeMultiplier = 1;
+    public double DataPerFieldMultiplier = 1;
     
 
     public bool SaveAndLoad = true;
@@ -100,43 +101,72 @@ public class PlayerData : MonoBehaviour
             case SkillTree.SkillID.None:
                 break;
             case SkillTree.SkillID.Targeted_Advertising:
-                MoneyPerAdMultiplier *= 1.5f;
+                MoneyPerAdMultiplier *= 2.0f;
+                SiteUsersPerSecond *= 2.0f;
                 break;
             case SkillTree.SkillID.AI_Assisted_Advertising:
                 MoneyPerSecond += 5;
+                DataMBPerSecond = 1;
+                DataPerFieldMultiplier = 2;
                 break;
             case SkillTree.SkillID.Automated_Advertising:
                 MoneyPerSecond *= 3;
+                DataMBPerSecond += 0.5;
+                DataPerFieldMultiplier *= 1.5;
                 break;
             case SkillTree.SkillID.User_Tagging:
+                DataPerFieldMultiplier *= 2.0f;
+                SiteUsersPerSecond *= 2.0f;
                 break;
             case SkillTree.SkillID.Facial_Recognition:
+                DataMBPerSecond += 2;
                 break;
             case SkillTree.SkillID.Addictive_UX:
+                DataMBPerSecond += 5;
+                MoneyPerSecond += 5;
+                SiteUsersPerSecond *= 3.0f;
                 break;
             case SkillTree.SkillID.Data_Scraping:
+                DataPerFieldMultiplier *= 1.5f;
                 break;
             case SkillTree.SkillID.Anonymized_Data:
+                DataPerFieldMultiplier *= 3.0f;
                 break;
             case SkillTree.SkillID.Data_Broker:
+                MoneyPerSecond += 10;
+                DataPerFieldMultiplier *= 1.5f;
+                DataMBPerSecond += 5;
                 break;
             case SkillTree.SkillID.Research_Device_Vulnerabilities:
+                DataPerFieldMultiplier *= 2.0f;
+                DataMBPerSecond += 5;
                 break;
             case SkillTree.SkillID.Expand_App_Permissions:
+                DataPerFieldMultiplier *= 2.0f;
+                DataMBPerSecond += 5;
                 break;
             case SkillTree.SkillID.Deanonymization_Research:
+                DataMBPerSecond += 10;
+                DataPerFieldMultiplier *= 2.0f;
                 break;
             case SkillTree.SkillID.Lobbying:
+                SiteUsersPerSecond *= 4;
                 break;
             case SkillTree.SkillID.Sign_In_With_SM_Tycoon:
+                SiteUsersPerSecond *= 2;
                 break;
             case SkillTree.SkillID.Add_Backdoor:
+                MoneyPerSecond *= 30;
                 break;
             case SkillTree.SkillID.Ban_Encryption:
+                DataMBPerSecond *= 5;
                 break;
             case SkillTree.SkillID.Prohibitive_Regulation:
+                SiteUsersPerSecond *= 5;
                 break;
             case SkillTree.SkillID.Acquire_Competition:
+                SiteUsersPerSecond *= 2;
+                DataMBPerSecond *= 2;
                 break;
             case SkillTree.SkillID.Minimum_10000_Users:
                 break;
