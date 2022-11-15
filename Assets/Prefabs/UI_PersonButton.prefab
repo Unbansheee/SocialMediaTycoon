@@ -31,6 +31,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1788665216163083710}
   - {fileID: 5198083155686411387}
   - {fileID: 3281516663451315763}
   m_Father: {fileID: 3281516662957069681}
@@ -126,6 +127,18 @@ MonoBehaviour:
       - m_Target: {fileID: 3281516662957069693}
         m_TargetAssemblyTypeName: UI_PersonIcon, Assembly-CSharp
         m_MethodName: OpenInfoPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2782704193441495117}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -275,34 +288,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adsWatched: 0
-  name: Ellia Adams
-  age: 54
-  genderIdentity: 1
-  email: e.adams@randatmail.com
-  phoneNumber: 553-6597-43
-  education: Lower secondary
+  name: Henry Miller
+  age: 23
+  genderIdentity: 0
+  email: h.miller@randatmail.com
+  phoneNumber: 218-1066-60
+  education: Doctoral
   occupation: Physicist
-  experience: 26
+  experience: 5
   hobbies:
-  - Walking
-  - Gaming
-  - Crocheting
-  salary: 116725
-  savings: 233483
-  debt: 19
-  creditScore: 850
-  marriageStatus: 1
-  children: 1
+  - Knitting
+  - Woodworking
+  - Writing
+  salary: 78984
+  savings: 1750
+  debt: 60607
+  creditScore: 386
+  marriageStatus: 2
+  children: 2
   searchHistory:
-  - pink ice cream cones
-  - financial planner
-  - why can i smell burning toast
-  - what is really in area 51
-  - why does it hurt to pee
-  - are ads bad for the economy
-  - bmi calculator
-  - how to make friends
-  seed: 992193
+  - how to meet someone in quarantine
+  - why is my eardrum sensitive
+  - how to not pay tax
+  - how to die without pain
+  - waxy ears
+  - news today
+  - are birds real
+  - how to delete my sons minecraft world
+  seed: 538925
 --- !u!1 &3281516663451315774
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +347,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3281516662541240837}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -369,7 +382,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ellia Adams
+  m_text: Henry Miller
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -438,6 +451,73 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &4028030182847749915
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3281516662541240837}
+    m_Modifications:
+    - target: {fileID: 2669848963386762455, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+      propertyPath: m_Name
+      value: ClickSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401604845701851813, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401604845701851813, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401604845701851813, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401604845701851813, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401604845701851813, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401604845701851813, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401604845701851813, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401604845701851813, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401604845701851813, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401604845701851813, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3401604845701851813, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+--- !u!4 &1788665216163083710 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3401604845701851813, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+  m_PrefabInstance: {fileID: 4028030182847749915}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2782704193441495117 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1258851359636121430, guid: 65d716029d9adb847a6a74723c2deb1d, type: 3}
+  m_PrefabInstance: {fileID: 4028030182847749915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4709407910172108589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -452,6 +532,10 @@ PrefabInstance:
     - target: {fileID: 682401567006550870, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 682401567006550870, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 682401567006550870, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_AnchorMax.x
@@ -540,7 +624,7 @@ PrefabInstance:
     - target: {fileID: 1092050056085232019, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 18d626d9487dff646ae32a00ce34b74b, type: 3}
+      objectReference: {fileID: 21300000, guid: dcc844692ca88a04ba42aa61687d618c, type: 3}
     - target: {fileID: 1092050056085232019, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -560,7 +644,7 @@ PrefabInstance:
     - target: {fileID: 2127918702173799607, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3dcc855c65f5e364ebcc6ffe2f4944f2, type: 3}
+      objectReference: {fileID: 21300000, guid: c70a8cd2a8898134fac98ef52dab067d, type: 3}
     - target: {fileID: 2127918702173799607, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -568,7 +652,7 @@ PrefabInstance:
     - target: {fileID: 2852578038512626116, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: bb56ceed12ac17e4ea6e1c7246b47100, type: 3}
+      objectReference: {fileID: 21300000, guid: b8ab556989f7e37478297b124f3a88ce, type: 3}
     - target: {fileID: 2875424446013237270, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -576,7 +660,7 @@ PrefabInstance:
     - target: {fileID: 3147714572466897567, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8b1b708161b62d244a34272c6b099ca6, type: 3}
+      objectReference: {fileID: 21300000, guid: fd01ee16efb1bb3468dc0b16f9adfb4b, type: 3}
     - target: {fileID: 3147714572466897567, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -596,7 +680,7 @@ PrefabInstance:
     - target: {fileID: 7302065289919815441, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6dd49a123fe17a64d9171bd5ff83cb52, type: 3}
+      objectReference: {fileID: 21300000, guid: 6bdd7b78954c64f4cbc257242f867e19, type: 3}
     - target: {fileID: 7302065289919815441, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -607,11 +691,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7841162287209972734, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: Seed
-      value: 992193
+      value: 538925
       objectReference: {fileID: 0}
     - target: {fileID: 7841162287209972734, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: identity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7841162287209972735, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RootOrder
@@ -672,7 +756,7 @@ PrefabInstance:
     - target: {fileID: 8218725007814310169, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6ad2abb0abbe68c48be1ce1526c49ec7, type: 3}
+      objectReference: {fileID: 21300000, guid: 238b05bff5bcaaa4aa1b27d177e9f9b3, type: 3}
     - target: {fileID: 8218725007814310169, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -680,7 +764,7 @@ PrefabInstance:
     - target: {fileID: 8424000516238932334, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0ab03226431ff9147bd42d4aa78d96f5, type: 3}
+      objectReference: {fileID: 21300000, guid: 7d8eb536bf2625344989a19b99eb9f43, type: 3}
     - target: {fileID: 8424000516238932334, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -688,7 +772,7 @@ PrefabInstance:
     - target: {fileID: 8950651778079995672, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d5e6fc5ce8a577f4684c7372589b4132, type: 3}
+      objectReference: {fileID: 21300000, guid: 6b136927d71d18b499874a0b1d015592, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82cdcb9288ace2e4b953efa0ceda8979, type: 3}
 --- !u!114 &3281516662342165715 stripped
