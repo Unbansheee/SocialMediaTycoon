@@ -465,7 +465,7 @@ MonoBehaviour:
     headline: Users Losing Trust In CloudMedia
     blurb: Survey data shows that some former users of CloudMedia are migrating to
       other platforms that have better track records and commitments to privacy.
-  scheduledNews: 20000000210000002200000023000000
+  scheduledNews: 
 --- !u!1001 &8060782119404808226
 PrefabInstance:
   m_ObjectHideFlags: 0
