@@ -80,18 +80,7 @@ public class NewsManager : MonoBehaviour
     void Start()
     {
         // Adding starting posts
-        //toolbar.GetButtonFromPageID(PageID.News).AddNotification(scheduledNews.Count);
-        foreach (NewsID id in scheduledNews)
-        {
-            foreach (NewsData data in newsDatabase)
-            {
-                if (data.id == id)
-                {
-                    PostNewsStory(data);
-                    break;
-                }
-            }
-        }
+        while (PostNextNewsStory());
     }
 
 
