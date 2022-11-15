@@ -5,6 +5,8 @@ using UnityEngine;
 public enum NewsID
 {
     None,
+
+    // Tree 1
     Better_Ads,
     Creepy_Ads,
     Better_Networks,
@@ -13,6 +15,7 @@ public enum NewsID
     Uneasy_Picture_Tagging,
     Social_Media_Additicion,
 
+    // Tree 2
     Are_My_Messages_Private,
     Announcing_Anon_Data,
     Cloudmedia_Using_Bug,
@@ -24,6 +27,7 @@ public enum NewsID
     Targeted_Billboards,
     Always_On_Microphone,
 
+    // Tree 3
     Law_Loose_Data_Privacy,
     Government_Caught_Surveiling_Minority,
     Protestors_Demand_Privacy_Laws,
@@ -38,6 +42,12 @@ public enum NewsID
     CM_Used_For_Gov_ID,
     No_Choice_But_CM,
     Gov_Concerned_About_CM_Influence,
+
+    // Misc added to various skills
+    Privacy_Browsers,
+    Privacy_Search_Engines,
+    Using_VPNs,
+    Users_Move_To_Privacy_Alternatives,
 }
 
 [System.Serializable]

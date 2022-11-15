@@ -426,7 +426,7 @@ MonoBehaviour:
     headline: New Content Regulation Leaves Start-Ups Scrambling
     blurb: '"... I don''t know what we''re going to do" said he founder, "We want
       to provide a privacy respecting alternative to CloudMedia, but we don''t have
-      the capitol to satify the new laws."'
+      the capital to satify the new laws."'
   - id: 28
     headline: CloudMedia Celebrates New Corporate Family
     blurb: CloudMedia is proud to welcome our former competitors into one large cooperative
@@ -446,7 +446,26 @@ MonoBehaviour:
     headline: Government Concerned About CloudMedia's Influence
     blurb: '"... The company obviously has considerable data about our elected officials
       that could be detrimental to national security." - Government Spokesman'
-  scheduledNews: 
+  - id: 32
+    headline: 'PSA: Use A Browser That Respects <i>You</i>'
+    blurb: You know, most popular apps for surfing the web collect data about you.
+      It's easy to switch to an alternative like Brave or Firefox that does't and
+      will also protect you from online trackers.
+  - id: 33
+    headline: You Don't Always Have To Use Gooble To "Gooble Something"
+    blurb: Consider everything you've ever typed into a serach engine. Those who
+      have are beginning to switch over to search engines that don't try to target
+      ads at you using your search history.
+  - id: 34
+    headline: Virtual Private Network Popularity Increasing
+    blurb: Rumours about Internet Service Providers selling data about their customers
+      have sparked a rise in VPNs which encrypt your data and hide your unique IP
+      address while online.
+  - id: 35
+    headline: Users Losing Trust In CloudMedia
+    blurb: Survey data shows that some former users of CloudMedia are migrating to
+      other platforms that have better track records and commitments to privacy.
+  scheduledNews: 20000000210000002200000023000000
 --- !u!1001 &8060782119404808226
 PrefabInstance:
   m_ObjectHideFlags: 0

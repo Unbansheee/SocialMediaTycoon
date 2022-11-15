@@ -433,7 +433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[0].triggeredNews.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[1].triggeredNews.Array.size
@@ -458,6 +458,10 @@ PrefabInstance:
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[0].triggeredNews.Array.data[0]
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[0].triggeredNews.Array.data[1]
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[1].triggeredNews.Array.data[0]
@@ -786,11 +790,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[1].skills.Array.data[0].triggeredNews.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[1].skills.Array.data[1].triggeredNews.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[0].triggeredNews.Array.size
@@ -798,7 +802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[1].triggeredNews.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[2].triggeredNews.Array.size
@@ -809,12 +813,24 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[0].skills.Array.data[0].triggeredNews.Array.data[1]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[1].skills.Array.data[0].triggeredNews.Array.data[0]
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[1].skills.Array.data[0].triggeredNews.Array.data[1]
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[1].skills.Array.data[1].triggeredNews.Array.data[0]
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[1].skills.Array.data[1].triggeredNews.Array.data[1]
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[0].triggeredNews.Array.data[0]
@@ -830,7 +846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[1].triggeredNews.Array.data[1]
-      value: 13
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[2].triggeredNews.Array.data[0]
