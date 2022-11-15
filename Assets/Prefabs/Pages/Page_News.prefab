@@ -298,9 +298,38 @@ MonoBehaviour:
   toolbar: {fileID: 0}
   newsDatabase:
   - id: 1
-    headline: Finally! Useful advertisements!
-    blurb: Users of Social Media Tycoon are raving about how frequently they see
-      advertisements for products they could have sworn they were just talking about!
+    headline: Finally! Useful Advertisements!
+    blurb: Users of CloudMedia are raving about how frequently they see advertisements
+      for products they could have sworn they were just talking about!
+  - id: 2
+    headline: 'CloudMeadia Knows What you <i>REALLY</i> want! '
+    blurb: Adrianna Andrews described how "it's not that I don't need the things
+      advertized, it's just, you know, kind of creepy sometimtes. Like it knows me
+      better than myself."
+  - id: 3
+    headline: New Tagging Feature Is A Success!
+    blurb: CloudMedia's tagging feature has allowed users to better connect with
+      their friends and families over great distances. "I love the rush of getting
+      a new tag notification!" - Eddy Campbell
+  - id: 4
+    headline: Have Advertisers Gone Too Far?
+    blurb: CloudMedia has left users feeling bombarded by advertisements. Some users
+      have questions about  how these ads get their information. "I feel a little
+      too seen" - Camila Elliott
+  - id: 5
+    headline: Picture Tagging Just Got Easier!
+    blurb: ... this new feature allows users who have already been tagged in pictures
+      to automatically be tagged in newly uploaded photos. How convenient!
+  - id: 6
+    headline: Teacher Fired After Auto-Tagged Photo From Party
+    blurb: ...was fired after a photo of her holding a beer at a friend's gathering
+      surfaced on her social media. "This is not the example we want to set for our
+      students" - School's Principal
+  - id: 7
+    headline: New Study Shows How Social Media Keeps You Hooked
+    blurb: 'Researchers describe how notifications with randomized delays and non-chronologial
+      newsfeeds keeps users on the app for longer,  increasing users'' egagement
+      with ads  '
   scheduledNews: 
 --- !u!1001 &8060782119404808226
 PrefabInstance:

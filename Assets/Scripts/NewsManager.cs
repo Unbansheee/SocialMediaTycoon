@@ -6,6 +6,12 @@ public enum NewsID
 {
     None,
     Better_Ads,
+    Creepy_Ads,
+    Better_Networks,
+    Annonying_Ads,
+    Easier_Picture_Tagging,
+    Uneasy_Picture_Tagging,
+    Social_Media_Additicion,
 }
 
 [System.Serializable]

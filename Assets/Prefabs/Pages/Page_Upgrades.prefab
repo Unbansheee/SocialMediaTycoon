@@ -424,8 +424,52 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[1].skills.Array.data[0].triggeredNews.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[1].skills.Array.data[1].triggeredNews.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[0].triggeredNews.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[1].triggeredNews.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[2].triggeredNews.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[0].skills.Array.data[0].triggeredNews.Array.data[0]
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[1].skills.Array.data[0].triggeredNews.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[1].skills.Array.data[1].triggeredNews.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[0].triggeredNews.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[1].triggeredNews.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[1].triggeredNews.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
+      propertyPath: skillTree.Array.data[2].skills.Array.data[2].triggeredNews.Array.data[0]
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1313412400879110845, guid: 1a3785445eb8fc545892a3ccaf5fb3e4, type: 3}
       propertyPath: skillTree.Array.data[0].skills.Array.data[0].prerequisiteSkills.Array.size
