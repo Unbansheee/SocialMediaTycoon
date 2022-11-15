@@ -22,10 +22,10 @@ public class PlayerData : MonoBehaviour
     public double MoneyPerSecond = 0;
     public double Reputation = 0;
     
-    public double MoneyPerAdMultiplier = 1;
-    public double CostPerUpgradeMultiplier = 1;
-    public double MoneyPerDataScrapeMultiplier = 1;
-    public double DataPerFieldMultiplier = 1;
+    public double MoneyPerAdMultiplier = 1; // Affects the amount of money you get from serving an ad
+    public double CostPerUpgradeMultiplier = 1; // Not used
+    public double MoneyPerDataScrapeMultiplier = 1; // Not used
+    public double DataPerFieldMultiplier = 1;  // Affects the amount of money you get from each data field when Saving data
     
 
     public bool SaveAndLoad = true;
