@@ -12,6 +12,7 @@ public enum NewsID
     Easier_Picture_Tagging,
     Uneasy_Picture_Tagging,
     Social_Media_Additicion,
+
     Are_My_Messages_Private,
     Announcing_Anon_Data,
     Cloudmedia_Using_Bug,
@@ -22,6 +23,21 @@ public enum NewsID
     Location_Based_Ads,
     Targeted_Billboards,
     Always_On_Microphone,
+
+    Law_Loose_Data_Privacy,
+    Government_Caught_Surveiling_Minority,
+    Protestors_Demand_Privacy_Laws,
+    Hackers_Exploit_CM_Backdoor,
+    CM_Unveils_Easy_Logins,
+    CM_Logins_Expose_Users_To_Phishing,
+    Banned_Encryption_Criminals,
+    Banned_Encryption_Protests,
+    Banned_Encryption_Data_Exposed,
+    Govt_Passes_Contet_Regulation,
+    Offer_Central_Service,
+    CM_Used_For_Gov_ID,
+    No_Choice_But_CM,
+    Gov_Concerned_About_CM_Influence,
 }
 
 [System.Serializable]

@@ -380,7 +380,73 @@ MonoBehaviour:
     headline: CloudMedia Is Listening
     blurb: ... all apps were closed, and yet CloudMedia started advertising showtimes
       for the movie she had just be speaking about with a coworker moments before
-  scheduledNews: 08000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  - id: 18
+    headline: New Law Loosens Data Privacy
+    blurb: 'Lobbyists representing various social media companies have succeeded
+      in passing laws that reduce or eliminate penalties for violating their users''
+      privacy '
+  - id: 19
+    headline: Government Illegally Surveiling Minorities
+    blurb: A recent leak of classified documents has revealed the government practice
+      of using undisclosed access to social media platforms to monitor minority populations.
+  - id: 20
+    headline: '"Privacy Is A Right! Out With CloutMedia!"'
+    blurb: Late on Tuesday morning, a group of 2000 people marched on Government
+      grounds to demand new laws that would protect their privacy online.
+  - id: 21
+    headline: Your Private Data is Now On the Web
+    blurb: Hackers have found and exploited a backdoor installed in CloudMedia for
+      government use. The backdoor allowed them download the data of all users which
+      was sold to parties unknown.
+  - id: 22
+    headline: Now You Can Use One Account For Everything!
+    blurb: 'CloudMedia unveiled their <i>Easy Logins</i> system which allows users
+      to log in to any online service using their existing CloudMedia account. '
+  - id: 23
+    headline: Users Want to Delete CloudMedia But Can't!
+    blurb: '"...the issue is that we use CloudMedia to sign into email, financial,
+      and medical services. I want to delete my data footprint but I''ll lose access
+      to everything in the process."'
+  - id: 24
+    headline: CloudMedia Partners With the Government To Fight Criminals
+    blurb: The new law, which makes encryption illegal, will prevent prevent criminal
+      actors from conspiring and sharing illicit material online according to a Government
+      Spokeswoman.
+  - id: 25
+    headline: Privacy Protestors Rounded Up!
+    blurb: ...some were arrested for using encrypted messaging apps, others for participating
+      in private messages critical of government policy that police deemed a threat
+      to national security.
+  - id: 26
+    headline: Medical Company Exposes Sensitive User Data
+    blurb: ... the data server was easily accessible to anyone with the internet
+      IP address. This wasn't even a hack, just plain negligence on the company's
+      part.
+  - id: 27
+    headline: New Content Regulation Leaves Start-Ups Scrambling
+    blurb: '"... I don''t know what we''re going to do" said he founder, "We want
+      to provide a privacy respecting alternative to CloudMedia, but we don''t have
+      the capitol to satify the new laws."'
+  - id: 28
+    headline: CloudMedia Celebrates New Corporate Family
+    blurb: CloudMedia is proud to welcome our former competitors into one large cooperative
+      endeavor. You can rest assured that all of your cumulative data is safe in
+      one place.
+  - id: 29
+    headline: CloudMedia Accounts Now Double As Govevernment IDs
+    blurb: Following our recent aquisitions we are excited to announce that all governent
+      services from voting, to your criminal history are accessible via your CloudMedia
+      account.
+  - id: 30
+    headline: '"We Have No Choice But To Use CloutMedia"'
+    blurb: ...some claimed to see #OutWithCloutMedia trending before it was quickly
+      taken down. This reflects most peoples' dissatisfaction with the current climate
+      of data autonomy.
+  - id: 31
+    headline: Government Concerned About CloudMedia's Influence
+    blurb: '"... The company obviously has considerable data about our elected officials
+      that could be detrimental to national security." - Government Spokesman'
+  scheduledNews: 
 --- !u!1001 &8060782119404808226
 PrefabInstance:
   m_ObjectHideFlags: 0
