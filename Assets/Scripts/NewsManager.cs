@@ -13,6 +13,7 @@ public struct NewsData
 {
     public NewsID id;
     public string headline;
+    [TextArea(3, 10)]
     public string blurb;
 }
 
