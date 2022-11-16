@@ -48,6 +48,9 @@ public enum NewsID
     Privacy_Search_Engines,
     Using_VPNs,
     Users_Move_To_Privacy_Alternatives,
+
+    // Endgame Images
+    IMG_End_Monopoly,
 }
 
 [System.Serializable]
@@ -65,6 +68,9 @@ public class NewsManager : MonoBehaviour
     GameObject newsItemPrefab;
 
     [SerializeField]
+    GameObject newsImagePrefab;
+
+    [SerializeField]
     Transform parentContainer;
 
     [SerializeField]
@@ -76,9 +82,12 @@ public class NewsManager : MonoBehaviour
     [SerializeField]
     private List<NewsID> scheduledNews;
 
+    private HashSet<NewsID> newsImageIDs;
+
     // Start is called before the first frame update
     void Start()
     {
+        newsImageIDs = new() { NewsID.IMG_End_Monopoly };
         // Adding starting posts
         while (PostNextNewsStory());
     }
@@ -112,13 +121,20 @@ public class NewsManager : MonoBehaviour
             return false;
         NewsID id = scheduledNews[0];
         scheduledNews.RemoveAt(0);
-        NewsData data = GetNewsDataFromID(id);
-        if (data.id != NewsID.None)
+        if (newsImageIDs.Contains(id))
         {
-            PostNewsStory(data);
-            ToolbarButton button = toolbar.GetButtonFromPageID(PageID.News);
-            if (!this.isActiveAndEnabled)
-                button.AddNotification(1);
+            PostNewsImage(id);
+        }
+        else
+        {
+            NewsData data = GetNewsDataFromID(id);
+            if (data.id != NewsID.None)
+            {
+                PostNewsStory(data);
+                ToolbarButton button = toolbar.GetButtonFromPageID(PageID.News);
+                if (!this.isActiveAndEnabled)
+                    button.AddNotification(1);
+            }
         }
         return scheduledNews.Count > 0;
     }
@@ -135,6 +151,16 @@ public class NewsManager : MonoBehaviour
         RectTransform rectTransform = item.GetComponent<RectTransform>();
         transform.localScale = new Vector3(1, 1, 1);
 
+        rectTransform.sizeDelta = new Vector2(1125.863f, rectTransform.sizeDelta.y);
+    }
+
+    void PostNewsImage(NewsID id)
+    {
+        GameObject item = Instantiate(newsImagePrefab, Vector3.zero, Quaternion.identity);
+        item.name = id.ToString();
+        item.transform.SetParent(parentContainer);
+        RectTransform rectTransform = item.GetComponent<RectTransform>();
+        transform.localScale = new Vector3(1, 1, 1);
         rectTransform.sizeDelta = new Vector2(1125.863f, rectTransform.sizeDelta.y);
     }
 }

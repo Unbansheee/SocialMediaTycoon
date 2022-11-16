@@ -118,7 +118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 26.078064, y: 0.0016479492}
+  m_AnchoredPosition: {x: 26.078064, y: 0}
   m_SizeDelta: {x: -0.063560486, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3914503744110401917
@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newsItemPrefab: {fileID: 5272412320015797908, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
+  newsImagePrefab: {fileID: 3431147175299801574, guid: 15281dd518cddbf40b68b2aaf54f4ae8, type: 3}
   parentContainer: {fileID: 2853058489755067269}
   toolbar: {fileID: 0}
   newsDatabase:
