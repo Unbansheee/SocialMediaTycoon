@@ -1495,7 +1495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: scheduledNews.Array.data[0]
-      value: 36
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: scheduledNews.Array.data[1]
@@ -1503,7 +1503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: newsDatabase.Array.data[36].id
-      value: 36
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: newsDatabase.Array.data[36].blurb
