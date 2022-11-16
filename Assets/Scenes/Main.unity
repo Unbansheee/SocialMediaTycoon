@@ -17827,5 +17827,13 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6268730292669866979, guid: 13f0bbf26369b75498deecac47eba95a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268730292669866979, guid: 13f0bbf26369b75498deecac47eba95a, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13f0bbf26369b75498deecac47eba95a, type: 3}
