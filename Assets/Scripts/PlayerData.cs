@@ -34,6 +34,7 @@ public class PlayerData : MonoBehaviour
 
     void Save()
     {
+        /*
         PlayerPrefs.SetString("SiteUsers", SiteUsers.ToString());
         PlayerPrefs.SetString("SiteUsersPerSecond", SiteUsersPerSecond.ToString());
         PlayerPrefs.SetString("DataMB", DataMB.ToString());
@@ -44,12 +45,14 @@ public class PlayerData : MonoBehaviour
         PlayerPrefs.SetString("MoneyPerAdMultiplier", MoneyPerAdMultiplier.ToString());
         PlayerPrefs.SetString("CostPerUpgradeMultiplier", CostPerUpgradeMultiplier.ToString());
         PlayerPrefs.SetString("MoneyPerDataScrapeMultiplier", MoneyPerDataScrapeMultiplier.ToString());
+        */
         
         
     }
     
     void Load()
     {
+        /*
         SiteUsers = double.Parse(PlayerPrefs.GetString("SiteUsers", "1"));
         SiteUsersPerSecond = double.Parse(PlayerPrefs.GetString("SiteUsersPerSecond", "0.05"));
         DataMB = double.Parse(PlayerPrefs.GetString("DataMB", "0"));
@@ -60,7 +63,7 @@ public class PlayerData : MonoBehaviour
         MoneyPerAdMultiplier = double.Parse(PlayerPrefs.GetString("MoneyPerAdMultiplier", "1"));
         CostPerUpgradeMultiplier = double.Parse(PlayerPrefs.GetString("CostPerUpgradeMultiplier", "1"));
         MoneyPerDataScrapeMultiplier = double.Parse(PlayerPrefs.GetString("MoneyPerDataScrapeMultiplier", "1"));
-        
+        */
         
     }
 
