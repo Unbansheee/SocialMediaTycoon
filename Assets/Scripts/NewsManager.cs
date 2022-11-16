@@ -84,10 +84,15 @@ public class NewsManager : MonoBehaviour
 
     private HashSet<NewsID> newsImageIDs;
 
+    private void Awake()
+    {
+        newsImageIDs = new() { NewsID.IMG_End_Monopoly };
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        newsImageIDs = new() { NewsID.IMG_End_Monopoly };
+        
         // Adding starting posts
         while (PostNextNewsStory());
     }
@@ -121,9 +126,28 @@ public class NewsManager : MonoBehaviour
             return false;
         NewsID id = scheduledNews[0];
         scheduledNews.RemoveAt(0);
+
+        // Temp code to ensure endgame image is last shown
+        if (id == NewsID.IMG_End_Monopoly)
+        {
+            if (scheduledNews.Count != 0)
+            {
+                scheduledNews.Add(id);
+                PostNextNewsStory();
+                return true;
+            }
+            else
+            {
+                toolbar.SetGameState(GameState.Ending);
+            }
+        }
+
         if (newsImageIDs.Contains(id))
         {
             PostNewsImage(id);
+            ToolbarButton button = toolbar.GetButtonFromPageID(PageID.News);
+            if (!this.isActiveAndEnabled)
+                button.AddNotification(1);
         }
         else
         {

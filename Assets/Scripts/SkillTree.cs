@@ -131,6 +131,9 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private AudioSource activateSound;
 
+    [SerializeField]
+    private Toolbar toolbar;
+
     PlayerData playerData;
     //NewsManager newsManager;
 
@@ -313,7 +316,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     // updates if a skill is unlockable, unlocked or locked
     public void UpdateSkillButton(Skill selectedSkill, SkillSettings settings, bool selected_for_purchase = false)
     {
-        if (settings.skill_unlocked)
+        if (settings.skill_unlocked || toolbar.GetGameState() == GameState.Ending)
             return;
 
         // count the number of prerequites that have been unlocked
@@ -418,5 +421,18 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
                 UpdateSkillButton(skill, settings);
             }
         }
+    }
+
+    public bool AllSkillsUnlocked()
+    {
+        foreach (SkillTier tier in skillTree)
+        {
+            foreach (Skill skill in tier.skills)
+            {
+                if (!skill.skillUnlocked)
+                    return false;
+            }
+        }
+        return true;
     }
 }
