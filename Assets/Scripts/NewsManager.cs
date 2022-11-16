@@ -83,6 +83,9 @@ public class NewsManager : MonoBehaviour
     Toolbar toolbar;
 
     [SerializeField]
+    private float newsDelayMultiplier = 20f;
+
+    [SerializeField]
     private List<NewsData> newsDatabase;
 
     [SerializeField]
@@ -135,7 +138,7 @@ public class NewsManager : MonoBehaviour
         scheduledNews.Add(id);
         if (scheduledNews.Count == 1)
         {
-            toolbar.ScheduleNewsNotificaiton(PostNextNewsStory, 10f);
+            toolbar.ScheduleNewsNotificaiton(PostNextNewsStory, newsDelayMultiplier);
         }
     }
 
