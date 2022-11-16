@@ -12,16 +12,20 @@ public class NewsItem : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI blurb;
 
+    [SerializeField]
+    AudioSource closeSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        closeSound = GameObject.Find("Audio_02").GetComponent<AudioSource>();
     }
     
     public void DesroyNewsItem()
     {
         Destroy(gameObject);
+        if (closeSound != null)
+            closeSound.Play();
     }
 
     // Update is called once per frame
