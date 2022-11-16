@@ -1999,11 +1999,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 366136826489574998, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[1].cost
-      value: 5000000
+      value: 2000000
       objectReference: {fileID: 0}
     - target: {fileID: 366136826489574998, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[2].cost
-      value: 2000000
+      value: 1000000
       objectReference: {fileID: 0}
     - target: {fileID: 366136826489574998, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: skillTree.Array.data[0].skills.Array.data[0].currency
@@ -2384,19 +2384,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4526667927123981675, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: skillTree.Array.data[1].skills.Array.data[1].cost
-      value: 3000000
+      value: 6000000
       objectReference: {fileID: 0}
     - target: {fileID: 4526667927123981675, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[0].cost
-      value: 1000000
+      value: 10000000
       objectReference: {fileID: 0}
     - target: {fileID: 4526667927123981675, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[1].cost
-      value: 3000000
+      value: 20000000
       objectReference: {fileID: 0}
     - target: {fileID: 4526667927123981675, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[2].cost
-      value: 5000000
+      value: 50000000
       objectReference: {fileID: 0}
     - target: {fileID: 4526667927123981675, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: skillTree.Array.data[2].skills.Array.data[0].currency
