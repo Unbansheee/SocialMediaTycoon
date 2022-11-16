@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SiteUsers: 1
-  SiteUsersPerSecond: 0
+  SiteUsersPerSecond: 0.05
   DataMB: 0
   DataMBPerSecond: 0
   Money: 200
