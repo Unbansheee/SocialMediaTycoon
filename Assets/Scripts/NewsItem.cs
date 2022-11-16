@@ -18,7 +18,8 @@ public class NewsItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        closeSound = GameObject.Find("Audio_02").GetComponent<AudioSource>();
+        if (closeSound == null)
+            closeSound = GameObject.Find("Audio_02").GetComponent<AudioSource>();
     }
     
     public void DesroyNewsItem()

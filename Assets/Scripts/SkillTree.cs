@@ -142,7 +142,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     // Runs once at the beginning
     void Start()
     {
-        activateSound = GameObject.Find("Audio").GetComponent<AudioSource>();
+        if (activateSound == null)
+            activateSound = GameObject.Find("Audio").GetComponent<AudioSource>();
         InstantiateSkillTree(skillButtons, tierObjects, skillTree, buttonMarginPercentage);
         InstantiateTooltipBox(tooltipBoxPrefab);
         UpdateSkills();
