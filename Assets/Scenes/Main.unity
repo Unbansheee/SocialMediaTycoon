@@ -1491,7 +1491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: scheduledNews.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: scheduledNews.Array.data[0]
@@ -2220,7 +2220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2551781602034586605, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -642.999
+      value: -642.99896
       objectReference: {fileID: 0}
     - target: {fileID: 2892955289393151715, guid: 9330e2d4f4c1c7d479667707a1c0a3ea, type: 3}
       propertyPath: m_ScrollSensitivity

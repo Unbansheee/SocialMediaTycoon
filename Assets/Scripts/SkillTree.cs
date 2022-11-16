@@ -384,6 +384,10 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
         {
             settings.skill_unlockable = true;
         }
+        else
+        {
+            settings.skill_unlockable = false;
+        }
 
         if (selected_for_purchase && (!settings.skill_unlockable || !settings.prerequisites_met || toolbar.GetGameState() == GameState.Ending))
         {
