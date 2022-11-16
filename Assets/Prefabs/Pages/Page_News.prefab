@@ -116,10 +116,10 @@ RectTransform:
   m_Father: {fileID: 281819716701595306}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26, y: 0.00016719959}
-  m_SizeDelta: {x: 1080, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 26.078064, y: 0.0016479492}
+  m_SizeDelta: {x: -0.063560486, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3914503744110401917
 MonoBehaviour:
@@ -345,7 +345,7 @@ MonoBehaviour:
       The move comes in response to growing discomfort about online data usage.'
   - id: 10
     headline: CloudMedia Can See What You Copy and Paste
-    blurb: ... had recently changed thier password to 'ILikeBurgers' and became suspecious
+    blurb: ... had recently changed thier password to 'ILikeBurgers' and became suspicious
       when they recieved a sudden jump in number of ads regarding fast food. "It
       beats typing it every...
   - id: 11
