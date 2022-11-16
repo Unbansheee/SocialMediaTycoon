@@ -126,6 +126,11 @@ public class NewsManager : MonoBehaviour
         return new();
     }
 
+    private void OnEnable()
+    {
+        StartCoroutine(UpdateLayoutGroup());
+    }
+
     IEnumerator UpdateLayoutGroup()
     {
 
@@ -200,7 +205,6 @@ public class NewsManager : MonoBehaviour
         RectTransform rectTransform = item.GetComponent<RectTransform>();
         transform.localScale = new Vector3(1, 1, 1);
 
-        StartCoroutine(UpdateLayoutGroup());
 
     }
 
@@ -212,7 +216,6 @@ public class NewsManager : MonoBehaviour
         RectTransform rectTransform = item.GetComponent<RectTransform>();
         transform.localScale = new Vector3(1, 1, 1);
 
-        StartCoroutine(UpdateLayoutGroup());
 
     }
 }
