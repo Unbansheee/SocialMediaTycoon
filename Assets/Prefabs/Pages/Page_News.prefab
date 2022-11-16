@@ -333,7 +333,7 @@ MonoBehaviour:
   - id: 7
     headline: New Study Shows How Social Media Keeps You Hooked
     blurb: 'Researchers describe how notifications with randomized delays and non-chronologial
-      newsfeeds keeps users on the app for longer,  increasing users'' egagement
+      newsfeeds keeps users on the app for longer,  increasing users'' engagement
       with ads  '
   - id: 8
     headline: Are Your Messages Really Private?
@@ -351,7 +351,7 @@ MonoBehaviour:
       beats typing it every...
   - id: 11
     headline: Contianment Breach
-    blurb: The kinds of targeted ads that people  used to only get on platforms like
+    blurb: The kinds of targeted ads that people used to only get on platforms like
       CloudMedia are spreading to other services according to media analysts.
   - id: 12
     headline: Are Insurance Companies Buying Your Data?
@@ -368,7 +368,7 @@ MonoBehaviour:
     blurb: ... it can often be an innocent mistake but some app developers use this
       fact to gather data that theirs users don't even realize they're giving up.
   - id: 15
-    headline: Please Stop Notifying Me When I'm Close To a Liquor Store.
+    headline: Stop Notifying Me When I'm Close To a Liquor Store.
     blurb: ..., a recovering Alcoholic, demonstrated that every time he comes in
       range of a liquor store his CloudMedia app notfifies him of that store's current
       bargains.
@@ -424,9 +424,9 @@ MonoBehaviour:
       part.
   - id: 27
     headline: New Content Regulation Leaves Start-Ups Scrambling
-    blurb: '"... I don''t know what we''re going to do" said he founder, "We want
+    blurb: '"... I don''t know what we''re going to do" said the founder, "We want
       to provide a privacy respecting alternative to CloudMedia, but we don''t have
-      the capital to satify the new laws."'
+      the capital to satisfy the new laws."'
   - id: 28
     headline: CloudMedia Celebrates New Corporate Family
     blurb: CloudMedia is proud to welcome our former competitors into one large cooperative
@@ -449,7 +449,7 @@ MonoBehaviour:
   - id: 32
     headline: 'PSA: Use A Browser That Respects <i>You</i>'
     blurb: You know, most popular apps for surfing the web collect data about you.
-      It's easy to switch to an alternative like Brave or Firefox that does't and
+      It's easy to switch to an alternative like Brave or Firefox that doesn't and
       will also protect you from online trackers.
   - id: 33
     headline: You Don't Always Have To Use Gooble To "Gooble Something"
