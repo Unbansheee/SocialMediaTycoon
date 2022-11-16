@@ -128,13 +128,16 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private Transform treeRoot;
 
+    [SerializeField]
+    private AudioSource activateSound;
+
     PlayerData playerData;
     //NewsManager newsManager;
 
     void Awake()
     {
         playerData = GameObject.FindWithTag("Player").GetComponent<PlayerData>();
-        //newsManager = GameObject.FindObjectOfType<NewsManager>();
+        activateSound = GameObject.Find("Audio").GetComponent<AudioSource>();
     }
 
     // Runs once at the beginning
@@ -388,6 +391,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             foreach (NewsID id in selectedSkill.triggeredNews)
             {
                 newsManager.ScheduleNewsFromID(id);
+                if (activateSound != null)
+                    activateSound.Play();
             }
             
             playerData.ApplySkill(selectedSkill.skillID);
