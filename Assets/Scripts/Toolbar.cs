@@ -59,7 +59,7 @@ public class Toolbar : MonoBehaviour
             Pages[(int)id].SetActive(true);
             buttons[(int)id].ClearNotifications();
 
-        
+            CurrentPage = id;
     }
 
     // Used by OnClick gameobject components
