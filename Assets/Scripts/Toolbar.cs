@@ -50,13 +50,16 @@ public class Toolbar : MonoBehaviour
 
     public void ShowPage(PageID id)
     {
-        CurrentPage = id;
-        foreach (GameObject page in Pages)
-        {
-            page.SetActive(false);
-        }
-        Pages[(int)id].SetActive(true);
-        buttons[(int)id].ClearNotifications();
+
+
+            foreach (GameObject page in Pages)
+            {
+                page.SetActive(false);
+            }
+            Pages[(int)id].SetActive(true);
+            buttons[(int)id].ClearNotifications();
+
+        
     }
 
     // Used by OnClick gameobject components

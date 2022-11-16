@@ -127,21 +127,33 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 2b90edb024a0071448bdfe15eb746a4e, type: 3}
+    - target: {fileID: 3279918749621873770, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046740374243769838, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046740374243769838, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4046740374243769838, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 562.7811
+      value: -413.15
       objectReference: {fileID: 0}
     - target: {fileID: 4046740374243769838, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 562.7811
+      value: -253.58
       objectReference: {fileID: 0}
     - target: {fileID: 4046740374243769838, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 502.4172
+      value: 0.0020141602
       objectReference: {fileID: 0}
     - target: {fileID: 4046740374243769838, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -424.82993
+      value: -0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 5272412320015797908, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
       propertyPath: m_Name
@@ -193,6 +205,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8476609011947286306, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721332822852880672, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

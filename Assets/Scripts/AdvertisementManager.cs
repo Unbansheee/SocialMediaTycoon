@@ -81,13 +81,13 @@ public class AdvertisementManager : MonoBehaviour
             playerData.Money += Random.Range(1, 20) * playerData.MoneyPerAdMultiplier;
             playerData.DataMB += Random.Range(1, 3) * playerData.DataPerFieldMultiplier;
             userInfoPage.userData.adsWatched++;
-            if (Random.Range(0,1) == 1) userInfoPage.UnlockRandomData();
+            userInfoPage.UnlockRandomData();
             MaxAdsPanel.SetActive(false);
         }
         else
         {
             Debug.Log("Max ads watched");
             MaxAdsPanel.SetActive(true);
-}
+        }
     }
 }

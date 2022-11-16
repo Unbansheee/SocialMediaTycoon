@@ -138,7 +138,9 @@ public class UserInfoPage : MonoBehaviour
             Debug.Log("Unlocked " + key);
 
         }
-        
+
+        AudioSource audio = GameObject.Find("Audio").GetComponent<AudioSource>();
+        audio.Play();
         RefreshFields();
     }
     
@@ -155,7 +157,7 @@ public class UserInfoPage : MonoBehaviour
     
     public void BuyData()
     {
-
+    
         int cost = GetFieldUnlockCost();
         
         PlayerData playerData = FindObjectOfType<PlayerData>();
@@ -163,6 +165,11 @@ public class UserInfoPage : MonoBehaviour
         {
             playerData.Money -= cost;
             UnlockRandomData();
+        }
+        else
+        {
+            AudioSource audio = GameObject.Find("Audio_02").GetComponent<AudioSource>();
+            audio.Play();
         }
 
     }

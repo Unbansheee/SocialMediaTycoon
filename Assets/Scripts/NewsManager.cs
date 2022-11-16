@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum NewsID
 {
@@ -48,6 +51,7 @@ public enum NewsID
     Privacy_Search_Engines,
     Using_VPNs,
     Users_Move_To_Privacy_Alternatives,
+    Start_Message,
 
     // Endgame Images
     IMG_End_Monopoly,
@@ -73,6 +77,8 @@ public class NewsManager : MonoBehaviour
     [SerializeField]
     Transform parentContainer;
 
+    public VerticalLayoutGroup layoutGroup;
+    
     [SerializeField]
     Toolbar toolbar;
 
@@ -84,6 +90,8 @@ public class NewsManager : MonoBehaviour
 
     private HashSet<NewsID> newsImageIDs;
 
+    
+    
     private void Awake()
     {
         newsImageIDs = new() { NewsID.IMG_End_Monopoly };
@@ -95,6 +103,9 @@ public class NewsManager : MonoBehaviour
         
         // Adding starting posts
         while (PostNextNewsStory());
+
+        StartCoroutine(UpdateLayoutGroup());
+
     }
 
 
@@ -110,6 +121,15 @@ public class NewsManager : MonoBehaviour
         return new();
     }
 
+    IEnumerator UpdateLayoutGroup()
+    {
+
+        yield return new WaitForNextFrameUnit();
+        
+        LayoutRebuilder.ForceRebuildLayoutImmediate(parentContainer as RectTransform);
+
+    }
+    
     public void ScheduleNewsFromID(NewsID id)
     {
         scheduledNews.Add(id);
@@ -175,7 +195,8 @@ public class NewsManager : MonoBehaviour
         RectTransform rectTransform = item.GetComponent<RectTransform>();
         transform.localScale = new Vector3(1, 1, 1);
 
-        rectTransform.sizeDelta = new Vector2(1125.863f, rectTransform.sizeDelta.y);
+
+
     }
 
     void PostNewsImage(NewsID id)
@@ -185,6 +206,8 @@ public class NewsManager : MonoBehaviour
         item.transform.SetParent(parentContainer);
         RectTransform rectTransform = item.GetComponent<RectTransform>();
         transform.localScale = new Vector3(1, 1, 1);
-        rectTransform.sizeDelta = new Vector2(1125.863f, rectTransform.sizeDelta.y);
+
+
+
     }
 }

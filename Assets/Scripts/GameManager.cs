@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating(nameof(RunOncePerSecond), 0, 1);
+        
+        var toolbar = FindObjectOfType<Toolbar>();
+        ToolbarButton button = toolbar.GetButtonFromPageID(PageID.News);
+        button.AddNotification(1);
 
     }
 

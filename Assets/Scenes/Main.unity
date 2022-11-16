@@ -1477,6 +1477,39 @@ PrefabInstance:
       propertyPath: toolbar
       value: 
       objectReference: {fileID: 1887604663}
+    - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: layoutGroup
+      value: 
+      objectReference: {fileID: 834172390}
+    - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: newsDatabase.Array.size
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: scheduledNews.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: scheduledNews.Array.data[0]
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: scheduledNews.Array.data[1]
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: newsDatabase.Array.data[36].id
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: newsDatabase.Array.data[36].blurb
+      value: CloudMedia claims to be a safe, secure place for you to connect with
+        friends!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168410470412200347, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: newsDatabase.Array.data[36].headline
+      value: A New Social Media Platform Emerges
+      objectReference: {fileID: 0}
     - target: {fileID: 1612857267495431692, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -1522,6 +1555,10 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 2853058489755067269, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853058489755067269, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
@@ -1535,15 +1572,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2853058489755067269, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 220
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853058489755067269, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.4125477
       objectReference: {fileID: 0}
     - target: {fileID: 2853058489755067269, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2853058489755067269, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914503744110401917, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: m_Spacing
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914503744110401917, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914503744110401917, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: m_ChildScaleHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3914503744110401917, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: m_ChildControlWidth
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914503744110401917, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: m_ChildControlHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914503744110401917, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+      propertyPath: m_ChildForceExpandHeight
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4087432497852574360, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1671,7 +1736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5325159817237911353, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5325159817237911355, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
       propertyPath: m_Color.b
@@ -1742,6 +1807,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bd177ce62ea7204ba8bca23f8c47e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &834172390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3914503744110401917, guid: 0a350e499d43b8f41843ba6753391184, type: 3}
+  m_PrefabInstance: {fileID: 818681504}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &893325120 stripped
@@ -6602,7 +6678,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1831036196818349204, guid: 9aca681c7d201084296cee7878be61f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831036196818349204, guid: 9aca681c7d201084296cee7878be61f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1831036196818349204, guid: 9aca681c7d201084296cee7878be61f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -6623,6 +6703,14 @@ PrefabInstance:
     - target: {fileID: 1831036196818349204, guid: 9aca681c7d201084296cee7878be61f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831036196818349204, guid: 9aca681c7d201084296cee7878be61f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831036196818349204, guid: 9aca681c7d201084296cee7878be61f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1831036196818349204, guid: 9aca681c7d201084296cee7878be61f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
