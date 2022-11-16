@@ -295,7 +295,9 @@ MonoBehaviour:
   newsItemPrefab: {fileID: 5272412320015797908, guid: 9573fdb87e51b5048a85bd968fdf5d6b, type: 3}
   newsImagePrefab: {fileID: 3431147175299801574, guid: 15281dd518cddbf40b68b2aaf54f4ae8, type: 3}
   parentContainer: {fileID: 2853058489755067269}
+  layoutGroup: {fileID: 0}
   toolbar: {fileID: 0}
+  newsDelayMultiplier: 20
   newsDatabase:
   - id: 1
     headline: Finally! Useful Advertisements!
@@ -465,4 +467,4 @@ MonoBehaviour:
     headline: Users Losing Trust In CloudMedia
     blurb: Survey data shows that some former users of CloudMedia are migrating to
       other platforms that have better track records and commitments to privacy.
-  scheduledNews: 
+  scheduledNews: 24000000

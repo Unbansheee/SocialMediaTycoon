@@ -51,10 +51,12 @@ public enum NewsID
     Privacy_Search_Engines,
     Using_VPNs,
     Users_Move_To_Privacy_Alternatives,
-    Start_Message,
 
     // Endgame Images
     IMG_End_Monopoly,
+
+    // Start message
+    Start_Message,
 }
 
 [System.Serializable]
@@ -81,6 +83,9 @@ public class NewsManager : MonoBehaviour
     
     [SerializeField]
     Toolbar toolbar;
+
+    [SerializeField]
+    private float newsDelayMultiplier = 20f;
 
     [SerializeField]
     private List<NewsData> newsDatabase;
@@ -135,7 +140,7 @@ public class NewsManager : MonoBehaviour
         scheduledNews.Add(id);
         if (scheduledNews.Count == 1)
         {
-            toolbar.ScheduleNewsNotificaiton(PostNextNewsStory, 10f);
+            toolbar.ScheduleNewsNotificaiton(PostNextNewsStory, newsDelayMultiplier);
         }
     }
 
