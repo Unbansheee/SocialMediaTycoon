@@ -132,6 +132,9 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     private AudioSource activateSound;
 
     [SerializeField]
+    private AudioSource rejectSound;
+
+    [SerializeField]
     private Toolbar toolbar;
 
     PlayerData playerData;
@@ -147,6 +150,8 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     {
         if (activateSound == null)
             activateSound = GameObject.Find("Audio").GetComponent<AudioSource>();
+        if (rejectSound == null)
+            rejectSound = GameObject.Find("Audio_02").GetComponent<AudioSource>();
         InstantiateSkillTree(skillButtons, tierObjects, skillTree, buttonMarginPercentage);
         InstantiateTooltipBox(tooltipBoxPrefab);
         UpdateSkills();
@@ -316,8 +321,14 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     // updates if a skill is unlockable, unlocked or locked
     public void UpdateSkillButton(Skill selectedSkill, SkillSettings settings, bool selected_for_purchase = false)
     {
-        if (settings.skill_unlocked || toolbar.GetGameState() == GameState.Ending)
+        if (settings.skill_unlocked)
             return;
+
+/*        else if (toolbar.GetGameState() == GameState.Ending && selected_for_purchase)
+        {
+            if (rejectSound != null)
+                rejectSound.Play();
+        }*/
 
         // count the number of prerequites that have been unlocked
         List<SkillID> unlocked_prerequisites = new();
@@ -374,6 +385,13 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             settings.skill_unlockable = true;
         }
 
+        if (selected_for_purchase && (!settings.skill_unlockable || !settings.prerequisites_met || toolbar.GetGameState() == GameState.Ending))
+        {
+            if (rejectSound != null)
+                rejectSound.Play();
+            return;
+        }
+
 
         // if skill unlockable and the user clicked on the skill in order to buy it
         if (settings.skill_unlockable && selected_for_purchase)
@@ -392,11 +410,15 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             
             
             settings.skill_unlocked = true;
+
+            if (activateSound != null && activateSound.gameObject.activeSelf)
+            {
+                activateSound.Play();
+            }
+
             foreach (NewsID id in selectedSkill.triggeredNews)
             {
                 newsManager.ScheduleNewsFromID(id);
-                if (activateSound != null && activateSound.gameObject.activeSelf)
-                    activateSound.Play();
             }
             
             playerData.ApplySkill(selectedSkill.skillID);
