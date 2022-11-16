@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 2430877442057899866}
   bounds: {fileID: 3935474664570184115}
-  ScreenTopPadding: 107
+  ScreenTopPadding: 90
 --- !u!1 &5753612852053676166
 GameObject:
   m_ObjectHideFlags: 0

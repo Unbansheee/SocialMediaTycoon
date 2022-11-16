@@ -33,24 +33,27 @@ public class TooltipManager : MonoBehaviour
     void FixedUpdate()
     {
         transform.position = Input.mousePosition + new Vector3(0, 0, 0);
-        // if RectTransform overlap the edge of the screen, move the tooltip
-        if (transform.position.x + (bounds.rect.width * 0.25) > Screen.width)
+        
+        // prevent tooltip from going off screen
+        
+        if (transform.position.x + bounds.rect.width * 0.25f > Screen.width)
         {
-            transform.position = new Vector3(Screen.width - (bounds.rect.width * 0.26f), transform.position.y, transform.position.z);
+            transform.position = new Vector3(Screen.width - bounds.rect.width * 0.26f, transform.position.y, transform.position.z);
         }
-        else if (transform.position.x - (bounds.rect.width * 0.25) < 0)
+        if (transform.position.x - bounds.rect.width * 0.25f < 0)
         {
-            transform.position = new Vector3((bounds.rect.width * 0.26f), transform.position.y, transform.position.z);
+            transform.position = new Vector3(bounds.rect.width * 0.26f, transform.position.y, transform.position.z);
         }
+        if (transform.position.y + bounds.rect.height * 0.5f + ScreenTopPadding > Screen.height)
+        {
+            transform.position = new Vector3(transform.position.x, Screen.height - bounds.rect.height * 0.5f - ScreenTopPadding, transform.position.z);
+        }
+        
 
-        if (transform.position.y + bounds.rect.height > Screen.height + ScreenTopPadding)
-        {
-            transform.position = new Vector3(transform.position.x, Screen.height + ScreenTopPadding - (bounds.rect.height), transform.position.z);
-        }
-        
-        
-        
-        
+
+
+
+
 
     }
 
