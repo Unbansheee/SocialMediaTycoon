@@ -444,20 +444,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Read Terms and Conditions\n\n\tBig Bird games reserves the right all data
-    provided through the app either directly or through permissions set on your device.
-    Such data may be used by Big Bird Games, our partners and may be sold in an 'anonymized'
-    format at the discretion of Big Bird Games. In the case that Big Bird Games is
-    purchased or meged into another entity, ownership of the data harvested from
-    you will be transferred to that new entity. \n\n\tYou additionally grant the
-    following device permission to Big Bird Games: -  access to your device's camera
-    and microphone at all times, even when Social Media Tycoon (c) is not active\n-
-    Access to real-time GPS location data\n- Access to your device's search history\n-
-    Access to your device's file system\n- Access to your contacts and correspondence\n-
-    Access to any biometric data stored on the device\n- Access to install additional
-    software such as, but not limited to, trackers with the ability to monitor your
-    behaviour on other applications\n\n\tBy Installing Social Media Tycoon (c) on
-    your device you are  aggreeing to everything in these terms and conditions.\n\n\t"
+  m_text: "<b>Terms and Conditions</b>\n\n\tBig Bird games reserves the right all
+    data provided through the app either directly or through permissions set on your
+    device. Such data may be used by Big Bird Games, our partners and may be sold
+    in an 'anonymized' format at the discretion of Big Bird Games. In the case that
+    Big Bird Games is purchased or meged into another entity, ownership of the data
+    harvested from you will be transferred to that new entity. \n\n<b>You additionally
+    grant the following device permission to Big Bird Games:</b> \n-  Access to your
+    device's camera and microphone at all times, even when Social Media Tycoon (c)
+    is closed\n- Access to real-time GPS location data\n- Access to your device's
+    search history\n- Access to your device's file system\n- Access to your contacts
+    and correspondence\n- Access to any biometric data stored on the device\n- Access
+    to install additional software such as, but not limited to, trackers with the
+    ability to monitor your behaviour on other applications\n\n\tBy Installing Social
+    Media Tycoon (c) on your device you are  aggreeing to everything in these terms
+    and conditions.\n\n\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
