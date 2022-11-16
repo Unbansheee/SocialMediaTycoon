@@ -137,12 +137,12 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
     void Awake()
     {
         playerData = GameObject.FindWithTag("Player").GetComponent<PlayerData>();
-        activateSound = GameObject.Find("Audio").GetComponent<AudioSource>();
     }
 
     // Runs once at the beginning
     void Start()
     {
+        activateSound = GameObject.Find("Audio").GetComponent<AudioSource>();
         InstantiateSkillTree(skillButtons, tierObjects, skillTree, buttonMarginPercentage);
         InstantiateTooltipBox(tooltipBoxPrefab);
         UpdateSkills();
@@ -391,7 +391,7 @@ public class SkillTree : MonoBehaviour, IPointerClickHandler
             foreach (NewsID id in selectedSkill.triggeredNews)
             {
                 newsManager.ScheduleNewsFromID(id);
-                if (activateSound != null)
+                if (activateSound != null && activateSound.gameObject.activeSelf)
                     activateSound.Play();
             }
             
